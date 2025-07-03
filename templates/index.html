@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malware Analysis Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-shield-virus me-2"></i>
+                Malware Analysis Platform
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/upload">Dosya Yükle</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gradient-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <i class="fas fa-microscope me-3"></i>
+                        Gelişmiş Malware Analiz Platformu
+                    </h1>
+                    <p class="lead mb-4">
+                        Qu1cksc0pe entegrasyonu ve AI destekli analiz ile malware örneklerini güvenli bir şekilde inceleyin.
+                        Kapsamlı raporlar alın ve siber güvenlik tehditlerini proaktif olarak tespit edin.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="/upload" class="btn btn-light btn-lg px-4">
+                            <i class="fas fa-upload me-2"></i>
+                            Analiz Başlat
+                        </a>
+                        <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Nasıl Çalışır?
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="hero-icon">
+                        <i class="fas fa-virus fa-8x opacity-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="fw-bold mb-3">Platform Özellikleri</h2>
+                    <p class="text-muted">Siber güvenlik analizi için gereken tüm araçlar bir arada</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card h-100 p-4 text-center border rounded shadow-sm">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-upload fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold">Güvenli Dosya Yükleme</h5>
+                        <p class="text-muted">
+                            Malware örneklerini güvenli bir şekilde yükleyin. 
+                            Otomatik dosya doğrulama ve boyut kontrolleri.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card h-100 p-4 text-center border rounded shadow-sm">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-cogs fa-3x text-success"></i>
+                        </div>
+                        <h5 class="fw-bold">Qu1cksc0pe Entegrasyonu</h5>
+                        <p class="text-muted">
+                            Otomatik malware analizi ve detaylı teknik inceleme. 
+                            YARA kuralları, hash analizi ve daha fazlası.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card h-100 p-4 text-center border rounded shadow-sm">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-robot fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="fw-bold">AI Destekli Raporlama</h5>
+                        <p class="text-muted">
+                            Analiz sonuçlarını AI ile yorumlayın. 
+                            Türkçe raporlar ve risk değerlendirmeleri.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="fw-bold mb-3">Analiz Süreci</h2>
+                    <p class="text-muted">Üç basit adımda malware analizi</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="process-step">
+                        <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <h5 class="fw-bold">Dosya Yükleme</h5>
+                        <p class="text-muted">
+                            Analiz edilecek malware dosyasını güvenli upload sistemi ile yükleyin.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 text-center">
+                    <div class="process-step">
+                        <div class="step-number bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <h5 class="fw-bold">Otomatik Analiz</h5>
+                        <p class="text-muted">
+                            Qu1cksc0pe aracı ile kapsamlı statik analiz gerçekleştirilir.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 text-center">
+                    <div class="process-step">
+                        <div class="step-number bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <h5 class="fw-bold">AI Raporu</h5>
+                        <p class="text-muted">
+                            AI destekli detaylı analiz raporu oluşturulur ve sunulur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Notice -->
+    <section class="py-5">
+        <div class="container">
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
+                <div>
+                    <h5 class="fw-bold mb-2">⚠️ Güvenlik Uyarısı</h5>
+                    <p class="mb-0">
+                        Bu platform sadece güvenlik araştırmaları için tasarlanmıştır. 
+                        Yüklenen dosyalar gerçek malware içerebilir ve izole edilmiş ortamda analiz edilir. 
+                        Lütfen sadece güvenilir kaynaklardan elde ettiğiniz dosyaları yükleyin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Platform Hakkında
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold">Qu1cksc0pe Nedir?</h6>
+                    <p>
+                        Qu1cksc0pe, malware örneklerini statik analiz için geliştirilmiş güçlü bir araçtır. 
+                        PE dosyaları, .NET assembly'leri ve diğer çalıştırılabilir dosyaları analiz edebilir.
+                    </p>
+                    
+                    <h6 class="fw-bold mt-4">AI Entegrasyonu</h6>
+                    <p>
+                        Platform, Qu1cksc0pe çıktılarını OpenAI API kullanarak analiz eder ve 
+                        kullanıcı dostu Türkçe raporlar oluşturur.
+                    </p>
+                    
+                    <h6 class="fw-bold mt-4">Güvenlik Önlemleri</h6>
+                    <ul>
+                        <li>Dosya boyutu ve tip validasyonu</li>
+                        <li>İzole edilmiş analiz ortamı</li>
+                        <li>Otomatik dosya temizleme</li>
+                        <li>Güvenli dosya işleme</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <a href="/upload" class="btn btn-primary">Analiz Başlat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="fw-bold">Malware Analysis Platform</h6>
+                    <p class="text-muted small">
+                        Siber güvenlik araştırmaları için geliştirilmiş AI destekli malware analiz platformu.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted small mb-0">
+                        <i class="fas fa-code me-1"></i>
+                        Qu1cksc0pe + Google Gemini AI ile güçlendirilmiştir
+                    </p>
+                    <p class="text-muted small">
+                        <i class="fas fa-calendar me-1"></i>
+                        2025 - Güvenlik Araştırmaları
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

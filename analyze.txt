@@ -1,0 +1,100 @@
+Bu iki rapor arasındaki farkları karşılaştırdığımda şunları görüyorum:
+
+## MEVCUT RAPORUNUZDA (2dc3ecd7...) OLAN AMA ESKİ RAPORDA EKSIK OLAN ÖZELLİKLER:
+
+### ✅ **Var olan güçlü yönler:**
+1. **AI Analiz Entegrasyonu** - Gemini AI ile kapsamlı analiz
+2. **Türkçe Raporlama** - Kullanıcı dostu açıklamalar
+3. **MITRE ATT&CK Teknikleri** - T1027, T1622, T1564.007 vb.
+4. **Detaylı Section Analizi** - Entropy değerleri ve şüpheli durumlar
+5. **IOC Listesi** - Organized hash, URL, dosya yolları
+6. **Risk Skorlama** - 82/100 gibi sayısal değerlendirme
+7. **Steganografi Tespit** - Bitmap'ten PE çıkarma
+8. **Anti-Debug Tespit** - DebuggerNonUserCodeAttribute gibi
+9. **String Analizi** - Şüpheli string kategorileri
+10. **Davranış Analizi** - Sistem değişiklikleri, ağ aktiviteleri
+
+## ESKİ RAPORDA VAR AMA MINCURİNİZDE EKSİK OLAN KRİTİK ÖZELLİKLER:
+
+### ❌ **Büyük eksiklikler:**
+
+#### 1. **VirusTotal Entegrasyonu**
+```
+- 56/72 AV tarama sonucu
+- %78 malicious score
+- AV motor isimleri (Kaspersky, Microsoft, Avast...)
+- Threat intelligence feeds
+```
+
+#### 2. **Dinamik Analiz Verileri**
+```
+- Process Tree (süreç ağacı)
+- Registry key işlemleri (HKEY_... anahtarları)
+- File operations (açılan/yazılan/silinen dosyalar)
+- Command executions (powershell, schtasks komutları)
+- DNS lookups (gerçek domain çözümlemeleri)
+- Module loading (yüklenen DLL'ler)
+```
+
+#### 3. **Gerçek Ağ İntelligence**
+```
+- Resolved IP addresses (23.55.140.42, 104.98.118.160...)
+- DNS queries (checkip.dyndns.org, reallyfreegeoip.org...)
+- Network connections
+```
+
+#### 4. **Sandbox Simulation Sonuçları**
+```
+- Process injection (updater.exe injection)
+- Mutex creation (RasPbFile, ZonesCacheCounterMutex)
+- Registry modifications
+- File system changes
+- Persistence mechanisms
+```
+
+#### 5. **Gelişmiş Hash Analizi**
+```
+- TLSH: T184C4F218769ADB72D5EA07F40621E13213B6AD9DF421D3074EEAECFB781135838962C7
+- SSDeep: 12288:Ixa1/nkJsj+yWZoJwQ9JCWX7NeAw3U97VjGT2oy:ZFkJsgxk8DfUFVjbD
+```
+
+#### 6. **Malware Family Classification**
+```
+- MassLogger PrivateLogger identification
+- Threat labels
+- Timeline (last seen, update dates)
+```
+
+#### 7. **Behavioral Indicators**
+```
+- PowerShell exclusion attempts
+- Scheduled task creation
+- Anti-virus evasion techniques
+- Window hiding behaviors
+```
+
+## ÖNCELİKLİ EKLENMESİ GEREKEN ÖZELLİKLER:
+
+### 🎯 **En kritik 5 eksiklik:**
+
+1. **VirusTotal API** - En büyük eksik, güvenilirlik için kritik
+2. **Dinamik Analiz Simülasyonu** - Process tree ve behavior prediction
+3. **Gerçek DNS/IP Intelligence** - Ağ IOC'leri için
+4. **Malware Family Detection** - Threat categorization
+5. **Timeline/Threat Intelligence** - Zamansal analiz
+
+### 📊 **Karşılaştırma tablosu:**
+
+| Özellik | Mevcut Rapor | Eski Rapor | Durum |
+|---------|--------------|------------|-------|
+| AI Analiz | ✅ Gelişmiş | ❌ Yok | Sizde güçlü |
+| VirusTotal | ❌ Yok | ✅ 56/72 | Kritik eksik |
+| MITRE ATT&CK | ✅ Detaylı | ✅ Temel | Eşit |
+| Dinamik Analiz | ❌ Yok | ✅ Kapsamlı | Büyük eksik |
+| DNS/IP Intel | ❌ Yok | ✅ Gerçek | Kritik eksik |
+| Türkçe Rapor | ✅ Tam | ❌ İngilizce | Sizde güçlü |
+| Risk Skorlama | ✅ 82/100 | ✅ %78 | Eşit |
+
+**Sonuç:** Mevcut raporunuz AI analizi ve Türkçe açıklamalar konusunda çok güçlü, ancak teknik derinlik ve gerçek threat intelligence konusunda eski raporu yakalamalı.
+
+Hangi eksiklikleri öncelikle gidermek istiyorsunuz?

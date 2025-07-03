@@ -1,0 +1,2 @@
+TEST FILE - Bu dosya AI analizini test etmek için oluşturulmuştur.
+Sample content for testing malware analysis platform.
