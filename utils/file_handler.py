@@ -7,7 +7,7 @@ File Handler - Dosya işlemleri ve güvenlik kontrollerini yapan modül
 
 import os
 import hashlib
-import mimetypes
+import math
 import magic
 from pathlib import Path
 from datetime import datetime
@@ -185,7 +185,6 @@ class FileHandler:
             return "0 B"
         
         size_names = ["B", "KB", "MB", "GB", "TB"]
-        import math
         i = int(math.floor(math.log(size_bytes, 1024)))
         p = math.pow(1024, i)
         s = round(size_bytes / p, 2)

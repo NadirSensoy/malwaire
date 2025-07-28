@@ -8,6 +8,7 @@ Geliştirilmiş prompt ve yapılandırılmış JSON çıktısı ile
 
 import os
 import json
+import re
 import openai
 from datetime import datetime
 
@@ -407,7 +408,6 @@ Include this VirusTotal data in the analysis report and use it in risk assessmen
         Parses AI response as JSON safely.
         Uses multiple strategies to increase success rate.
         """
-        import re
         
         print("🔍 Starting JSON parse process...")
         
@@ -859,7 +859,6 @@ Include this VirusTotal data in the analysis report and use it in risk assessmen
         Sanitizes Qu1cksc0pe output to prevent JSON parsing issues.
         Removes problematic characters and limits size.
         """
-        import re
         
         if not raw_output:
             return ""

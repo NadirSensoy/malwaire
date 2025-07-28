@@ -13,7 +13,7 @@ import json
 import threading
 from datetime import datetime
 from pathlib import Path
-from flask import Flask, request, render_template, jsonify, send_file, redirect, url_for
+from flask import Flask, request, render_template, jsonify, send_file
 from flask_cors import CORS
 from flask_socketio import SocketIO, emit, join_room, leave_room
 from werkzeug.utils import secure_filename
