@@ -84,11 +84,6 @@ python app.py
 ./start_production.sh
 ```
 
-Production modu özellikleri:
-- Gunicorn ile optimize edilmiş worker'lar
-- 60 dakika timeout desteği
-- Gelişmiş hata yönetimi
-- Sistem kaynak takibi
 
 ## 📁 Proje Yapısı
 
@@ -103,6 +98,7 @@ malwaire/
 │   ├── css/
 │   ├── js/
 │   └── images/
+├── Qu1ckSc0pe/           # Qu1cksc0pe u buraya klonlayın
 ├── uploads/              # Yüklenen dosyalar
 ├── reports/              # Oluşturulan raporlar
 ├── utils/                # Yardımcı modüller
@@ -112,20 +108,4 @@ malwaire/
 └── requirements.txt      # Python bağımlılıkları
 ```
 
-## ⚠️ Güvenlik Uyarıları
 
-- Bu platform sadece güvenli, izole edilmiş ortamlarda kullanılmalıdır
-- Malware örnekleri gerçek tehditler içerebilir
-- Analiz işlemleri sandbox ortamında gerçekleştirilir
-
-## 🤝 Katkı
-
-1. Projeyi fork edin
-2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
-5. Pull Request oluşturun
-
-## 📄 Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır.
