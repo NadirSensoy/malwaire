@@ -19,7 +19,7 @@ Bu proje, kullanıcıların malware örneklerini yükleyip Qu1cksc0pe aracıyla 
 
 2. **Qu1cksc0pe Kurulumu**:
    ```bash
-   # Qu1cksc0pe'u klonlayın (eğer yoksa)
+   # Qu1cksc0pe'u klonlayın (gerekli)
    git clone --depth 1 https://github.com/CYB3RMX/Qu1cksc0pe ./Qu1cksc0pe
    
    # Qu1cksc0pe sanal ortam oluşturun
@@ -29,6 +29,8 @@ Bu proje, kullanıcıların malware örneklerini yükleyip Qu1cksc0pe aracıyla 
    pip install -r requirements.txt
    cd ..
    ```
+   
+   **Not**: Qu1cksc0pe klasörü .gitignore'da yer alır ve kurulum sırasında ayrıca klonlanmalıdır.
 
 3. **OpenAI API Anahtarı (Opsiyonel)**:
    ```bash
