@@ -1,0 +1,91 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/231bdc30a6a638b7ecbeb3363505c745d5c8adc9f846d05b7483d2205f6cec7f.sh --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                               
+
+                        * -------------------------------- *
+           __           | Name: Mr. Virus                  |
+         _|  |_         | Type: Trojan.Dropper             |
+       _|      |_       | Status: Qu1cksc0ped!!            |
+      |          |      | Description: He said dont use    |
+      |  X    X  |      | this tool. Now he is dead.       |
+   _  |  _    _  |  _   * -------------------------------- *
+  |_|_|_| |__| |_|_|_|
+    |_|_        _|_|
+      |_|      |_| 
+
+
+[*] Analyzing: /home/kali/Downloads/231bdc30a6a638b7ecbeb3363505c745d5c8adc9f846d05b7483d2205f6cec7f.sh
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+[!] There is no valid pattern found!
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: downloader.amos
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│    downloader     │   9   │
+│      trojan       │   8   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│     amos     │   2   │
+└──────────────┴───────┘
+
+[*] Detection: 11/76
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Detected By ┃              Results              ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     AVG     │      BV:Downloader-BHW [Drp]      │
+│    Avast    │      BV:Downloader-BHW [Drp]      │
+│ ESET-NOD32  │   OSX/TrojanDownloader.Agent.BC   │
+│  Fortinet   │       BASH/Agent.BC!tr.dldr       │
+│    GData    │    Script.Trojan.Agent.7TK6XJ     │
+│   Ikarus    │    Trojan-Downloader.OSX.Agent    │
+│  Kaspersky  │ HEUR:Trojan-Downloader.OSX.Amos.c │
+│  Kingsoft   │        Win32.Troj.Undef.a         │
+│  Microsoft  │   Trojan:Script/Multiverze!rfn    │
+│  Symantec   │          OSX.Trojan.Gen           │
+│   Tencent   │  Osx.Trojan-Downloader.Der.Ftgl   │
+└─────────────┴───────────────────────────────────┘
+                                                                                                                                    
+                                                    * CrowdSourced IDS Reports *                                                    
+┏━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Alert Number ┃ SRC IP  ┃ SRC Port ┃ DST IP ┃ DST Port ┃ Alert Severity ┃      Rule Category      ┃          Rule Source          ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      1       │ 8.8.8.8 │    53    │  none  │   none   │      low       │ protocol-command-decode │ Snort registered user ruleset │
+└──────────────┴─────────┴──────────┴────────┴──────────┴────────────────┴─────────────────────────┴───────────────────────────────┘
+
+[*] Alert Summary: /home/kali/Downloads/231bdc30a6a638b7ecbeb3363505c745d5c8adc9f846d05b7483d2205f6cec7f.sh
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Alert Level ┃ Number of Alerts ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│    HIGH     │        0         │
+│   MEDIUM    │        0         │
+│     LOW     │        1         │
+│    INFO     │        0         │
+└─────────────┴──────────────────┘
+ 
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/231bdc30a6a638b7ecbeb3363505c745d5c8adc9f846d05b7483d2205f6cec7f.sh
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[URL]> https://goatramz.com/get9/update

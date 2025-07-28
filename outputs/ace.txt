@@ -1,0 +1,89 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/ace3310f949dec39ca76b98fd12af49d3f7b57ef5eb0b4b536973f4652bb6668.vbs --archive --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                               
+
+
++ ------------------------------ +
+I                                I
+I      *********************     I
+I      *  MALWARE ALERT!!  *     I
+I      *********************     I
+I                                I
++ --------------I I------------- +
+                I I                 ___QU1CKSC0PE___
+                I I
+             ____V_____              Version: 1.8.5
+
+
+
+[*] Analyzing: /home/kali/Downloads/ace3310f949dec39ca76b98fd12af49d3f7b57ef5eb0b4b536973f4652bb6668.vbs
+[!] Archive type not supported.
+[*] Analyzing: /home/kali/Downloads/ace3310f949dec39ca76b98fd12af49d3f7b57ef5eb0b4b536973f4652bb6668.vbs
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+[!] There is no valid pattern found!
+
+[*] Looking for possible corrupted Windows executable patterns...
+>>> Possible corrupted MZ header at: 0x21e00. Attempting to fix that!
+>>> Possible corrupted MZ header at: 0x94600. Attempting to fix that!
+>>> Possible corrupted MZ header at: 0xc1200. Attempting to fix that!
+
+[*] Modified data saved into: fixed_corrupted_headers.exe
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │  17   │
+│      dropper      │   2   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+└──────────────┴───────┘
+
+[*] Detection: 16/76
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃   Detected By    ┃                     Results                     ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      ALYac       │            Trojan.GenericKD.76891222            │
+│       AVG        │              Script:SNH-gen [Trj]               │
+│    Antiy-AVL     │               Trojan/Script.Agent               │
+│     Arcabit      │             Trojan.Generic.D4954456             │
+│      Avast       │              Script:SNH-gen [Trj]               │
+│   BitDefender    │            Trojan.GenericKD.76891222            │
+│    ESET-NOD32    │          a variant of Generik.BLNMSMD           │
+│     Emsisoft     │          Trojan.GenericKD.76891222 (B)          │
+│      GData       │           Script.Trojan.Agent.H7QVXL            │
+│    Gridinsoft    │              Backdoor.U.Quasar.tr               │
+│      Ikarus      │                Trojan.SuspectCRC                │
+│     Kingsoft     │               Win32.Troj.Undef.a                │
+│ MicroWorld-eScan │            Trojan.GenericKD.76891222            │
+│    Microsoft     │           Trojan:Script/Wacatac.B!ml            │
+│      Rising      │ Trojan.Undefined!8.1327C (TOPIS:E0:ESUDlxPgl1P) │
+│      VIPRE       │            Trojan.GenericKD.76891222            │
+└──────────────────┴─────────────────────────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/ace3310f949dec39ca76b98fd12af49d3f7b57ef5eb0b4b536973f4652bb6668.vbs
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[!] There is no possible domain strings found.
+

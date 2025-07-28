@@ -19,13 +19,23 @@ Bu proje, kullanıcıların malware örneklerini yükleyip Qu1cksc0pe aracıyla 
 
 2. **Qu1cksc0pe Kurulumu**:
    ```bash
-   # Qu1cksc0pe'u klonlayın
-   git clone --depth 1 https://github.com/CYB3RMX/Qu1cksc0pe /home/kali/Desktop/Qu1cksc0pe
+   # Qu1cksc0pe'u klonlayın (eğer yoksa)
+   git clone --depth 1 https://github.com/CYB3RMX/Qu1cksc0pe ./Qu1cksc0pe
    
-   # Sanal ortam oluşturun
-   cd /home/kali/Desktop/Qu1cksc0pe
+   # Qu1cksc0pe sanal ortam oluşturun
+   cd Qu1cksc0pe
    virtualenv -p python3 sc0pe_venv
    source sc0pe_venv/bin/activate
+   pip install -r requirements.txt
+   cd ..
+   ```
+
+3. **OpenAI API Anahtarı (Opsiyonel)**:
+   ```bash
+   # .env dosyası oluşturun
+   echo "OPENAI_API_KEY=your-api-key-here" > .env
+   # veya environment variable olarak ayarlayın
+   export OPENAI_API_KEY="your-api-key-here"
    ```
 
 3. **Ortam Değişkenleri**:
@@ -50,6 +60,33 @@ Bu proje, kullanıcıların malware örneklerini yükleyip Qu1cksc0pe aracıyla 
    - Dosyayı upload sayfasında yükleyin
    - Analiz işleminin tamamlanmasını bekleyin
    - Detaylı AI destekli raporu görüntüleyin
+
+## ⏱️ Analiz Süreleri
+
+Platform, dosya tipine ve boyutuna göre optimize edilmiş timeout'lar kullanır:
+
+- **Standart dosyalar**: ~10 dakika
+- **Döküman dosyalar** (PDF, DOC, XLS): ~15 dakika  
+- **APK dosyalar**: ~30 dakika
+- **DLL/büyük dosyalar** (>50MB): ~60 dakika
+
+## 🚀 Production Modu
+
+Uzun süren analizler için production modda çalıştırın:
+
+```bash
+# Development modu (varsayılan)
+python app.py
+
+# Production modu (önerilen)
+./start_production.sh
+```
+
+Production modu özellikleri:
+- Gunicorn ile optimize edilmiş worker'lar
+- 60 dakika timeout desteği
+- Gelişmiş hata yönetimi
+- Sistem kaynak takibi
 
 ## 📁 Proje Yapısı
 

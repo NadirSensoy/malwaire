@@ -1,0 +1,257 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/9cc3a43497044ad88e424b82ffb0801a4c9e3033c34ddd32fe282c996ca545bc.xlsx --analyze --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣤⣶⣶⣿⣷⣆⠀⠀⠀⠀
+⠀⠀⠀⢀⣤⣤⣶⣶⣾⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⡆⠀⠀⠀
+⠀⢀⣴⣿⣿⣿⣿⣿⣿⡿⠛⠉⠉⠀⠀⠀⣿⣿⣿⣿⣷⠀⠀⠀        !!WARNING!!: Press F key to respect who clicked this link:
+⣠⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⢤⣶⣾⠿⢿⣿⣿⣿⣿⣇⠀⠀
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠈⠉⠀⠀⠀⣿⣿⣿⣿⣿⡆⠀                  -->  https://youtu.be/dQw4w9WgXcQ
+⢸⣿⣿⣿⣏⣿⣿⣿⣿⣿⣷⠀⠀⢠⣤⣶⣿⣿⣿⣿⣿⣿⣿⡀
+⠀⢿⣿⣿⣿⡸⣿⣿⣿⣿⣿⣇⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣧
+⠀⠸⣿⣿⣿⣷⢹⣿⣿⣿⣿⣿⣄⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⢻⣿⣿⣿⡇⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠘⣿⣿⣿⣿⠘⠻⠿⢛⣛⣭⣽⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⢹⣿⣿⠏⠀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠋
+⠀⠀⠀⠈⣿⠏⠀⣰⣿⣿⣿⣿⣿⣿⠿⠟⠛⠋⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢠⡿⠿⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+[*] Analyzing: /home/kali/Downloads/9cc3a43497044ad88e424b82ffb0801a4c9e3033c34ddd32fe282c996ca545bc.xlsx
+[*] Target OS: Android
+
+[!] It looks like the target AndroidManifest.xml is corrupted!!
+
+[*] Looking for package name...
+
+[*] General Informations about /home/kali/Downloads/9cc3a43497044ad88e424b82ffb0801a4c9e3033c34ddd32fe282c996ca545bc.xlsx
+>>>> Possible Package Name: None
+
+[*] Sending query to Google Play Store about target application.
+>>>> Google Play Store: Not Found
+
+
+There is no permissions found!
+
+
+[*] Performing YARA rule matching...
+There is no rules matched for /home/kali/Downloads/9cc3a43497044ad88e424b82ffb0801a4c9e3033c34ddd32fe282c996ca545bc.xlsx
+
+[*] Performing library analysis...
+Decompiler(JADX) not found. Skipping...
+
+[*] Performing malware family detection. Please wait!!
+
+[*] Performing source code analysis...
+Couldn't locate source codes. Did target file decompiled correctly?
+>>> Hint: Don't forget to specify decompiler path in Systems/Android/libScanner.conf
+
+[*] Looking for possible IP address patterns. Please wait...
+[!] There is no possible IP address pattern found!
+
+[*] Looking for URL values. Please wait...
+[!] There is no URL pattern found!
+
+[*] Do you want to check target app's security? This process will take a while.[Y/n]: y
+[!] An error occured while parsing AndroidManifest.xml. Did your APK file decompiled correctly?
+[*] Analyzing: /home/kali/Downloads/9cc3a43497044ad88e424b82ffb0801a4c9e3033c34ddd32fe282c996ca545bc.xlsx
+[*] Ole File: False
+[*] Encrypted: False
+
+[*] Analyzing file structure...
+        * Document Structure *         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              File Name              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         [Content_Types].xml         │
+│             _rels/.rels             │
+│     xl/_rels/workbook.xml.rels      │
+│           xl/workbook.xml           │
+│         xl/theme/theme1.xml         │
+│            xl/styles.xml            │
+│      xl/worksheets/sheet3.xml       │
+│      xl/worksheets/sheet2.xml       │
+│      xl/worksheets/sheet1.xml       │
+│          docProps/core.xml          │
+│          docProps/app.xml           │
+│     xl/drawings/vmlDrawing1.vml     │
+│    xl/embeddings/oleObject1.bin     │
+│ xl/worksheets/_rels/sheet1.xml.rels │
+└─────────────────────────────────────┘
+
+[*] Analyzing: xl/embeddings/oleObject1.bin
+
+[*] Searching for interesting links...
+There is no interesting links found.
+
+[*] Performing YARA rule matching...
+>>> Rule name: Suspicious_Macro_Presence
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x172d │       b'.bin'       │
+└────────┴─────────────────────┘
+ 
+
+[*] Looking for Macros...
+>>> VBA MACRO: Not found.
+
+
+>>> XLM MACRO: Not found.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃     File Type      ┃    Pattern    ┃ Offset ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ PKZIP Archive File │ b'PK\x03\x04' │  0x0   │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1d4  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2f9  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x429  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x5b8  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xba4  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xd71  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xec3  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1015 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x11d3 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1348 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1500 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16f7 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ec3 │
+│ PKZIP Archive File │ b'PK\x05\x06' │ 0x241b │
+└────────────────────┴───────────────┴────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+[*] Target OS: Android
+
+[*] Parsing file contents...
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                             File Type                                              ┃              File Name              ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│        XML 1.0 document, ASCII text, with very long lines (967), with CRLF line terminators        │         [Content_Types].xml         │
+│        XML 1.0 document, ASCII text, with very long lines (531), with CRLF line terminators        │             _rels/.rels             │
+│        XML 1.0 document, ASCII text, with very long lines (782), with CRLF line terminators        │     xl/_rels/workbook.xml.rels      │
+│        XML 1.0 document, ASCII text, with very long lines (567), with CRLF line terminators        │           xl/workbook.xml           │
+│ XML 1.0 document, Unicode text, UTF-8 text, with very long lines (945), with CRLF line terminators │         xl/theme/theme1.xml         │
+│        XML 1.0 document, ASCII text, with very long lines (811), with CRLF line terminators        │            xl/styles.xml            │
+│        XML 1.0 document, ASCII text, with very long lines (382), with CRLF line terminators        │      xl/worksheets/sheet3.xml       │
+│        XML 1.0 document, ASCII text, with very long lines (382), with CRLF line terminators        │      xl/worksheets/sheet2.xml       │
+│        XML 1.0 document, ASCII text, with very long lines (548), with CRLF line terminators        │      xl/worksheets/sheet1.xml       │
+│        XML 1.0 document, ASCII text, with very long lines (562), with CRLF line terminators        │          docProps/core.xml          │
+│        XML 1.0 document, ASCII text, with very long lines (763), with CRLF line terminators        │          docProps/app.xml           │
+│                                                data                                                │     xl/drawings/vmlDrawing1.vml     │
+│                        Composite Document File V2 Document, Can't read SSAT                        │    xl/embeddings/oleObject1.bin     │
+│        XML 1.0 document, ASCII text, with very long lines (396), with CRLF line terminators        │ xl/worksheets/_rels/sheet1.xml.rels │
+└────────────────────────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Interesting Files       ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ xl/embeddings/oleObject1.bin │
+└──────────────────────────────┘
+                                                     * URLs *                                                      
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                  Pattern                                  ┃                File                 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       http://schemas.openxmlformats.org/package/2006/content-types        │         [Content_Types].xml         │
+│       http://schemas.openxmlformats.org/package/2006/relationships        │             _rels/.rels             │
+│       http://schemas.openxmlformats.org/package/2006/relationships        │     xl/_rels/workbook.xml.rels      │
+│         http://schemas.openxmlformats.org/spreadsheetml/2006/main         │           xl/workbook.xml           │
+│           http://schemas.openxmlformats.org/drawingml/2006/main           │         xl/theme/theme1.xml         │
+│         http://schemas.openxmlformats.org/spreadsheetml/2006/main         │            xl/styles.xml            │
+│         http://schemas.openxmlformats.org/spreadsheetml/2006/main         │      xl/worksheets/sheet3.xml       │
+│         http://schemas.openxmlformats.org/spreadsheetml/2006/main         │      xl/worksheets/sheet2.xml       │
+│         http://schemas.openxmlformats.org/spreadsheetml/2006/main         │      xl/worksheets/sheet1.xml       │
+│  http://schemas.openxmlformats.org/package/2006/metadata/core-properties  │          docProps/core.xml          │
+│ http://schemas.openxmlformats.org/officeDocument/2006/extended-properties │          docProps/app.xml           │
+│       http://schemas.openxmlformats.org/package/2006/relationships        │ xl/worksheets/_rels/sheet1.xml.rels │
+└───────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────┘
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.mathtype/obfs
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │   8   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│   mathtype   │   7   │
+│     obfs     │   6   │
+│     o97m     │   3   │
+└──────────────┴───────┘
+
+[*] Detection: 33/76
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Detected By      ┃                       Results                        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│        ALYac         │              Exploit.MathType-Obfs.Gen               │
+│         AVG          │             OLE:CVE-2017-11882-B [Expl]              │
+│      AhnLab-V3       │                OLE/Cve-2018-0798.Gen                 │
+│       Alibaba        │       Exploit:Office97/CVE-2017-11882.d1532439       │
+│       Arcabit        │              Exploit.MathType-Obfs.Gen               │
+│        Avast         │             OLE:CVE-2017-11882-B [Expl]              │
+│        Avira         │                EXP/CVE-2018-0798.Gen                 │
+│     BitDefender      │              Exploit.MathType-Obfs.Gen               │
+│        Cynet         │                Malicious (score: 99)                 │
+│        DrWeb         │                 W97M.DownLoader.2938                 │
+│      ESET-NOD32      │ probably a variant of Win32/Exploit.CVE-2017-11882.F │
+│       Emsisoft       │            Exploit.MathType-Obfs.Gen (B)             │
+│       F-Secure       │            Exploit.EXP/CVE-2018-0798.Gen             │
+│       Fortinet       │                XML/FormBook.TOJIG!tr                 │
+│        GData         │               XML.Trojan.Agent.IU8Q2N                │
+│        Ikarus        │                Exploit.CVE-2017-11882                │
+│      Kaspersky       │          UDS:DangerousObject.Multi.Generic           │
+│       Kingsoft       │              Script.Troj.office.2025515              │
+│   MicroWorld-eScan   │              Exploit.MathType-Obfs.Gen               │
+│      Microsoft       │            Exploit:O97M/CVE-2018-0798!KZH            │
+│        Rising        │       Exploit.CVE-2017-11882!1.E8F4 (CLASSIC)        │
+│       Sangfor        │             Exploit.Doc.CVE-2018-0798.a              │
+│        Sophos        │                    Troj/DocExp-AC                    │
+│       Symantec       │                Exp.CVE-2017-11882!g5                 │
+│       TACHYON        │             Suspicious/XOX.CVE-2018-0798             │
+│       Tencent        │              Exp.Office.CVE-2018-0802.a              │
+│      TrendMicro      │             Trojan.O97M.CVE201711882.SM              │
+│ TrendMicro-HouseCall │             Trojan.O97M.CVE201711882.SM              │
+│        VIPRE         │              Exploit.MathType-Obfs.Gen               │
+│       ViRobot        │              XLS.Z.CVE-2017-11882.9265               │
+│        Yandex        │                Trojan.AvsMofer.bS43uE                │
+│      ZoneAlarm       │                    Troj/DocExp-AC                    │
+│        Zoner         │               Probably Heur.W97ShellO                │
+└──────────────────────┴──────────────────────────────────────────────────────┘
+                                                                                                                                                                  
+                                                                   * CrowdSourced IDS Reports *                                                                   
+┏━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Alert Number ┃ SRC IP ┃ SRC Port ┃    DST IP    ┃ DST Port ┃ Alert Severity ┃                 Rule Category                 ┃           Rule Source            ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      1       │  none  │   none   │ 182.16.39.59 │    80    │      high      │ Malware Command and Control Activity Detected │ Proofpoint Emerging Threats Open │
+│      4       │  none  │   none   │ 182.16.39.59 │    80    │      low       │            Potentially Bad Traffic            │ Proofpoint Emerging Threats Open │
+│      5       │  none  │   none   │   8.8.8.8    │    53    │      low       │            Potentially Bad Traffic            │ Proofpoint Emerging Threats Open │
+│      6       │  none  │   none   │   8.8.8.8    │    53    │      low       │                 misc-activity                 │  Snort registered user ruleset   │
+└──────────────┴────────┴──────────┴──────────────┴──────────┴────────────────┴───────────────────────────────────────────────┴──────────────────────────────────┘
+
+[*] Alert Summary: /home/kali/Downloads/9cc3a43497044ad88e424b82ffb0801a4c9e3033c34ddd32fe282c996ca545bc.xlsx
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Alert Level ┃ Number of Alerts ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│    HIGH     │        3         │
+│   MEDIUM    │        0         │
+│     LOW     │        3         │
+│    INFO     │        0         │
+└─────────────┴──────────────────┘
+ 
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/9cc3a43497044ad88e424b82ffb0801a4c9e3033c34ddd32fe282c996ca545bc.xlsx
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[!] There is no possible domain strings found.

@@ -15,14 +15,25 @@ from pathlib import Path
 class QuickScopeRunner:
     """Qu1cksc0pe malware analiz aracını çalıştıran sınıf"""
     
-    def __init__(self, quickscope_path):
+    def __init__(self, quickscope_path=None):
         """
         Args:
             quickscope_path (str): Qu1cksc0pe aracının kurulu olduğu dizin yolu
+                                 None ise proje içindeki Qu1cksc0pe kullanılır
         """
-        self.quickscope_path = Path(quickscope_path)
+        if quickscope_path is None:
+            # Proje içindeki Qu1cksc0pe dizinini kullan
+            current_dir = Path(__file__).parent.parent
+            self.quickscope_path = current_dir / "Qu1cksc0pe"
+        else:
+            self.quickscope_path = Path(quickscope_path)
+            
         self.venv_path = self.quickscope_path / "sc0pe_venv"
         self.script_path = self.quickscope_path / "qu1cksc0pe.py"
+        
+        print(f"🔍 Qu1cksc0pe path: {self.quickscope_path}")
+        print(f"🐍 Virtual env path: {self.venv_path}")
+        print(f"📜 Script path: {self.script_path}")
         
         # Qu1cksc0pe kurulumu kontrol et
         self._verify_installation()
@@ -43,14 +54,14 @@ class QuickScopeRunner:
         activate_script = self.venv_path / "bin" / "activate"
         return f"source {activate_script}"
     
-    def run_analysis(self, file_path, progress_callback=None, enable_virustotal=False):
+    def run_analysis(self, file_path, progress_callback=None, enable_virustotal=True):
         """
         Qu1cksc0pe ile malware analizi çalıştırır
         
         Args:
             file_path (str): Analiz edilecek dosya yolu
             progress_callback (callable): İlerleme durumunu bildiren callback fonksiyonu
-            enable_virustotal (bool): VirusTotal analizi aktif edilsin mi
+            enable_virustotal (bool): VirusTotal analizi aktif edilsin mi (default: True)
             
         Returns:
             dict: Analiz sonuçları
@@ -75,8 +86,48 @@ class QuickScopeRunner:
                     'error': f'Dosya bulunamadı: {abs_file_path}'
                 }
             
-            # Komut oluştur - tam parametre seti
-            base_params = f"--file '{abs_file_path}' --analyze --domain --packer --resource --sigcheck --mitre --lang"
+            # Dosya uzantısını kontrol et
+            file_ext = abs_file_path.lower().split('.')[-1]
+            
+            # Dosya türlerini kategorize et
+            is_apk = file_ext == 'apk'
+            
+            # Döküman dosyası formatları
+            document_extensions = ['doc', 'docm', 'docx', 'xls', 'xlsm', 'xlsx', 'pdf', 'one', 'htm', 'html', 'rtf']
+            is_document = file_ext in document_extensions
+            
+            # macOS executable formatları
+            macos_extensions = ['macho']
+            is_macos = file_ext in macos_extensions
+            
+            # Arşiv dosyası formatları
+            archive_extensions = ['zip', 'rar', 'ace']
+            is_archive = file_ext in archive_extensions
+            
+            # PCAP dosyaları
+            is_pcap = file_ext == 'pcap'
+            
+            # PowerShell script dosyaları
+            powershell_extensions = ['ps1', 'psm1', 'psd1']
+            is_powershell = file_ext in powershell_extensions
+            
+            # E-mail dosyaları
+            email_extensions = ['eml']
+            is_email = file_ext in email_extensions
+            
+            # Komut oluştur - dosya türüne göre parametre seti
+            if is_archive:
+                # Arşiv dosyaları için --archive parametresi
+                base_params = f"--file '{abs_file_path}' --archive --domain --packer --resource --sigcheck --mitre --lang"
+            elif is_document:
+                # Döküman dosyaları için --docs parametresi
+                base_params = f"--file '{abs_file_path}' --docs --domain --mitre --lang"
+            elif is_macos:
+                # macOS executable dosyaları için --analyze parametresi
+                base_params = f"--file '{abs_file_path}' --analyze --domain --packer --resource --sigcheck --mitre --lang"
+            else:
+                # Diğer dosyalar için --analyze parametresi
+                base_params = f"--file '{abs_file_path}' --analyze --domain --packer --resource --sigcheck --mitre --lang"
             
             # VirusTotal analizi ekle
             if enable_virustotal:
@@ -90,21 +141,92 @@ class QuickScopeRunner:
             ]
             
             print(f"🔧 Çalıştırılacak komut: {' '.join(cmd)}")
+            print(f"📱 APK dosyası mı? {is_apk}")
+            print(f"📄 Döküman dosyası mı? {is_document}")
+            print(f"📦 Arşiv dosyası mı? {is_archive}")
+            print(f"📊 PCAP dosyası mı? {is_pcap}")
+            print(f"💻 PowerShell script mı? {is_powershell}")
+            print(f"📧 E-mail dosyası mı? {is_email}")
+            print(f"🍎 macOS executable mı? {is_macos}")
             
             if progress_callback:
-                progress_callback("Qu1cksc0pe analizi çalışıyor...", 25)
+                if is_apk:
+                    progress_callback("APK dosyası analiz ediliyor (bu işlem daha uzun sürebilir)...", 25)
+                elif is_document:
+                    progress_callback("Döküman dosyası analiz ediliyor...", 25)
+                elif is_archive:
+                    progress_callback("Arşiv dosyası analiz ediliyor...", 25)
+                elif is_pcap:
+                    progress_callback("PCAP dosyası analiz ediliyor...", 25)
+                elif is_powershell:
+                    progress_callback("PowerShell script analiz ediliyor...", 25)
+                elif is_email:
+                    progress_callback("E-mail dosyası analiz ediliyor...", 25)
+                elif is_macos:
+                    progress_callback("macOS executable analiz ediliyor...", 25)
+                else:
+                    progress_callback("Qu1cksc0pe analizi çalışıyor...", 25)
             
-            # Qu1cksc0pe'u çalıştır
-            result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                timeout=600,  # 10 dakika timeout
-                cwd=str(self.quickscope_path)
-            )
+            # Özel dosya türleri için otomatik "y" girişi ile Qu1cksc0pe'u çalıştır
+            if is_apk or is_document or is_archive or is_pcap or is_powershell or is_email or is_macos:
+                if is_apk:
+                    print("📱 APK dosyası tespit edildi, otomatik 'y' girişi ile çalıştırılıyor...")
+                    timeout_duration = 900  # APK analizi daha uzun sürebilir - 15 dakika
+                elif is_document:
+                    print("📄 Döküman dosyası tespit edildi, otomatik 'y' girişi ile çalıştırılıyor...")
+                    timeout_duration = 600  # Döküman analizi - 10 dakika
+                elif is_archive:
+                    print("📦 Arşiv dosyası tespit edildi, otomatik 'y' girişi ile çalıştırılıyor...")
+                    timeout_duration = 900  # Arşiv analizi daha uzun sürebilir - 15 dakika
+                elif is_pcap:
+                    print("📊 PCAP dosyası tespit edildi, otomatik 'y' girişi ile çalıştırılıyor...")
+                    timeout_duration = 600  # PCAP analizi - 10 dakika
+                elif is_powershell:
+                    print("💻 PowerShell script tespit edildi, otomatik 'y' girişi ile çalıştırılıyor...")
+                    timeout_duration = 600  # PowerShell analizi - 10 dakika
+                elif is_email:
+                    print("📧 E-mail dosyası tespit edildi, otomatik 'y' girişi ile çalıştırılıyor...")
+                    timeout_duration = 600  # E-mail analizi - 10 dakika
+                elif is_macos:
+                    print("🍎 macOS executable tespit edildi, otomatik 'y' girişi ile çalıştırılıyor...")
+                    timeout_duration = 600  # macOS analizi - 10 dakika
+                
+                # Analizi sırasında çıkabilecek promptları otomatik kabul et
+                result = subprocess.run(
+                    cmd,
+                    input="y\ny\ny\n",  # Birden fazla prompt için otomatik "y" cevapları
+                    capture_output=True,
+                    text=True,
+                    timeout=timeout_duration,
+                    cwd=str(self.quickscope_path)
+                )
+            else:
+                # Normal dosyalar için standart çalıştırma
+                result = subprocess.run(
+                    cmd,
+                    capture_output=True,
+                    text=True,
+                    timeout=600,  # 10 dakika timeout
+                    cwd=str(self.quickscope_path)
+                )
             
             if progress_callback:
-                progress_callback("Qu1cksc0pe çıktısı işleniyor...", 60)
+                if is_apk:
+                    progress_callback("APK analizi tamamlandı, sonuçlar işleniyor...", 60)
+                elif is_document:
+                    progress_callback("Döküman analizi tamamlandı, sonuçlar işleniyor...", 60)
+                elif is_archive:
+                    progress_callback("Arşiv analizi tamamlandı, sonuçlar işleniyor...", 60)
+                elif is_pcap:
+                    progress_callback("PCAP analizi tamamlandı, sonuçlar işleniyor...", 60)
+                elif is_powershell:
+                    progress_callback("PowerShell analizi tamamlandı, sonuçlar işleniyor...", 60)
+                elif is_email:
+                    progress_callback("E-mail analizi tamamlandı, sonuçlar işleniyor...", 60)
+                elif is_macos:
+                    progress_callback("macOS analizi tamamlandı, sonuçlar işleniyor...", 60)
+                else:
+                    progress_callback("Qu1cksc0pe çıktısı işleniyor...", 60)
             
             # Sonuçları parse et
             # Qu1cksc0pe bazen çıktı olsa bile 0 dışında exit code döndürebilir

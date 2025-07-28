@@ -1,0 +1,219 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/61b3308f527b626fb0b33f8e2d9f02847515a54473d9e77f30bbb94f307c85db.elf --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile                                                                      
+
+                   <------------------------------------------>
+                   <  This tool is very dangerous. Be careful >
+           __      <   while using it!!                       >
+         _|  |_    <------------------------------------------>
+       _|      |_   /
+      |  _    _  | /
+      | |_|  |_| |
+   _  |  _    _  |  _
+  |_|_|_| |__| |_|_|_|
+    |_|_        _|_|   <- Mr. Virus
+      |_|      |_| 
+
+
+[*] Analyzing: /home/kali/Downloads/61b3308f527b626fb0b33f8e2d9f02847515a54473d9e77f30bbb94f307c85db.elf
+[*] Target OS: Linux
+
+[*] General Informations about /home/kali/Downloads/61b3308f527b626fb0b33f8e2d9f02847515a54473d9e77f30bbb94f307c85db.elf
+>>>> Machine Type: SH
+>>>> Binary Entrypoint: 0x4001a0
+>>>> Number of Sections: 11
+>>>> Number of Segments: 3
+>>>> MD5: 8e75a7b928f1f73a32bd6ca83086187e
+>>>> SHA1: 974daf81977a4c168d88276d4f0487a415a2e398
+>>>> SHA256: 61b3308f527b626fb0b33f8e2d9f02847515a54473d9e77f30bbb94f307c85db
+  * Security *   
+┏━━━━━━━┳━━━━━━━┓
+┃  NX   ┃  PIE  ┃
+┡━━━━━━━╇━━━━━━━┩
+│ False │ False │
+└───────┴───────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Functions or Strings about Networking ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                socket                 │
+│                 send                  │
+│                connect                │
+│             /proc/net/tcp             │
+└───────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Functions or Strings about File ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              open               │
+│              read               │
+│              link               │
+│              stat               │
+│              mount              │
+│             access              │
+│             remove              │
+│              ioctl              │
+└─────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Functions or Strings about Process ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                pipe                │
+│               abort                │
+│              /bin/sh               │
+└────────────────────────────────────┘
+                    * WARNING *                     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Functions or Strings about Information Gathering ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                       time                       │
+└──────────────────────────────────────────────────┘
+                   * WARNING *                   
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Functions or Strings about System/Persistence ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                    reboot                     │
+│                   shutdown                    │
+│                    /bin/sh                    │
+└───────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Functions or Strings about Other/Unknown ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                   main                   │
+│                    ll                    │
+│                   octl                   │
+│                    nd                    │
+│                   rand                   │
+└──────────────────────────────────────────┘
+
+[*] Performing YARA rule matching...
+>>> Rule name: Linux_ARM_Mirai_Variant_2022_03_16
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x10224 │    /proc/net/tcp    │
+└─────────┴─────────────────────┘
+ 
+                        * Informations About Sections *                         
+┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Section Names ┃ Size(bytes) ┃ Offset  ┃ Virtual Address ┃      Entropy       ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│     .init     │     48      │  0x94   │    0x400094     │ 4.365601562950723  │
+│     .text     │    65536    │  0xe0   │    0x4000e0     │ 6.930972210722047  │
+│     .fini     │     36      │ 0x100e0 │    0x4100e0     │  4.5588138903312   │
+│    .rodata    │    8544     │ 0x10104 │    0x410104     │ 5.822699457017193  │
+│    .ctors     │      8      │ 0x12268 │    0x422268     │        1.0         │
+│    .dtors     │      8      │ 0x12270 │    0x422270     │        1.0         │
+│     .data     │    1116     │ 0x1227c │    0x42227c     │ 3.0526011654816188 │
+│     .got      │     16      │ 0x126d8 │    0x4226d8     │ 0.9933927290103626 │
+│     .bss      │    8964     │ 0x126e8 │    0x4226e8     │        0.0         │
+│   .shstrtab   │     67      │ 0x126e8 │       0x0       │ 3.6128561653281492 │
+└───────────────┴─────────────┴─────────┴─────────────────┴────────────────────┘
+               * Informations About Segments *               
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Segments  ┃              Contained Sections               ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   LOAD    │    ['.init', '.text', '.fini', '.rodata']     │
+│   LOAD    │ ['.ctors', '.dtors', '.data', '.got', '.bss'] │
+│ GNU_STACK │                      []                       │
+└───────────┴───────────────────────────────────────────────┘
+
+[*] Performing debug section hunt...
+There is no debug sections in this binary!!
+
+-> Statistics for: /home/kali/Downloads/61b3308f527b626fb0b33f8e2d9f02847515a54473d9e77f30bbb94f307c85db.elf
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Categories       ┃ Number of Functions or Strings ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     All Functions     │               0                │
+│ Categorized Functions │               24               │
+│      Networking       │               4                │
+│         File          │               8                │
+│        Process        │               3                │
+│ Information Gathering │               1                │
+│  System/Persistence   │               3                │
+│     Other/Unknown     │               5                │
+└───────────────────────┴────────────────────────────────┘
+
+[*] Performing magic number analysis...
+[!] There is no valid pattern found!
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[*] Performing language detection. Please wait!!
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Programming Language ┃ Probability ┃ Pattern Occurences ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│          C           │    100.0    │         1          │
+└──────────────────────┴─────────────┴────────────────────┘
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.mirai/bonb
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │  23   │
+│       worm        │   2   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│    mirai     │  24   │
+│     bonb     │   2   │
+└──────────────┴───────┘
+
+[*] Detection: 32/76
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃   Detected By    ┃                Results                ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      ALYac       │        Trojan.Generic.38159655        │
+│       AVG        │          ELF:Mirai-ATL [Trj]          │
+│    Antiy-AVL     │    Trojan[Backdoor]/Linux.Mirai.b     │
+│     Arcabit      │        Trojan.Generic.D2464527        │
+│      Avast       │          ELF:Mirai-ATL [Trj]          │
+│   Avast-Mobile   │          ELF:Mirai-FY [Trj]           │
+│      Avira       │           LINUX/Mirai.bonb            │
+│   BitDefender    │        Trojan.Generic.38159655        │
+│  CAT-QuickHeal   │         Elf.Trojan.A15302077          │
+│      ClamAV      │      Unix.Trojan.Mirai-7100807-0      │
+│      Cynet       │         Malicious (score: 99)         │
+│      DrWeb       │           Linux.Siggen.9999           │
+│    ESET-NOD32    │      a variant of Linux/Mirai.F       │
+│     Emsisoft     │      Trojan.Generic.38159655 (B)      │
+│     F-Secure     │       Malware.LINUX/Mirai.bonb        │
+│     Fortinet     │            ELF/Mirai.A!tr             │
+│      GData       │        Trojan.Generic.38159655        │
+│    Gridinsoft    │        Susp.U.XOREncoded.sd!yf        │
+│      Ikarus      │          Trojan.Linux.Mirai           │
+│       K7GW       │         Trojan ( 0040f02b1 )          │
+│    Kaspersky     │      HEUR:Backdoor.Linux.Mirai.b      │
+│     Kingsoft     │        Linux.Backdoor.Mirai.b         │
+│ MicroWorld-eScan │        Trojan.Generic.38159655        │
+│    Microsoft     │      Backdoor:Linux/Gafgyt.P!MTB      │
+│  NANO-Antivirus  │       Trojan.Elf32.Mirai.kyoelq       │
+│      Rising      │ Backdoor.Mirai/Linux!1.DAAB (CLASSIC) │
+│     Sangfor      │        Suspicious.Linux.Save.a        │
+│      Sophos      │             Mal/Generic-S             │
+│     Symantec     │              Linux.Mirai              │
+│     Tencent      │       Backdoor.Linux.Mirai.wbc        │
+│    TrendMicro    │        Possible_MIRAI.SMLBO20         │
+│      VIPRE       │        Trojan.Generic.38159655        │
+└──────────────────┴───────────────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/61b3308f527b626fb0b33f8e2d9f02847515a54473d9e77f30bbb94f307c85db.elf
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[URL]> http://%s/%s/%s
+[URL]> http://%s/%s/%s
+

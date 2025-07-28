@@ -1,0 +1,1408 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/a769c40ce48a38eed8897447081fc002d567535943befc4b51d866d134953588.apk --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                               
+
+       _______________
+      |@@@@|     |####|
+      |@@@@|     |####|
+      |@@@@|     |####|
+      \@@@@|     |####/
+       \@@@|     |###/
+        `@@|_____|##'
+             (O)
+        .-''''''''''-.             Congratulations!
+      .'  * * * * * * `.
+     :  *             * :                  You just analyzed your 1000th sample :)
+    : ~ Malware Hunter ~ :
+    :         of         :
+    :    ~ The Year ~    :             You won 100BTC!!!
+     :  *             * :
+      `.  * * * * * * .'
+        `-..........-'
+
+[*] Analyzing: /home/kali/Downloads/a769c40ce48a38eed8897447081fc002d567535943befc4b51d866d134953588.apk
+[*] Target OS: Android
+
+[*] General Informations about /home/kali/Downloads/a769c40ce48a38eed8897447081fc002d567535943befc4b51d866d134953588.apk
+>>>> App Name: Scudo App
+>>>> Package Name: p1a1fa04c.pae25061e.p658c02c8
+
+[*] Sending query to Google Play Store about target application.
+>>>> Google Play Store: Not Found
+
+>>>> SDK Version: 33
+>>>> Main Activity: p1a1fa04c.pae25061e.p658c02c8.p055ff792
+>>>> Signatures:
+>> META-INF/CERTIFIC.RSA
+ 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃                       Permissions                       ┃ State ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│               android.permission.SEND_SMS               │ Risky │
+│         android.permission.ACCESS_NETWORK_STATE         │ Info  │
+│ android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS │ Info  │
+│             android.permission.RECEIVE_MMS              │ Risky │
+│           android.permission.BROADCAST_STICKY           │ Info  │
+│               android.permission.VIBRATE                │ Info  │
+│          android.permission.FOREGROUND_SERVICE          │ Info  │
+│              android.permission.WAKE_LOCK               │ Info  │
+│         android.provider.Telephony.SMS_RECEIVED         │ Info  │
+│            android.permission.WRITE_SETTINGS            │ Info  │
+│           android.permission.DISABLE_KEYGUARD           │ Info  │
+│           android.permission.MEDIA_PROJECTION           │ Info  │
+│       android.permission.REQUEST_INSTALL_PACKAGES       │ Info  │
+│       android.permission.REQUEST_DELETE_PACKAGES        │ Info  │
+│          android.permission.POST_NOTIFICATIONS          │ Info  │
+│          android.permission.QUERY_ALL_PACKAGES          │ Info  │
+│             android.permission.RECEIVE_SMS              │ Risky │
+│               android.permission.READ_SMS               │ Risky │
+│               android.permission.INTERNET               │ Info  │
+│           android.permission.READ_PHONE_STATE           │ Risky │
+└─────────────────────────────────────────────────────────┴───────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Features          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ android.hardware.telephony │
+└────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃               Activities                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ p1a1fa04c.pae25061e.p658c02c8.p055ff792 │
+│ p1a1fa04c.pae25061e.p658c02c8.p9d04afb5 │
+│ p1a1fa04c.pae25061e.p658c02c8.p87c443d6 │
+│ p1a1fa04c.pae25061e.p658c02c8.p7d6d99f8 │
+│ p1a1fa04c.pae25061e.p658c02c8.p551b4901 │
+│ p1a1fa04c.pae25061e.p658c02c8.pb7c3773b │
+│ p1a1fa04c.pae25061e.p658c02c8.p518a21b6 │
+└─────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                Services                 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ p1a1fa04c.pae25061e.p658c02c8.p8b987b32 │
+│ p1a1fa04c.pae25061e.p658c02c8.pf5d1b764 │
+│ p1a1fa04c.pae25061e.p658c02c8.pa6f292f0 │
+│ p1a1fa04c.pae25061e.p658c02c8.pa3827881 │
+│ p1a1fa04c.pae25061e.p658c02c8.pc26c0b40 │
+└─────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                Receivers                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ p1a1fa04c.pae25061e.p658c02c8.p6fc15597 │
+│ p1a1fa04c.pae25061e.p658c02c8.pc3b7d718 │
+│ p1a1fa04c.pae25061e.p658c02c8.pfc3587e5 │
+└─────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                Providers                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ p41cabb1d.p880fed34.pe37d5e26.p33fd95c8 │
+│      p41cabb1d.p69492035.p2f165d56      │
+└─────────────────────────────────────────┘
+
+[*] Performing YARA rule matching...
+There is no rules matched for /home/kali/Downloads/a769c40ce48a38eed8897447081fc002d567535943befc4b51d866d134953588.apk
+
+[*] Performing library analysis...
+Decompiler(JADX) not found. Skipping...
+
+[*] Performing malware family detection. Please wait!!
+
+[*] Performing source code analysis...
+Couldn't locate source codes. Did target file decompiled correctly?
+>>> Hint: Don't forget to specify decompiler path in Systems/Android/libScanner.conf
+
+[*] Looking for possible IP address patterns. Please wait...
+[!] There is no possible IP address pattern found!
+
+[*] Looking for URL values. Please wait...
+[!] There is no URL pattern found!
+
+[*] Do you want to check target app's security? This process will take a while.[Y/n]: y
+[!] An error occured while parsing AndroidManifest.xml. Did your APK file decompiled correctly?
+[*] Analyzing: /home/kali/Downloads/a769c40ce48a38eed8897447081fc002d567535943befc4b51d866d134953588.apk
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓
+┃           File Type            ┃       Pattern        ┃  Offset   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━┩
+│       PKZIP Archive File       │    b'PK\x03\x04'     │    0x0    │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │   0xd8c   │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8afb4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8b23d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8b88a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8b981  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8bbff  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8cd8f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8d19d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8d6bb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8d75a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8d7fd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8d87b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8d8fa  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8dac7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8dc12  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8dd5e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8df2e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8dfb4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8e037  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8e0be  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8e142  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8e1c6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8e249  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8e534  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8e883  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8ea71  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8ed70  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8f0b6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8f2a5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8f4b5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8f6c7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8f8a5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8faaa  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8fcb7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8fe9a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8ff29  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa8ffb9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9003e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa900c4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa901f3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa90371  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa904ef  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa90620  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa90837  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa909d9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa90b78  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa90d55  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa90f30  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9108b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa911e6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa913bb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91592  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa916d2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9180f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91949  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91a8d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91b27  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91bb4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91c4b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91cd9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91d67  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa91dfe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa920b7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9215a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa92395  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa92570  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa92619  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa926c0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa92759  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa927f2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa92ac0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa92c65  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa92e0e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9307a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa932de  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93430  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93583  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9361f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa936b0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93809  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9396b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93ace  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93c18  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93d63  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93ea1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa93fe0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9412c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9426a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa943aa  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9450f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa946cf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa94837  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa94978  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa94adf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa94c4b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa94ce1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa94e50  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa94f7c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95095  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95120  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa951b2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95241  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa952d8  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9536f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95403  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9548d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95520  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa955b2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95643  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa956cf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95757  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa957df  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9586c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa958f8  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95980  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95a08  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95a8e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95b24  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95bbc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95c48  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95cd3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95d68  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95df9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95e8c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95f21  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa95fa8  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9602e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa960d1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96175  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96210  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa962a7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96337  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa963ca  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9645b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa964e9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96579  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96607  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9669b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96739  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa967c9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96851  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa968e3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9696c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa969f4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96a7c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96b02  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96b8a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96c22  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96cb7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96d48  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96dd4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96e61  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96efd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa96f99  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97031  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa970ca  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9715f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa971f2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97284  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9731e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa973b4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9744a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa974de  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97582  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97624  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa976bd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97746  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa977d0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97863  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97900  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9799a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97a2a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97ac4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97b5b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97c7c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97dac  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97ed9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa97f67  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa980ca  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9821f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9836f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa984d7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa98637  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa98787  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa988e1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa98a0f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa98b38  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa98c7d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa98dab  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa98ef9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9908d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa991e5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9933f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa994dd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9962e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa997c7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa998ef  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa99a7b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa99c05  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa99d96  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa99f48  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9a04f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9a19f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9a33b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9a4db  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9a668  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9a792  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9a8e0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9aa36  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9abcb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9ad57  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9aec8  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b05b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b1ad  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b246  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b2e2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b437  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b63a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b7b3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9b928  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9ba9e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9bbfb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9bd83  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9bef6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c08c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c1af  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c241  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c38d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c426  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c568  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c761  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c904  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9c99d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9cad7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9cc11  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9cc9b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9cd2e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9ce63  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9cf92  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d0ac  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d14e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d1f2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d28a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d321  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d3c2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d45f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d4fe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d591  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d623  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d6bf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9d918  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9daa6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9dc22  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9de69  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9dff9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9e177  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9e32b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9e428  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9e580  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9e6bb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9e86c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9eae7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9ecc9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9ee03  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9efb3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9f0c7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9f1d4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9f2e0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9f480  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9f6a1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9f874  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9fac0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9fc7c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xa9fe2c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa001b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa029d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa0331  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa0541  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa0778  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa09d5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa0bef  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa0e14  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa0fb0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa114d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa129a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa13ce  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa1503  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa16b0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa185e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa1900  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa1998  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa1a36  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa1bf1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa1d42  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa1f48  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa2143  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa22ff  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa24a1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa25de  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa2720  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa28a0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa29e7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa2b83  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa2cfe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa2e79  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa321a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa33b9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa3754  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa38f1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa3c00  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa3d8e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4083  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4210  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa431a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4485  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa474e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa48f7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4a31  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4b59  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4be0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4c6a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4cf7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa4d84  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5096  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa511d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa51ad  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5234  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa53f8  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5593  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa57ac  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5998  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5a23  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5ab9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5b45  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5bd7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5c60  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5ced  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5d82  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5e17  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa5f7e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa615b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa632d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa6508  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa66e7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa68bd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa6a71  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa6b0c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa6ca6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa6dde  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa6f61  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa70e1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa72aa  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7456  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa74f0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa768d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7886  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa79e6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7b2e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7bc3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7c49  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7cd3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7d66  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7df1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7e7e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa7f08  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa803a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa816c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa82d0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa8403  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa85e8  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa8808  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa8a8b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa8f28  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa945b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa9596  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa969b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa9793  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa98e2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa9a08  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa9b28  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa9c4c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa9d8c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaa9ecd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaa206  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaa6a6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaa7c9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaa8ec  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaaa58  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaab7d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaac94  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaae3d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab074  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab186  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab29a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab3b0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab4c2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab5d2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab73e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaab920  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaba7e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaac62e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaadbbc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaadc04  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaade1f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaadec7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaadf65  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae001  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae099  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae139  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae1d3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae381  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae516  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae70d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaae971  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaeb81  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaecdf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaee06  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaef99  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaf130  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaf2e4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaf62e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaf9bd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaafaec  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaafbf1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaafceb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaafe1c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaaff3f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab005f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab017f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab02b5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab03e9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab065d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab09bc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab0ab3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab0ba1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab0cc5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab0de7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab0efe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab1097  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab1273  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab1382  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab1491  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab159a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab16ae  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab17be  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab18df  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab1a6e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab1b7e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab22ae  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab2d16  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab2d5c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab2ed4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab2f70  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab300d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab30a9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab3141  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab31e1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab327b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab3395  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab3500  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab366d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab3870  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab3b4f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab3eb1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab44fe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab4c17  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab4d55  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab4e94  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab4f8f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab50e1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab520a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab532d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab5451  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab5598  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab56df  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab5afe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab615c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab62bf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab6427  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab660b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab6734  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab684e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab6a60  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab6d1e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab6e36  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab6f4d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab705f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab7178  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab728e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab7433  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab76d5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab786a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xab8a6e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabadc8  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabae10  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb0c1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb16f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb20d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb2ad  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb345  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb3e5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb47f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb5f2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabb777  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabba1d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabbe48  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabc354  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabcd4b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabd8b6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabd9fd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabdb38  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabdc37  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabdd85  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabdeb5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabdfdc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabe104  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabe264  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabe3c6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabeb15  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabf46d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabf60a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabf7fb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabfaaf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabfbda  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabfcff  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xabff5c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0303  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0424  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0547  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0668  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0787  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac08a2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0a9c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0de5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac0fe2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac2f46  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac81a6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac81f0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac8603  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac86cc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac8833  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac8a64  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac8dc9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac91ce  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xac9bf1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaca74c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaca94b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xacac23  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xacae26  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xacb1a9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xacb2ca  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xacb525  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xacb781  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xace45c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad5ea2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad5eec  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad644c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6535  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6663  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6795  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad68c5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad69f9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6b26  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6c52  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6d7b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6ea7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad6fd5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad706e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad719b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad7373  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad7403  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad75f6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad777c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad78d9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad7ae7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad7b75  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad7c0d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad7edd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad827d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad856d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad88a3  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad8b0f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad8c57  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad8dc9  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad8f97  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad9253  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad93c6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad95d1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad9965  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad9aec  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad9cc2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xad9e9b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xada172  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xada46e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xada915  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadab90  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadac10  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadad63  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadae91  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadaf13  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadafa5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb034  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb0bf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb152  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb1dd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb268  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb37b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb406  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb498  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb52d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb5c2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb64d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadb857  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadba26  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadbbf7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadbc7b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadbd07  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadbd91  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadbe22  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadbeb0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadc019  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadc252  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadc483  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadc5fe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadc8f5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadcaac  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadcb3e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadcd87  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadce16  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadceb0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadcff7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadd262  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadd5c2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadd8b0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaddab0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaddc49  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadde81  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xade0ba  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xade258  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xade375  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xade4cd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xade5f1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xade80b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadea09  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadeb57  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaded1b  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf022  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf1c5  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf2e4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf36d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf3fe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf48c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf686  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadf8c6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadfac4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xadfd79  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae01dc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae03ac  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0548  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae06d6  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0766  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae07fc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0884  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0916  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae09ab  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0a40  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0adb  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0b6f  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0caa  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae0e62  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae107c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1297  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1403  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1488  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1519  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae15a2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae162e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae16bd  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1751  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae17db  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae185c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae18ef  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae197a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1a03  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1a95  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1b34  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1bcf  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1c69  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1cfe  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae1f84  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae22b7  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae2571  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae2609  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae269c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae272d  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae2973  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae2c05  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae2d31  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae2e63  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae39cc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae4cd4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae5eb0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae6614  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae727a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae7d7e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xae8cf4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaea8b0  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaec0b2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaed96c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaf06b4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaf2ec2  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaf5124  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xaf98aa  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafce4e  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd03c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd145  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd25a  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd2dc  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd371  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd408  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd49c  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xafd525  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xbc3c68  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xbcd2b4  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x106745d │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x1067b23 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x10b0d20 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x1143705 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x1143b35 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x1143c01 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x16165f1 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x161c528 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x161c90d │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x161cde2 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x161d3e1 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x16211d6 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x162151e │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x1628e98 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x1629326 │
+│       PKZIP Archive File       │    b'PK\x05\x06'     │ 0x1640706 │
+│     Dalvik Executable File     │       b'dex\n'       │   0xdb8   │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa81c0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa8320  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa8454  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa8638  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa8858  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa8ae0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa8f80  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa94b4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa95f0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa96ec  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa97e0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa9934  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa9a58  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa9b7c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa9ca8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa9de8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaa9f24  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaa25c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaa700  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaa828  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaa948  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaaab0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaabd0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaace4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaae90  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab0c8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab1e0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab2f0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab410  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab520  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab628  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab794  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaab978  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaadc44  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaade60  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaadf18  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaadfb4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae04c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae0ec  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae190  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae228  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae3d8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae56c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae764  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaae9cc  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaebd4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaed30  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaee58  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaefec  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaf180  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaf33c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaf684  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaafa14  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaafb44  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaafc44  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaafd38  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaafe6c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaaff90  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab00b0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab01dc  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0310  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0440  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab06b4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0a14  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0b10  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0c00  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0d1c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0e3c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab0f50  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab10e8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab12c8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab13dc  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab14e8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab15fc  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab170c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab1814  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab1938  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab1ac4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab2d9c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab2f14  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab2fc0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab305c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab30f4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab3194  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab3238  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab33e8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab3554  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab36c0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab38c4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab3ba0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab3f08  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab4554  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab4c70  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab4db0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab4ee8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab4fdc  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab5134  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab525c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab5380  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab54ac  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab55f4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab5738  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab5b54  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab61b4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab631c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab6484  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab6664  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab6788  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab68a0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab6ab4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab6d74  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab6e90  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab6fa4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab70c0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab71d8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab72e4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab748c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xab772c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabae54  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb100  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb1c0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb260  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb2f8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb398  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb43c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb4d4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb644  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabb7cc  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabba70  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabbe9c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabc3ac  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabcda4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabd910  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabda58  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabdb8c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabdc84  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabddd8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabdf08  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabe030  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabe160  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabe2c4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabe420  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabeb6c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabf4c8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabf668  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabf85c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabfb08  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabfc30  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabfd50  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xabffb0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac0358  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac0480  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac05a0  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac06cc  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac07e8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac08f8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac0af4  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac0e3c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac8234  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac8644  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac8720  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac8888  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac8ab8  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac8e1c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac9228  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xac9c4c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaca7ac  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xaca9ac  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xacac78  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xacae7c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xacb200  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xacb324  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xacb580  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xad5f30  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xad6490  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0xbc3c9c  │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0x10b0d58 │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0x1616624 │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0x161d410 │
+└────────────────────────────────┴──────────────────────┴───────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+>>> Possible corrupted MZ header at: 0x163000. Attempting to fix that!
+
+[*] Modified data saved into: fixed_corrupted_headers.exe
+[*] Target OS: Android
+
+[*] Parsing file contents...
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                      File Type                                                                      ┃                                 File Name                                 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                                                                 Android binary XML                                                                  │                            AndroidManifest.xml                            │
+│                                                                 Android binary XML                                                                  │                       res/anim/abc_popup_enter.xml                        │
+│                                                                 Android binary XML                                                                  │                        res/anim/abc_popup_exit.xml                        │
+│                                                                 Android binary XML                                                                  │         res/anim/btn_checkbox_to_checked_icon_null_animation.xml          │
+│                                                                 Android binary XML                                                                  │        res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml         │
+│                                                                 Android binary XML                                                                  │          res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml           │
+│                                                                 Android binary XML                                                                  │          res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml          │
+│                                                                 Android binary XML                                                                  │       res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml        │
+│                                                                 Android binary XML                                                                  │           res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml           │
+│                                                                 Android binary XML                                                                  │          res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml           │
+│                                                                 Android binary XML                                                                  │        res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml        │
+│                                                                 Android binary XML                                                                  │               res/anim/fragment_fast_out_extra_slow_in.xml                │
+│                                                                 Android binary XML                                                                  │                  res/anim/mtrl_bottom_sheet_slide_in.xml                  │
+│                                                                 Android binary XML                                                                  │                 res/anim/mtrl_bottom_sheet_slide_out.xml                  │
+│                                                                 Android binary XML                                                                  │                res/anim/mtrl_card_lowers_interpolator.xml                 │
+│                                                                 Android binary XML                                                                  │               res/animator/design_fab_hide_motion_spec.xml                │
+│                                                                 Android binary XML                                                                  │               res/animator/design_fab_show_motion_spec.xml                │
+│                                                                 Android binary XML                                                                  │                   res/animator/fragment_close_enter.xml                   │
+│                                                                 Android binary XML                                                                  │                   res/animator/fragment_close_exit.xml                    │
+│                                                                 Android binary XML                                                                  │                   res/animator/fragment_fade_enter.xml                    │
+│                                                                 Android binary XML                                                                  │                    res/animator/fragment_fade_exit.xml                    │
+│                                                                 Android binary XML                                                                  │                   res/animator/fragment_open_enter.xml                    │
+│                                                                 Android binary XML                                                                  │                    res/animator/fragment_open_exit.xml                    │
+│                                                                 Android binary XML                                                                  │       res/animator/linear_indeterminate_line1_head_interpolator.xml       │
+│                                                                 Android binary XML                                                                  │       res/animator/linear_indeterminate_line1_tail_interpolator.xml       │
+│                                                                 Android binary XML                                                                  │       res/animator/linear_indeterminate_line2_head_interpolator.xml       │
+│                                                                 Android binary XML                                                                  │       res/animator/linear_indeterminate_line2_tail_interpolator.xml       │
+│                                                                 Android binary XML                                                                  │                 res/animator/mtrl_btn_state_list_anim.xml                 │
+│                                                                 Android binary XML                                                                  │                res/animator/mtrl_card_state_list_anim.xml                 │
+│                                                                 Android binary XML                                                                  │                res/animator/mtrl_chip_state_list_anim.xml                 │
+│                                                                 Android binary XML                                                                  │          res/animator/mtrl_extended_fab_state_list_animator.xml           │
+│                                                                 Android binary XML                                                                  │                res/animator/mtrl_fab_hide_motion_spec.xml                 │
+│                                                                 Android binary XML                                                                  │                res/animator/mtrl_fab_show_motion_spec.xml                 │
+│                                                                 Android binary XML                                                                  │       res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml        │
+│                                                                 Android binary XML                                                                  │        res/animator/mtrl_fab_transformation_sheet_expand_spec.xml         │
+│                                                                 Android binary XML                                                                  │      res/color/abc_background_cache_hint_selector_material_dark.xml       │
+│                                                                 Android binary XML                                                                  │      res/color/abc_background_cache_hint_selector_material_light.xml      │
+│                                                                 Android binary XML                                                                  │         res/color/abc_primary_text_disable_only_material_dark.xml         │
+│                                                                 Android binary XML                                                                  │        res/color/abc_primary_text_disable_only_material_light.xml         │
+│                                                                 Android binary XML                                                                  │               res/color/abc_primary_text_material_dark.xml                │
+│                                                                 Android binary XML                                                                  │               res/color/abc_primary_text_material_light.xml               │
+│                                                                 Android binary XML                                                                  │                     res/color/abc_search_url_text.xml                     │
+│                                                                 Android binary XML                                                                  │              res/color/abc_secondary_text_material_dark.xml               │
+│                                                                 Android binary XML                                                                  │              res/color/abc_secondary_text_material_light.xml              │
+│                                                                 Android binary XML                                                                  │                      res/color/abc_tint_default.xml                       │
+│                                                                 Android binary XML                                                                  │                      res/color/abc_tint_edittext.xml                      │
+│                                                                 Android binary XML                                                                  │                     res/color/abc_tint_seek_thumb.xml                     │
+│                                                                 Android binary XML                                                                  │                      res/color/abc_tint_spinner.xml                       │
+│                                                                 Android binary XML                                                                  │                        res/color/design_error.xml                         │
+│                                                                 Android binary XML                                                                  │                      res/color/design_icon_tint.xml                       │
+│                                                                 Android binary XML                                                                  │                res/color/material_on_surface_disabled.xml                 │
+│                                                                 Android binary XML                                                                  │           res/color/material_on_surface_emphasis_high_type.xml            │
+│                                                                 Android binary XML                                                                  │             res/color/material_on_surface_emphasis_medium.xml             │
+│                                                                 Android binary XML                                                                  │           res/color/material_slider_active_tick_marks_color.xml           │
+│                                                                 Android binary XML                                                                  │             res/color/material_slider_active_track_color.xml              │
+│                                                                 Android binary XML                                                                  │                 res/color/material_slider_halo_color.xml                  │
+│                                                                 Android binary XML                                                                  │          res/color/material_slider_inactive_tick_marks_color.xml          │
+│                                                                 Android binary XML                                                                  │            res/color/material_slider_inactive_track_color.xml             │
+│                                                                 Android binary XML                                                                  │                 res/color/material_slider_thumb_color.xml                 │
+│                                                                 Android binary XML                                                                  │            res/color/material_timepicker_button_background.xml            │
+│                                                                 Android binary XML                                                                  │              res/color/material_timepicker_button_stroke.xml              │
+│                                                                 Android binary XML                                                                  │                res/color/material_timepicker_clockface.xml                │
+│                                                                 Android binary XML                                                                  │            res/color/material_timepicker_clock_text_color.xml             │
+│                                                                 Android binary XML                                                                  │             res/color/material_timepicker_modebutton_tint.xml             │
+│                                                                 Android binary XML                                                                  │                 res/color/mtrl_btn_bg_color_selector.xml                  │
+│                                                                 Android binary XML                                                                  │                    res/color/mtrl_btn_ripple_color.xml                    │
+│                                                                 Android binary XML                                                                  │               res/color/mtrl_btn_stroke_color_selector.xml                │
+│                                                                 Android binary XML                                                                  │             res/color/mtrl_btn_text_btn_bg_color_selector.xml             │
+│                                                                 Android binary XML                                                                  │               res/color/mtrl_btn_text_btn_ripple_color.xml                │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_btn_text_color_selector.xml                 │
+│                                                                 Android binary XML                                                                  │               res/color/mtrl_calendar_item_stroke_color.xml               │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_calendar_selected_range.xml                 │
+│                                                                 Android binary XML                                                                  │                  res/color/mtrl_card_view_foreground.xml                  │
+│                                                                 Android binary XML                                                                  │                    res/color/mtrl_card_view_ripple.xml                    │
+│                                                                 Android binary XML                                                                  │                 res/color/mtrl_chip_background_color.xml                  │
+│                                                                 Android binary XML                                                                  │                  res/color/mtrl_chip_close_icon_tint.xml                  │
+│                                                                 Android binary XML                                                                  │                   res/color/mtrl_chip_surface_color.xml                   │
+│                                                                 Android binary XML                                                                  │                    res/color/mtrl_chip_text_color.xml                     │
+│                                                                 Android binary XML                                                                  │              res/color/mtrl_choice_chip_background_color.xml              │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_choice_chip_ripple_color.xml                │
+│                                                                 Android binary XML                                                                  │                 res/color/mtrl_choice_chip_text_color.xml                 │
+│                                                                 Android binary XML                                                                  │                         res/color/mtrl_error.xml                          │
+│                                                                 Android binary XML                                                                  │                 res/color/mtrl_fab_bg_color_selector.xml                  │
+│                                                                 Android binary XML                                                                  │              res/color/mtrl_fab_icon_text_color_selector.xml              │
+│                                                                 Android binary XML                                                                  │                    res/color/mtrl_fab_ripple_color.xml                    │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_filled_background_color.xml                 │
+│                                                                 Android binary XML                                                                  │                  res/color/mtrl_filled_stroke_color.xml                   │
+│                                                                 Android binary XML                                                                  │                  res/color/mtrl_indicator_text_color.xml                  │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_navigation_bar_item_tint.xml                │
+│                                                                 Android binary XML                                                                  │              res/color/mtrl_navigation_bar_ripple_color.xml               │
+│                                                                 Android binary XML                                                                  │        res/color/mtrl_on_primary_text_btn_text_color_selector.xml         │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_on_surface_ripple_color.xml                 │
+│                                                                 Android binary XML                                                                  │                 res/color/mtrl_outlined_stroke_color.xml                  │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_popupmenu_overlay_color.xml                 │
+│                                                                 Android binary XML                                                                  │                res/color/mtrl_tabs_icon_color_selector.xml                │
+│                                                                 Android binary XML                                                                  │            res/color/mtrl_tabs_legacy_text_color_selector.xml             │
+│                                                                 Android binary XML                                                                  │                   res/color/mtrl_tabs_ripple_color.xml                    │
+│                                                                 Android binary XML                                                                  │              res/color/mtrl_text_btn_text_color_selector.xml              │
+│                                                                 Android binary XML                                                                  │                 res/color/switch_thumb_material_dark.xml                  │
+│                                                                 Android binary XML                                                                  │                 res/color/switch_thumb_material_light.xml                 │
+│                                                                 Android binary XML                                                                  │           res/color-night/material_timepicker_button_stroke.xml           │
+│                                                                 Android binary XML                                                                  │             res/color-night/material_timepicker_clockface.xml             │
+│                                                                 Android binary XML                                                                  │          res/color-night/material_timepicker_modebutton_tint.xml          │
+│                                                                 Android binary XML                                                                  │                  res/drawable/$avd_hide_password__0.xml                   │
+│                                                                 Android binary XML                                                                  │                  res/drawable/$avd_hide_password__1.xml                   │
+│                                                                 Android binary XML                                                                  │                  res/drawable/$avd_hide_password__2.xml                   │
+│                                                                 Android binary XML                                                                  │                  res/drawable/$avd_show_password__0.xml                   │
+│                                                                 Android binary XML                                                                  │                  res/drawable/$avd_show_password__1.xml                   │
+│                                                                 Android binary XML                                                                  │                  res/drawable/$avd_show_password__2.xml                   │
+│                                                                 Android binary XML                                                                  │                res/drawable/$ic_launcher_foreground__0.xml                │
+│                                                                 Android binary XML                                                                  │         res/drawable/abc_action_bar_item_background_material.xml          │
+│                                                                 Android binary XML                                                                  │               res/drawable/abc_btn_borderless_material.xml                │
+│                                                                 Android binary XML                                                                  │                  res/drawable/abc_btn_check_material.xml                  │
+│                                                                 Android binary XML                                                                  │               res/drawable/abc_btn_check_material_anim.xml                │
+│                                                                 Android binary XML                                                                  │                 res/drawable/abc_btn_colored_material.xml                 │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_btn_default_mtrl_shape.xml                │
+│                                                                 Android binary XML                                                                  │                  res/drawable/abc_btn_radio_material.xml                  │
+│                                                                 Android binary XML                                                                  │               res/drawable/abc_btn_radio_material_anim.xml                │
+│                                                                 Android binary XML                                                                  │              res/drawable/abc_cab_background_internal_bg.xml              │
+│                                                                 Android binary XML                                                                  │             res/drawable/abc_cab_background_top_material.xml              │
+│                                                                 Android binary XML                                                                  │             res/drawable/abc_control_background_material.xml              │
+│                                                                 Android binary XML                                                                  │              res/drawable/abc_dialog_material_background.xml              │
+│                                                                 Android binary XML                                                                  │                 res/drawable/abc_ic_ab_back_material.xml                  │
+│                                                                 Android binary XML                                                                  │            res/drawable/abc_ic_arrow_drop_right_black_24dp.xml            │
+│                                                                 Android binary XML                                                                  │                  res/drawable/abc_ic_clear_material.xml                   │
+│                                                                 Android binary XML                                                                  │              res/drawable/abc_ic_go_search_api_material.xml               │
+│                                                                 Android binary XML                                                                  │              res/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml              │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_ic_menu_cut_mtrl_alpha.xml                │
+│                                                                 Android binary XML                                                                  │             res/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml              │
+│                                                                 Android binary XML                                                                  │             res/drawable/abc_ic_menu_selectall_mtrl_alpha.xml             │
+│                                                                 Android binary XML                                                                  │               res/drawable/abc_ic_menu_share_mtrl_alpha.xml               │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_ic_search_api_material.xml                │
+│                                                                 Android binary XML                                                                  │             res/drawable/abc_ic_voice_search_api_material.xml             │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_list_divider_material.xml                 │
+│                                                                 Android binary XML                                                                  │    res/drawable/abc_list_selector_background_transition_holo_dark.xml     │
+│                                                                 Android binary XML                                                                  │    res/drawable/abc_list_selector_background_transition_holo_light.xml    │
+│                                                                 Android binary XML                                                                  │               res/drawable/abc_list_selector_holo_dark.xml                │
+│                                                                 Android binary XML                                                                  │               res/drawable/abc_list_selector_holo_light.xml               │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_seekbar_thumb_material.xml                │
+│                                                                 Android binary XML                                                                  │              res/drawable/abc_seekbar_tick_mark_material.xml              │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_seekbar_track_material.xml                │
+│                                                                 Android binary XML                                                                  │        res/drawable/abc_spinner_textfield_background_material.xml         │
+│                                                                 Android binary XML                                                                  │                   res/drawable/abc_star_black_48dp.xml                    │
+│                                                                 Android binary XML                                                                  │                 res/drawable/abc_star_half_black_48dp.xml                 │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_switch_thumb_material.xml                 │
+│                                                                 Android binary XML                                                                  │                res/drawable/abc_tab_indicator_material.xml                │
+│                                                                 Android binary XML                                                                  │                 res/drawable/abc_text_cursor_material.xml                 │
+│                                                                 Android binary XML                                                                  │                     res/drawable/abc_vector_test.xml                      │
+│                                                                 Android binary XML                                                                  │                    res/drawable/avd_hide_password.xml                     │
+│                                                                 Android binary XML                                                                  │                    res/drawable/avd_show_password.xml                     │
+│                                                                 Android binary XML                                                                  │                res/drawable/btn_checkbox_checked_mtrl.xml                 │
+│                                                                 Android binary XML                                                                  │     res/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml     │
+│                                                                 Android binary XML                                                                  │               res/drawable/btn_checkbox_unchecked_mtrl.xml                │
+│                                                                 Android binary XML                                                                  │     res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml     │
+│                                                                 Android binary XML                                                                  │                    res/drawable/btn_radio_off_mtrl.xml                    │
+│                                                                 Android binary XML                                                                  │            res/drawable/btn_radio_off_to_on_mtrl_animation.xml            │
+│                                                                 Android binary XML                                                                  │            res/drawable/btn_radio_on_to_off_mtrl_animation.xml            │
+│                                                                 Android binary XML                                                                  │                  res/drawable/design_fab_background.xml                   │
+│                                                                 Android binary XML                                                                  │                   res/drawable/design_ic_visibility.xml                   │
+│                                                                 Android binary XML                                                                  │                 res/drawable/design_ic_visibility_off.xml                 │
+│                                                                 Android binary XML                                                                  │                   res/drawable/design_password_eye.xml                    │
+│                                                                 Android binary XML                                                                  │                        res/drawable/ic_bnl_big.xml                        │
+│                                                                 Android binary XML                                                                  │                  res/drawable/ic_launcher_foreground.xml                  │
+│                                                                 Android binary XML                                                                  │                  res/drawable/ic_mtrl_checked_circle.xml                  │
+│                                                                 Android binary XML                                                                  │                res/drawable/ic_mtrl_chip_checked_black.xml                │
+│                                                                 Android binary XML                                                                  │                res/drawable/ic_mtrl_chip_close_circle.xml                 │
+│                                                                 Android binary XML                                                                  │                 res/drawable/material_cursor_drawable.xml                 │
+│                                                                 Android binary XML                                                                  │             res/drawable/material_ic_calendar_black_24dp.xml              │
+│                                                                 Android binary XML                                                                  │               res/drawable/material_ic_clear_black_24dp.xml               │
+│                                                                 Android binary XML                                                                  │               res/drawable/material_ic_edit_black_24dp.xml                │
+│                                                                 Android binary XML                                                                  │        res/drawable/material_ic_keyboard_arrow_left_black_24dp.xml        │
+│                                                                 Android binary XML                                                                  │       res/drawable/material_ic_keyboard_arrow_right_black_24dp.xml        │
+│                                                                 Android binary XML                                                                  │          res/drawable/material_ic_menu_arrow_down_black_24dp.xml          │
+│                                                                 Android binary XML                                                                  │                  res/drawable/mtrl_dialog_background.xml                  │
+│                                                                 Android binary XML                                                                  │                   res/drawable/mtrl_dropdown_arrow.xml                    │
+│                                                                 Android binary XML                                                                  │                 res/drawable/mtrl_ic_arrow_drop_down.xml                  │
+│                                                                 Android binary XML                                                                  │                  res/drawable/mtrl_ic_arrow_drop_up.xml                   │
+│                                                                 Android binary XML                                                                  │                      res/drawable/mtrl_ic_cancel.xml                      │
+│                                                                 Android binary XML                                                                  │                      res/drawable/mtrl_ic_error.xml                       │
+│                                                                 Android binary XML                                                                  │                res/drawable/mtrl_popupmenu_background.xml                 │
+│                                                                 Android binary XML                                                                  │               res/drawable/mtrl_tabs_default_indicator.xml                │
+│                                                                 Android binary XML                                                                  │                  res/drawable/navigation_empty_icon.xml                   │
+│                                                                 Android binary XML                                                                  │           res/drawable-watch/abc_dialog_material_background.xml           │
+│                                                                 Android binary XML                                                                  │  res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml  │
+│                                                                 Android binary XML                                                                  │  res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml  │
+│                                                                 Android binary XML                                                                  │ res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml │
+│                                                                 Android binary XML                                                                  │ res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml │
+│                                                                 Android binary XML                                                                  │    res/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml    │
+│                                                                 Android binary XML                                                                  │    res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml     │
+│                                                                 Android binary XML                                                                  │                   res/interpolator/fast_out_slow_in.xml                   │
+│                                                                 Android binary XML                                                                  │               res/interpolator/mtrl_fast_out_linear_in.xml                │
+│                                                                 Android binary XML                                                                  │                res/interpolator/mtrl_fast_out_slow_in.xml                 │
+│                                                                 Android binary XML                                                                  │               res/interpolator/mtrl_linear_out_slow_in.xml                │
+│                                                                 Android binary XML                                                                  │                 res/layout/abc_action_bar_title_item.xml                  │
+│                                                                 Android binary XML                                                                  │                   res/layout/abc_action_menu_layout.xml                   │
+│                                                                 Android binary XML                                                                  │            res/layout/abc_action_mode_close_item_material.xml             │
+│                                                                 Android binary XML                                                                  │            res/layout/abc_alert_dialog_button_bar_material.xml            │
+│                                                                 Android binary XML                                                                  │                 res/layout/abc_alert_dialog_material.xml                  │
+│                                                                 Android binary XML                                                                  │               res/layout/abc_cascading_menu_item_layout.xml               │
+│                                                                 Android binary XML                                                                  │                 res/layout/abc_dialog_title_material.xml                  │
+│                                                                 Android binary XML                                                                  │                  res/layout/abc_expanded_menu_layout.xml                  │
+│                                                                 Android binary XML                                                                  │                res/layout/abc_list_menu_item_checkbox.xml                 │
+│                                                                 Android binary XML                                                                  │                 res/layout/abc_list_menu_item_layout.xml                  │
+│                                                                 Android binary XML                                                                  │                  res/layout/abc_list_menu_item_radio.xml                  │
+│                                                                 Android binary XML                                                                  │                 res/layout/abc_popup_menu_item_layout.xml                 │
+│                                                                 Android binary XML                                                                  │                 res/layout/abc_screen_content_include.xml                 │
+│                                                                 Android binary XML                                                                  │                     res/layout/abc_screen_simple.xml                      │
+│                                                                 Android binary XML                                                                  │           res/layout/abc_screen_simple_overlay_action_mode.xml            │
+│                                                                 Android binary XML                                                                  │                     res/layout/abc_screen_toolbar.xml                     │
+│                                                                 Android binary XML                                                                  │            res/layout/abc_search_dropdown_item_icons_2line.xml            │
+│                                                                 Android binary XML                                                                  │                      res/layout/abc_search_view.xml                       │
+│                                                                 Android binary XML                                                                  │                 res/layout/abc_select_dialog_material.xml                 │
+│                                                                 Android binary XML                                                                  │                       res/layout/activity_main.xml                        │
+│                                                                 Android binary XML                                                                  │                 res/layout/activity_media_projection.xml                  │
+│                                                                 Android binary XML                                                                  │                res/layout/design_menu_item_action_area.xml                │
+│                                                                 Android binary XML                                                                  │                 res/layout/design_text_input_end_icon.xml                 │
+│                                                                 Android binary XML                                                                  │                res/layout/design_text_input_start_icon.xml                │
+│                                                                 Android binary XML                                                                  │                res/layout/material_clockface_textview.xml                 │
+│                                                                 Android binary XML                                                                  │                  res/layout/material_clockface_view.xml                   │
+│                                                                 Android binary XML                                                                  │                   res/layout/material_clock_display.xml                   │
+│                                                                 Android binary XML                                                                  │               res/layout/material_clock_display_divider.xml               │
+│                                                                 Android binary XML                                                                  │                res/layout/material_clock_period_toggle.xml                │
+│                                                                 Android binary XML                                                                  │                 res/layout/material_radial_view_group.xml                 │
+│                                                                 Android binary XML                                                                  │                     res/layout/material_time_chip.xml                     │
+│                                                                 Android binary XML                                                                  │                    res/layout/material_time_input.xml                     │
+│                                                                 Android binary XML                                                                  │                 res/layout/mtrl_alert_dialog_actions.xml                  │
+│                                                                 Android binary XML                                                                  │                  res/layout/mtrl_alert_dialog_title.xml                   │
+│                                                                 Android binary XML                                                                  │               res/layout/mtrl_alert_select_dialog_item.xml                │
+│                                                                 Android binary XML                                                                  │            res/layout/mtrl_alert_select_dialog_multichoice.xml            │
+│                                                                 Android binary XML                                                                  │           res/layout/mtrl_alert_select_dialog_singlechoice.xml            │
+│                                                                 Android binary XML                                                                  │               res/layout/mtrl_auto_complete_simple_item.xml               │
+│                                                                 Android binary XML                                                                  │                     res/layout/mtrl_calendar_day.xml                      │
+│                                                                 Android binary XML                                                                  │                 res/layout/mtrl_calendar_day_of_week.xml                  │
+│                                                                 Android binary XML                                                                  │                  res/layout/mtrl_calendar_horizontal.xml                  │
+│                                                                 Android binary XML                                                                  │                    res/layout/mtrl_calendar_month.xml                     │
+│                                                                 Android binary XML                                                                  │                    res/layout/mtrl_calendar_months.xml                    │
+│                                                                 Android binary XML                                                                  │                res/layout/mtrl_calendar_month_labeled.xml                 │
+│                                                                 Android binary XML                                                                  │               res/layout/mtrl_calendar_month_navigation.xml               │
+│                                                                 Android binary XML                                                                  │                   res/layout/mtrl_calendar_vertical.xml                   │
+│                                                                 Android binary XML                                                                  │                     res/layout/mtrl_calendar_year.xml                     │
+│                                                                 Android binary XML                                                                  │                 res/layout/mtrl_picker_header_dialog.xml                  │
+│                                                                 Android binary XML                                                                  │               res/layout/mtrl_picker_header_fullscreen.xml                │
+│                                                                 Android binary XML                                                                  │             res/layout/mtrl_picker_header_selection_text.xml              │
+│                                                                 Android binary XML                                                                  │               res/layout/mtrl_picker_header_title_text.xml                │
+│                                                                 Android binary XML                                                                  │                 res/layout/mtrl_picker_header_toggle.xml                  │
+│                                                                 Android binary XML                                                                  │                res/layout/select_dialog_item_material.xml                 │
+│                                                                 Android binary XML                                                                  │             res/layout/select_dialog_multichoice_material.xml             │
+│                                                                 Android binary XML                                                                  │            res/layout/select_dialog_singlechoice_material.xml             │
+│                                                                 Android binary XML                                                                  │            res/layout/support_simple_spinner_dropdown_item.xml            │
+│                                                                 Android binary XML                                                                  │           res/layout-land/material_clock_period_toggle_land.xml           │
+│                                                                 Android binary XML                                                                  │               res/layout-land/mtrl_picker_header_dialog.xml               │
+│                                                                 Android binary XML                                                                  │           res/layout-watch/abc_alert_dialog_title_material.xml            │
+│                                                                 Android binary XML                                                                  │                     res/mipmap-anydpi/ic_launcher.xml                     │
+│                                                                 Android binary XML                                                                  │                  res/mipmap-anydpi/ic_launcher_round.xml                  │
+│                                                                 Android binary XML                                                                  │               res/xml/accessibility_service_description.xml               │
+│                                                                 Android binary XML                                                                  │                     res/xml/device_admin_receiver.xml                     │
+│                                                             Dalvik dex file version 039                                                             │                                classes.dex                                │
+│ Adobe Photoshop Color swatch, version 0, 3 colors; 1st RGB space (0), w 0x1, x 0, y 0, z 0; 2nd Lab space (7), w 0xa9e, x 0x30a, y 0x66b, z 0x6f74  │               kotlin/annotation/annotation.kotlin_builtins                │
+│ Adobe Photoshop Color swatch, version 0, 3 colors; 1st RGB space (0), w 0x1, x 0, y 0, z 0; 2nd Lab space (7), w 0xacd, x 0x70a, y 0x66b, z 0x6f74  │              kotlin/collections/collections.kotlin_builtins               │
+│ Adobe Photoshop Color swatch, version 0, 3 colors; 1st RGB space (0), w 0x1, x 0, y 0, z 0; 2nd Lab space (7), w 0xa66, x 0xa06, y 0x6b6f, z 0x746c │               kotlin/coroutines/coroutines.kotlin_builtins                │
+│ Adobe Photoshop Color swatch, version 0, 3 colors; 1st RGB space (0), w 0x1, x 0, y 0, z 0; 2nd Lab space (7), w 0xa88, x 0x30a, y 0x66b, z 0x6f74  │                 kotlin/internal/internal.kotlin_builtins                  │
+│ Adobe Photoshop Color swatch, version 0, 3 colors; 1st RGB space (0), w 0x1, x 0, y 0, z 0; 2nd Lab space (7), w 0xaf0, x 0x120a, y 0x66b, z 0x6f74 │                       kotlin/kotlin.kotlin_builtins                       │
+│ Adobe Photoshop Color swatch, version 0, 3 colors; 1st RGB space (0), w 0x1, x 0, y 0, z 0; 2nd Lab space (7), w 0xaa3, x 0x40a, y 0x66b, z 0x6f74  │                   kotlin/ranges/ranges.kotlin_builtins                    │
+│ Adobe Photoshop Color swatch, version 0, 3 colors; 1st RGB space (0), w 0x1, x 0, y 0, z 0; 2nd Lab space (7), w 0xad8, x 0x50a, y 0x66b, z 0x6f74  │                  kotlin/reflect/reflect.kotlin_builtins                   │
+│                                                       ASCII text, with CRLF line terminators                                                        │      META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler       │
+│                                                       ASCII text, with CRLF line terminators                                                        │    META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory    │
+│                                                                        empty                                                                        │                  res/drawable-hdpi/ic_bnl_big_round.webp                  │
+│                                                                        empty                                                                        │                  res/drawable-mdpi/ic_bnl_big_round.webp                  │
+│                                                                        empty                                                                        │                 res/drawable-xhdpi/ic_bnl_big_round.webp                  │
+│                                                                        empty                                                                        │                 res/drawable-xxhdpi/ic_bnl_big_round.webp                 │
+│                                                                        empty                                                                        │                res/drawable-xxxhdpi/ic_bnl_big_round.webp                 │
+│                                             Android package resource table (ARSC), 5937 string(s), utf8                                             │                              resources.arsc                               │
+│                                             Android package (APK), with gradle app-metadata.properties                                              │                              assets/bnl.apk                               │
+│                                             Android package (APK), with gradle app-metadata.properties                                              │                             assets/hibank.apk                             │
+│                                                         Android ART profile, version 010 P                                                          │                        assets/dexopt/baseline.prof                        │
+│                                                                        data                                                                         │                       assets/dexopt/baseline.profm                        │
+│                                                                        data                                                                         │                           META-INF/CERTIFIC.RSA                           │
+│                                                HTML document, ASCII text, with CRLF line terminators                                                │                            assets/index1.html                             │
+│                                                HTML document, ASCII text, with CRLF line terminators                                                │                         assets/indexloading.html                          │
+│                                                HTML document, ASCII text, with CRLF line terminators                                                │                         assets/loadingscreen.html                         │
+│                                                  compiled Java class data, version 52.0 (Java 1.8)                                                  │                             DebugProbesKt.bin                             │
+│                                             JAR Signature File, ASCII text, with CRLF line terminators                                              │                           META-INF/CERTIFIC.SF                            │
+│                                                JAR Manifest, ASCII text, with CRLF line terminators                                                 │                           META-INF/MANIFEST.MF                            │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━┓
+┃ Interesting Files ┃
+┡━━━━━━━━━━━━━━━━━━━┩
+│    classes.dex    │
+│ DebugProbesKt.bin │
+└───────────────────┘
+                         * URLs *                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Pattern           ┃           File            ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ http://www.w3.org/2000/svg │ assets/loadingscreen.html │
+└────────────────────────────┴───────────────────────────┘
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │   5   │
+│      spyware      │   2   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+└──────────────┴───────┘
+
+[*] Detection: 12/76
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Detected By      ┃              Results               ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       AhnLab-V3       │  Trojan/Android.SpyAgent.1238678   │
+│     Avast-Mobile      │       Android:Evo-gen [Trj]        │
+│    BitDefenderFalx    │    Android.Riskware.FakeApp.ZZ     │
+│      ESET-NOD32       │ a variant of Android/Spy.Agent.DUD │
+│         GData         │    Generic.Trojan.Agent.VN3NV2     │
+│        Ikarus         │     Trojan-Spy.AndroidOS.Agent     │
+│         K7GW          │       Spyware ( 005be90b1 )        │
+│       Kaspersky       │  HEUR:Trojan.AndroidOS.Boogr.gsh   │
+│       Kingsoft        │        Android.Troj.Spy.DUD        │
+│ SymantecMobileInsight │          AppRisk:Generisk          │
+│        Tencent        │       a.privacy.InfoStealer        │
+│       Trustlook       │      Android.Malware.Spyware       │
+└───────────────────────┴────────────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/a769c40ce48a38eed8897447081fc002d567535943befc4b51d866d134953588.apk
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[IP_Address]> 104.24.181.7
+[URL]> http://schemas.android.com/apk/res-auto
+[URL]> http://schemas.android.com/apk/res/android

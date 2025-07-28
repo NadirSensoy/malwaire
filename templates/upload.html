@@ -56,9 +56,9 @@
                                     <i class="fas fa-cloud-upload-alt fa-4x text-muted mb-3"></i>
                                     <h5 class="mb-3">Dosyayı buraya sürükleyin veya tıklayın</h5>
                                     <p class="text-muted mb-3">
-                                        Desteklenen formatlar: .exe, .dll, .bin, .com, .scr, .msi, .jar, .apk, .zip vb.
+                                        Desteklenen formatlar: Executables, Scripts, Archives, Documents, Mobile Apps, Email Files
                                     </p>
-                                    <input type="file" id="fileInput" name="file" class="d-none" accept=".exe,.dll,.bin,.com,.scr,.pif,.bat,.cmd,.msi,.jar,.apk,.dex,.elf,.so,.dmg,.pkg,.zip,.rar,.7z,.tar,.gz">
+                                    <input type="file" id="fileInput" name="file" class="d-none" accept="*/*">
                                     <button type="button" class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
                                         <i class="fas fa-folder-open me-2"></i>
                                         Dosya Seç
@@ -87,12 +87,12 @@
                                     Analiz Seçenekleri
                                 </h6>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="enableVirusTotal" name="enable_virustotal">
+                                    <input class="form-check-input" type="checkbox" id="enableVirusTotal" name="enable_virustotal" checked>
                                     <label class="form-check-label" for="enableVirusTotal">
                                         <strong>VirusTotal Analizi Aktif Et</strong>
                                         <br>
                                         <small class="text-muted">
-                                            Dosyayı VirusTotal üzerinden de tarayarak daha kapsamlı analiz sağlar
+                                            Dosyayı VirusTotal üzerinden de tarayarak daha kapsamlı analiz sağlar (Önerilen)
                                         </small>
                                     </label>
                                 </div>
@@ -196,26 +196,127 @@
                     <div class="card-header">
                         <h6 class="mb-0">
                             <i class="fas fa-list me-2"></i>
-                            Desteklenen Dosya Formatları
+                            Desteklenen Dosya Formatları 
                         </h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="text-muted">Windows Çalıştırılabilir Dosyalar</h6>
-                                <ul class="list-unstyled small">
-                                    <li><i class="fas fa-file me-2"></i>.exe, .dll, .com, .scr</li>
-                                    <li><i class="fas fa-file me-2"></i>.msi, .pif, .bat, .cmd</li>
-                                </ul>
+                                <div class="mb-4">
+                                    <h6 class="text-primary">
+                                        <i class="fab fa-windows me-2"></i>
+                                        Windows Executables (.exe, .dll, .msi, .bin)
+                                    </h6>
+                                    <span class="badge bg-success me-2">Static</span>
+                                    <p class="small text-muted mt-2">PE dosyaları, DLL'ler, MSI paketleri ve binary dosyalar</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-warning">
+                                        <i class="fab fa-linux me-2"></i>
+                                        Linux Executables (.elf, .bin)
+                                    </h6>
+                                    <span class="badge bg-success me-2">Static</span>
+                                    <p class="small text-muted mt-2">ELF formatındaki Linux executable dosyaları</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-secondary">
+                                        <i class="fab fa-apple me-2"></i>
+                                        MacOS Executables (mach-o)
+                                    </h6>
+                                    <span class="badge bg-success">Static</span>
+                                    <p class="small text-muted mt-2">macOS Mach-O formatındaki executable dosyalar</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-success">
+                                        <i class="fab fa-android me-2"></i>
+                                        Android Files (.apk, .jar, .dex)
+                                    </h6>
+                                    <span class="badge bg-success me-2">Static</span>
+                                    <p class="small text-muted mt-2">Android uygulamaları ve Java archive dosyaları</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-info">
+                                        <i class="fas fa-code me-2"></i>
+                                        Golang Binaries (Linux)
+                                    </h6>
+                                    <span class="badge bg-success">Static</span>
+                                    <p class="small text-muted mt-2">Go dili ile geliştirilmiş Linux binary dosyaları</p>
+                                </div>
                             </div>
+                            
                             <div class="col-md-6">
-                                <h6 class="text-muted">Diğer Formatlar</h6>
-                                <ul class="list-unstyled small">
-                                    <li><i class="fas fa-file me-2"></i>.jar, .apk, .dex</li>
-                                    <li><i class="fas fa-file me-2"></i>.elf, .so, .dmg, .pkg</li>
-                                    <li><i class="fas fa-file me-2"></i>.zip, .rar, .7z, .tar, .gz</li>
-                                </ul>
+                                <div class="mb-4">
+                                    <h6 class="text-primary">
+                                        <i class="fas fa-file-alt me-2"></i>
+                                        Document Files
+                                    </h6>
+                                    <span class="badge bg-success">Static</span>
+                                    <p class="small text-muted mt-2">Office dokümanları, PDF'ler (.doc, .docx, .xls, .pdf vb.)</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-dark">
+                                        <i class="fas fa-archive me-2"></i>
+                                        Archive Files (.zip, .rar, .ace)
+                                    </h6>
+                                    <span class="badge bg-success">Static</span>
+                                    <p class="small text-muted mt-2">Sıkıştırılmış arşiv dosyaları</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-secondary">
+                                        <i class="fas fa-network-wired me-2"></i>
+                                        PCAP Files (.pcap)
+                                    </h6>
+                                    <span class="badge bg-success">Static</span>
+                                    <p class="small text-muted mt-2">Ağ trafiği yakalama dosyaları</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-primary">
+                                        <i class="fas fa-terminal me-2"></i>
+                                        PowerShell Scripts
+                                    </h6>
+                                    <span class="badge bg-success">Static</span>
+                                    <p class="small text-muted mt-2">PowerShell script dosyaları (.ps1, .psm1, .psd1)</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h6 class="text-warning">
+                                        <i class="fas fa-envelope me-2"></i>
+                                        E-Mail Files (.eml)
+                                    </h6>
+                                    <span class="badge bg-success">Static</span>
+                                    <p class="small text-muted mt-2">E-posta dosyaları ve ekleri</p>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="mt-4 p-3 bg-light rounded">
+                            <h6 class="text-muted mb-3">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Analiz Türleri Açıklaması
+                            </h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-success me-2">Static</span>
+                                        <span class="small">Dosya içeriği analizi, imza taraması, metadata çıkarımı</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <small class="text-info">
+                                <i class="fas fa-shield-alt me-1"></i>
+                                <strong>Güvenlik:</strong> Uzantısız dosyalar da kabul edilir. Tüm analizler izole sandbox ortamında gerçekleştirilir.
+                            </small>
                         </div>
                     </div>
                 </div>

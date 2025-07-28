@@ -1,0 +1,172 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/172a996044c5a9e986b90b26baafdf3a76359a24339da762aaf132311e6dd092.ps1 --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs
+
+
+SIMON SAYS:
+
+         -o          o-
+          +hydNNNNdyh+          <--------------------------->
+        +mMMMMMMMMMMMMm+        <  Do not click every link. >
+       dMMm:NMMMMMMN:mMMb       <      Please listen me!!   >
+      hMMMMMMMMMMMMMMMMMMh      <--------------------------->
+  ..  yyyyyyyyyyyyyyyyyyyy  ..    /
+.mMMm MMMMMMMMMMMMMMMMMMMM mMMm. /
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-
+ +yy+ MMMMMMMMMMMMMMMMMMMM +yy+  <- Mr. Simon
+      mMMMMMMMMMMMMMMMMMMm
+       /++MMMMh++hMMMM++/
+          MMMMo  oMMMM
+          MMMMo  oMMMM
+          oNMm-  -mMNs 
+
+
+[*] Analyzing: /home/kali/Downloads/172a996044c5a9e986b90b26baafdf3a76359a24339da762aaf132311e6dd092.ps1
+[*] Performing Powershell Script analysis...
+
+[*] Performing pattern scan...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Extracted patterns about Obfuscation/Encoding ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│               FromBase64String                │
+│             System.Text.Encoding              │
+│                UTF8.GetString                 │
+└───────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Extracted patterns about FileSystem ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             Remove-Item             │
+│              New-Item               │
+│               IO.File               │
+└─────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Extracted patterns about Networking ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                 IEX                 │
+│                Host                 │
+│                Port                 │
+└─────────────────────────────────────┘
+
+[*] Performing extraction of path values...
+[!] There is no pattern about path values...
+
+
+[*] Performing detection of possible executions...
+[!] There is no pattern about execution!
+
+
+[*] Performing XOR'ed payload detection...
+[!] There is no pattern about XOR'ed payloads!
+
+[*] Performing non-XOR'ed payload detection...
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/powershell_analyzer.py", line 292, in <module>
+    pwsh_analyzer.check_for_non_xored_payloads_presence()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/powershell_analyzer.py", line 205, in check_for_non_xored_payloads_presence
+    b64_payload = re.findall(self.pattern_b64[0], str(self.all_strings), re.IGNORECASE)
+  File "/usr/lib/python3.13/re/__init__.py", line 278, in findall
+    return _compile(pattern, flags).findall(string)
+           ~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/re/__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "/usr/lib/python3.13/re/_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "/usr/lib/python3.13/re/_parser.py", line 980, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.13/re/_parser.py", line 459, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       not nested and not items))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/re/_parser.py", line 841, in _parse
+    raise source.error('global flags not at the start '
+                       'of the expression',
+                       source.tell() - start)
+re.PatternError: global flags not at the start of the expression at position 2
+[*] Analyzing: /home/kali/Downloads/172a996044c5a9e986b90b26baafdf3a76359a24339da762aaf132311e6dd092.ps1
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+[!] There is no valid pattern found!
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.netsupport/powershell
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │  10   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│  netsupport  │   2   │
+│  powershell  │   2   │
+└──────────────┴───────┘
+
+[*] Detection: 10/76
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃   Detected By    ┃               Results               ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     Arcabit      │       Trojan.Generic.D49573C2       │
+│   BitDefender    │      Trojan.GenericKD.76903362      │
+│    ESET-NOD32    │    a variant of Generik.NBAFENJ     │
+│     Emsisoft     │    Trojan.GenericKD.76903362 (B)    │
+│      GData       │     Script.Trojan.Agent.NA6BCE      │
+│    Gridinsoft    │       Trojan.U.NetSupport.tr        │
+│      Ikarus      │          Trojan.SuspectCRC          │
+│ MicroWorld-eScan │      Trojan.GenericKD.76903362      │
+│    Microsoft     │    Trojan:PowerShell/Obfuse!MSR     │
+│     Sangfor      │ Trojan.Generic-Script.Save.031d6f34 │
+└──────────────────┴─────────────────────────────────────┘
+                                                                                                                                                                  
+                                                                   * CrowdSourced IDS Reports *                                                                   
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Alert Number ┃    SRC IP     ┃ SRC Port ┃    DST IP     ┃ DST Port ┃ Alert Severity ┃             Rule Category             ┃           Rule Source            ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      1       │     none      │   none   │ 83.222.190.38 │   443    │      high      │           policy-violation            │  Snort registered user ruleset   │
+│      2       │ 83.222.190.38 │   443    │     none      │   none   │      high      │            trojan-activity            │  Snort registered user ruleset   │
+│      3       │     none      │   none   │ 104.26.1.231  │    80    │      high      │            trojan-activity            │  Snort registered user ruleset   │
+│      4       │ 83.222.190.38 │   443    │     none      │   none   │     medium     │              Misc Attack              │ Proofpoint Emerging Threats Open │
+│      5       │ 83.222.190.38 │   443    │     none      │   none   │      low       │                unknown                │  Snort registered user ruleset   │
+│      6       │     none      │   none   │ 83.222.190.38 │   443    │      low       │        Potentially Bad Traffic        │ Proofpoint Emerging Threats Open │
+│      7       │     none      │   none   │ 83.222.190.38 │   443    │      low       │             Misc activity             │ Proofpoint Emerging Threats Open │
+│      8       │ 83.222.190.38 │   443    │     none      │   none   │      low       │             Misc activity             │ Proofpoint Emerging Threats Open │
+│      9       │     none      │   none   │ 104.26.0.231  │    80    │      info      │ Potential Corporate Privacy Violation │ Proofpoint Emerging Threats Open │
+└──────────────┴───────────────┴──────────┴───────────────┴──────────┴────────────────┴───────────────────────────────────────┴──────────────────────────────────┘
+
+[*] Alert Summary: /home/kali/Downloads/172a996044c5a9e986b90b26baafdf3a76359a24339da762aaf132311e6dd092.ps1
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Alert Level ┃ Number of Alerts ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│    HIGH     │        3         │
+│   MEDIUM    │        1         │
+│     LOW     │        4         │
+│    INFO     │        1         │
+└─────────────┴──────────────────┘
+ 
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/172a996044c5a9e986b90b26baafdf3a76359a24339da762aaf132311e6dd092.ps1
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[Monero_Wallet_Address]> 45cG5Vc1NxYTJaM29WNmwvdmdqM2gxZnJrUktLTkRyMnFmdzVSRWx2WjczTy9tWG5TSUhZQkJMWnpSbHYrRmk4akRyc2syN

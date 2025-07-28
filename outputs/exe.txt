@@ -1,0 +1,651 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/54a8b4c753e22ebf0f248088c4424393f31417b9d79e0dafe7bf573e6263240a.exe --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs
+
+ _____ _   _  __  _____  _   __ _____ _____ ___________ _____         @
+|  _  | | | |/  |/  __ \| | / //  ___/  __ \  _  | ___ \  ___|      @ @ @
+| | | | | | | | || /  \/| |/ / \  --.| /  \/ |/| | |_/ / |__       @@ @ @@
+| | | | | | | | || |    |    \   --. \ |   |  /| |  __/|  __|    @@@@@@@@@@@
+\  \/ / |_| |_| || \__/\| |\  \/\__/ / \__/\ |_/ / |   | |___      @@ @ @@
+ \_/\_|\___/ \___/\____/\_| \_/\____/ \____/\___/\_|   \____/       @ @ @
+                                                                      @
+                                   |             |
+  All in One malware analysis tool.| By CYB3RMX_ | Version: 1.8.5
+  ---------------------------------|             |
+
+
+[*] Analyzing: /home/kali/Downloads/54a8b4c753e22ebf0f248088c4424393f31417b9d79e0dafe7bf573e6263240a.exe
+[*] Target OS: Windows
+
+[*] File Type: .NET Executable
+
+[*] Performing .NET analysis...
+[*] Performing extraction of imports and exports. Please wait...
+Analyzing.. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:05
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about File ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│         CreateDirectory         │ 0xca29  │
+│  AssemblyFileVersionAttribute   │ 0xbc8a  │
+│          get_FileName           │ 0xb9e7  │
+│          set_FileName           │ 0xb9f4  │
+│          GetFolderPath          │ 0xbee5  │
+│          SpecialFolder          │ 0xc265  │
+│          DirectoryInfo          │ 0xc1e5  │
+└─────────────────────────────────┴─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about Networking/Web ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│                  connect                  │ 0xbe64  │
+│                  Connect                  │ 0xbe64  │
+│                   send                    │ 0xc273  │
+│                   Send                    │ 0xc273  │
+│                   bind                    │ 0xbe14  │
+│                   bind                    │ 0xc91c  │
+│                   Bind                    │ 0xbe14  │
+│                   Bind                    │ 0xc91c  │
+│                   Ping                    │ 0xb4ea  │
+└───────────────────────────────────────────┴─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about Process ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│         STAThreadAttribute         │ 0xbb73  │
+└────────────────────────────────────┴─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about Dll/Resource Handling ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│               get_ResourceManager                │ 0xc285  │
+│                 System.Resources                 │ 0xc41b  │
+│                 System.Resources                 │ 0xea07  │
+│                 System.Resources                 │ 0xeabd  │
+│                 System.Resources                 │ 0xeb2a  │
+│                 System.Resources                 │ 0xeb75  │
+│                 System.Resources                 │ 0xebe2  │
+│                 System.Resources                 │ 0xec2d  │
+│                 System.Resources                 │ 0xec9a  │
+│                 System.Resources                 │ 0xece5  │
+│                 System.Resources                 │ 0xed52  │
+│                 System.Resources                 │ 0xed9d  │
+│                 System.Resources                 │ 0xee0a  │
+│                 System.Resources                 │ 0xee55  │
+│                 System.Resources                 │ 0xeec2  │
+│                 System.Resources                 │ 0xef0d  │
+│                 System.Resources                 │ 0xef7a  │
+│                 System.Resources                 │ 0xefc5  │
+│                 System.Resources                 │ 0xf032  │
+│                 ResourceManager                  │ 0xc289  │
+└──────────────────────────────────────────────────┴─────────┘
+                       * WARNING *                        
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about Evasion/Bypassing ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│             DebuggableAttribute              │ 0xbbe3  │
+│         DebuggerNonUserCodeAttribute         │ 0xbbc6  │
+│                DebuggingModes                │ 0xc52e  │
+│            DebuggerBrowsableState            │ 0xbb3c  │
+└──────────────────────────────────────────────┴─────────┘
+                     * WARNING *                     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about Cryptography ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│               GetHashCode               │ 0xb8fd  │
+└─────────────────────────────────────────┴─────────┘
+                         * WARNING *                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about Information Gathering ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│                get_CurrentDomain                 │ 0xc0b2  │
+└──────────────────────────────────────────────────┴─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃ Functions or Strings about Other/Unknown ┃ Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│         EditorBrowsableAttribute         │ 0xbc12  │
+│               set_TabIndex               │ 0xc916  │
+│               set_TabStop                │ 0xc206  │
+│               set_AutoSize               │ 0xbde2  │
+│         set_AutoScaleDimensions          │ 0xc5fe  │
+│            set_AutoScaleMode             │ 0xb909  │
+│              set_ClientSize              │ 0xbdef  │
+│           set_FormBorderStyle            │ 0xb9bb  │
+│                 set_Text                 │ 0xc8eb  │
+│                 set_Size                 │ 0xbdcc  │
+│               get_Controls               │ 0xc5c9  │
+│              StringBuilder               │ 0xc257  │
+│                ButtonBase                │ 0xbab2  │
+│          System.Drawing.Bitmap           │ 0xf062  │
+│          System.Drawing.Bitmap           │ 0xf169  │
+│          System.Drawing.Bitmap           │ 0x23f52 │
+│           System.Windows.Forms           │ 0xc5e0  │
+└──────────────────────────────────────────┴─────────┘
+
+[*] Extracting and analyzing classes...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Program ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                  Main                   │
+│          InitializeApplication          │
+└─────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.BusinessLogic ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                     .ctor                     │
+│             InitializeSampleData              │
+│                  ProcessData                  │
+│               GenerateDummyData               │
+│              GenerateRandomItem               │
+│                 GetRandomWord                 │
+│                 ReverseString                 │
+│                EncodeToNumbers                │
+│                AddRandomSuffix                │
+│                ScrambleString                 │
+│                  AnalyzeText                  │
+│            GenerateRandomPassword             │
+│              CalculatePercentage              │
+│                FormatCurrency                 │
+│                 ValidateInput                 │
+│                  ClearCache                   │
+│                 GetCacheSize                  │
+│                 GetCachedKeys                 │
+└───────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.DataAccess ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                   .ctor                    │
+│          InitializeDataStructure           │
+│               LoadSampleData               │
+│             GenerateRandomTags             │
+│               GetAllRecords                │
+│               GetRecordById                │
+│            GetRecordsByCategory            │
+│             GetRecordsByStatus             │
+│              GetActiveRecords              │
+│               SearchRecords                │
+│                 SaveRecord                 │
+│                DeleteRecord                │
+│               GetSystemStats               │
+│                ExportToXml                 │
+│               ImportFromXml                │
+│           GetCategoryStatistics            │
+│            GetStatusStatistics             │
+│              GetAverageValue               │
+│                ClearAllData                │
+│               GetRecordCount               │
+│            GetTopRecordsByScore            │
+└────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.DataRecord ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                   get_Id                   │
+│                   set_Id                   │
+│                  get_Name                  │
+│                  set_Name                  │
+│                get_Category                │
+│                set_Category                │
+│                 get_Status                 │
+│                 set_Status                 │
+│                get_Priority                │
+│                set_Priority                │
+│                 get_Value                  │
+│                 set_Value                  │
+│              get_CreatedDate               │
+│              set_CreatedDate               │
+│              get_ModifiedDate              │
+│              set_ModifiedDate              │
+│              get_Description               │
+│              set_Description               │
+│                  get_Tags                  │
+│                  set_Tags                  │
+│                get_IsActive                │
+│                set_IsActive                │
+│                 get_Score                  │
+│                 set_Score                  │
+│                   .ctor                    │
+│                  ToString                  │
+│              ToDetailedString              │
+└────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.MainForm ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                  .ctor                   │
+│        InitializeCustomComponents        │
+│             LoadInitialData              │
+│           buttonProcess_Click            │
+│            buttonClear_Click             │
+│         buttonGenerateData_Click         │
+│     listBoxData_SelectedIndexChanged     │
+│              MainForm_Load               │
+│             UpdateTimer_Tick             │
+│            buttonExport_Click            │
+│            buttonImport_Click            │
+│               UpdateStatus               │
+│               AddToHistory               │
+│                 Dispose                  │
+│           InitializeComponent            │
+│             CapturePixelData             │
+└──────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Form2 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                 .ctor                 │
+│      InitializeCustomComponents       │
+│            LoadInitialData            │
+│          buttonProcess_Click          │
+│           buttonClear_Click           │
+│       buttonGenerateData_Click        │
+│   listBoxData_SelectedIndexChanged    │
+│             MainForm_Load             │
+│           UpdateTimer_Tick            │
+│          buttonExport_Click           │
+│          buttonImport_Click           │
+│             UpdateStatus              │
+│             AddToHistory              │
+│                Dispose                │
+│          InitializeComponent          │
+└───────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Form3 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                 .ctor                 │
+│      InitializeCustomComponents       │
+│            LoadInitialData            │
+│          buttonProcess_Click          │
+│           buttonClear_Click           │
+│       buttonGenerateData_Click        │
+│   listBoxData_SelectedIndexChanged    │
+│             MainForm_Load             │
+│           UpdateTimer_Tick            │
+│          buttonExport_Click           │
+│          buttonImport_Click           │
+│             UpdateStatus              │
+│             AddToHistory              │
+│                Dispose                │
+│          InitializeComponent          │
+└───────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Form4 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                 .ctor                 │
+│      InitializeCustomComponents       │
+│            LoadInitialData            │
+│          buttonProcess_Click          │
+│           buttonClear_Click           │
+│       buttonGenerateData_Click        │
+│   listBoxData_SelectedIndexChanged    │
+│             MainForm_Load             │
+│           UpdateTimer_Tick            │
+│          buttonExport_Click           │
+│          buttonImport_Click           │
+│             UpdateStatus              │
+│             AddToHistory              │
+│                Dispose                │
+│          InitializeComponent          │
+└───────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Form5 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                 .ctor                 │
+│      InitializeCustomComponents       │
+│            LoadInitialData            │
+│          buttonProcess_Click          │
+│           buttonClear_Click           │
+│       buttonGenerateData_Click        │
+│   listBoxData_SelectedIndexChanged    │
+│             MainForm_Load             │
+│           UpdateTimer_Tick            │
+│          buttonExport_Click           │
+│          buttonImport_Click           │
+│             UpdateStatus              │
+│             AddToHistory              │
+│                Dispose                │
+│          InitializeComponent          │
+└───────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Form6 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                 .ctor                 │
+│      InitializeCustomComponents       │
+│            LoadInitialData            │
+│          buttonProcess_Click          │
+│           buttonClear_Click           │
+│       buttonGenerateData_Click        │
+│   listBoxData_SelectedIndexChanged    │
+│             MainForm_Load             │
+│           UpdateTimer_Tick            │
+│          buttonExport_Click           │
+│          buttonImport_Click           │
+│             UpdateStatus              │
+│             AddToHistory              │
+│                Dispose                │
+│          InitializeComponent          │
+└───────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Form7 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                 .ctor                 │
+│      InitializeCustomComponents       │
+│            LoadInitialData            │
+│          buttonProcess_Click          │
+│           buttonClear_Click           │
+│       buttonGenerateData_Click        │
+│   listBoxData_SelectedIndexChanged    │
+│             MainForm_Load             │
+│           UpdateTimer_Tick            │
+│          buttonExport_Click           │
+│          buttonImport_Click           │
+│             UpdateStatus              │
+│             AddToHistory              │
+│                Dispose                │
+│          InitializeComponent          │
+└───────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Properties.Resources ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                        .ctor                         │
+│                 get_ResourceManager                  │
+│                     get_Culture                      │
+│                     set_Culture                      │
+│                       get_quDO                       │
+│                        get_SL                        │
+└──────────────────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Methods in Class: ModernAdapter.Properties.Settings ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                     get_Default                     │
+│                        .ctor                        │
+│                       .cctor                        │
+└─────────────────────────────────────────────────────┘
+
+[*] Performing pattern analysis...
+[!] Couldn't detect any pattern. This file might be obfuscated!
+
+
+[*] Looking for: Windows Registry Key
+[!] There is no pattern about registry keys!
+
+
+[*] Looking for: Interesting String Patterns
+Analyzing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+┏━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Interesting Patterns ┃
+┡━━━━━━━━━━━━━━━━━━━━━━┩
+│       jIXC.pdb       │
+│       jIXC.exe       │
+│     mscoree.dll      │
+│    System.Config     │
+└──────────────────────┘
+
+[*] Performing embedded PE file detection...
+[!] There is no embedded PE file!
+
+
+[*] Parsing DEBUG information...
+>>> PDB Name: jIXC.pdb
+>>> Debug Signature: 386BD726CB8349C28D23AD05B5CC6A031
+
+[*] Checking the target PDB in our malicious PDB database...
+
+[*] Performing analysis via Vivisect and Floss...
+[*] Initializing viv.analyze. Please wait...
+[*] Performing stack string extraction. Please wait...
+extracting stackstrings: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 312.45 functions/s]
+
+[!] There is no stack string value found!
+
+
+[*] Performing tight string extraction. Please wait...
+finding decoding function features: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 18236.10 functions/s, skipped 0 library functions]
+extracting tightstrings: 0 functions [00:00, ? functions/s]
+
+[!] There is no tight string value found!
+
+
+[*] Performing string decode via function emulation. Please wait...
+decoding strings: 0 functions [00:00, ? functions/s]
+
+[!] There is no decoded string value found!
+
+[*] Extracting and parsing function informations. Please wait...
+>>> Number of functions: 1
+Processing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
+┃    Function Name     ┃ Size ┃ Offset ┃ Xrefs From This Address ┃ Xrefs To This Address ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━┩
+│ _CorExeMain_0048b41a │  6   │  0x0   │            2            │           0           │
+└──────────────────────┴──────┴────────┴─────────────────────────┴───────────────────────┘
+
+[*] Parsing section information...
+                                                   * Informations About Sections *                                                    
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Section Name ┃ Virtual Size ┃ Virtual Address ┃ Size Of Raw Data ┃ Pointer to Raw Data ┃                  Entropy                  ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│    .text     │   0x89420    │     0x2000      │     0x89600      │        0x200        │ 7.6687490236716105 Possible obfuscation!! │
+│    .rsrc     │    0x5ac     │     0x8c000     │      0x600       │       0x89800       │             4.09740024253514              │
+│    .reloc    │     0xc      │     0x8e000     │      0x200       │       0x89e00       │            0.10191042566270775            │
+└──────────────┴──────────────┴─────────────────┴──────────────────┴─────────────────────┴───────────────────────────────────────────┘
+
+[*] Checking linked DLL files...
+┏━━━━━━━━━━━━━━━━━━┓
+┃ Linked DLL Files ┃
+┡━━━━━━━━━━━━━━━━━━┩
+│   mscoree.dll    │
+└──────────────────┘
+
+[*] Performing YARA rule matching...
+>>> Rule name: dotnet_binary_file
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x89609 │   b'mscoree.dll'    │
+│ 0x895fd │   b'_CorExeMain'    │
+│ 0xb613  │     b'mscorlib'     │
+│ 0xe9b1  │  b'.NETFramework'   │
+└─────────┴─────────────────────┘
+ 
+
+-> Statistics for: /home/kali/Downloads/54a8b4c753e22ebf0f248088c4424393f31417b9d79e0dafe7bf573e6263240a.exe
+>> Time Date Stamp: Wed Jun 25 07:44:13 2025 UTC
+>>>> MD5: aad30e43426358bde6d73ef179021c60
+>>>> SHA1: ccecd29ec13490d2d548dac93aae88a9ced3c9d0
+>>>> SHA256: 54a8b4c753e22ebf0f248088c4424393f31417b9d79e0dafe7bf573e6263240a
+>> IMPHASH: f34d5f2d4577ed6d9ceec516c1f5a744
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Categories       ┃ Number of Functions or Strings ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  All Imports,Exports  │               61               │
+│  Categorized Imports  │               60               │
+│         File          │               7                │
+│    Networking/Web     │               9                │
+│        Process        │               1                │
+│ Dll/Resource Handling │               20               │
+│   Evasion/Bypassing   │               4                │
+│     Cryptography      │               1                │
+│ Information Gathering │               1                │
+│     Other/Unknown     │               17               │
+└───────────────────────┴────────────────────────────────┘
+[*] Analyzing: /home/kali/Downloads/54a8b4c753e22ebf0f248088c4424393f31417b9d79e0dafe7bf573e6263240a.exe
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃           File Type            ┃       Pattern        ┃ Offset  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│    Windows Executable File     │    b'MZ\x90\x00'     │   0x0   │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0x23f85 │
+└────────────────────────────────┴──────────────────────┴─────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+[*] Target OS: Windows
+
+[*] Using Method 1: Hidden PE signature scan via strings
+[!] There is no embedded PE executable pattern found!
+
+[*] Using Method 1: Hidden PE signature scan via strings (16-bit)
+[!] There is no embedded PE executable pattern found!
+
+[*] Using Method 2: Detecting and merging split data
+[*] Locating start offsets...
+[*] Locating end offsets...
+[*] Deobfuscating split data. Please wait...
+[*] Data saved into: qu1cksc0pe_carved_deobfuscated_split.exe
+
+[*] Using Method 3: Extract PE file from Bitmap data
+[*] Found a valid Bitmap file on: 0xf19c | Size: 85318
+[*] Performing extraction. Please wait...
+[*] Extraction was successful. Performing PE extraction...
+[*] Using Method 4: Locate and decrypt hidden PE file
+[!] There is no encrypted PE pattern found!
+
+[*] Performing Windows API import/export extraction. Please wait...
+[!] There is no technique detected!
+[*] Performing language detection. Please wait!!
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Programming Language ┃ Probability ┃ Pattern Occurences ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│          C#          │    60.0     │         9          │
+│          C           │    40.0     │         6          │
+└──────────────────────┴─────────────┴────────────────────┘
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.msil/genie
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │  34   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│     msil     │  13   │
+│    genie     │   3   │
+│    bwokr     │   2   │
+└──────────────┴───────┘
+
+[*] Detection: 49/76
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Detected By      ┃                           Results                            ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│        ALYac         │                  Trojan.GenericKD.76752143                   │
+│         APEX         │                          Malicious                           │
+│         AVG          │                   Win32:MalwareX-gen [Pws]                   │
+│      AhnLab-V3       │               Trojan/Win.MalwareX-gen.C5773574               │
+│       Alibaba        │               TrojanSpy:MSIL/MalwareX.b0e37799               │
+│       Arcabit        │                   Trojan.Generic.D493250F                    │
+│        Avast         │                   Win32:MalwareX-gen [Pws]                   │
+│        Avira         │                   TR/AD.SnakeStealer.bwokr                   │
+│     BitDefender      │                  Trojan.GenericKD.76752143                   │
+│         Bkav         │                    W32.AIDetectMalware.CS                    │
+│    CAT-QuickHeal     │              Trojan.Ghanarava.1753197235021c60               │
+│     CrowdStrike      │              win/malicious_confidence_100% (W)               │
+│       Cylance        │                            Unsafe                            │
+│        DrWeb         │                    Trojan.PackedNET.3357                     │
+│      ESET-NOD32      │                      MSIL/Spy.Agent.AES                      │
+│       Elastic        │                 malicious (high confidence)                  │
+│       Emsisoft       │                Trojan.GenericKD.76752143 (B)                 │
+│       F-Secure       │               Trojan.TR/AD.SnakeStealer.bwokr                │
+│       Fortinet       │                     MSIL/Kryptik.ALLB!tr                     │
+│        GData         │                  Trojan.GenericKD.76752143                   │
+│      Gridinsoft      │                       Spy.Win32.Gen.tr                       │
+│        Ikarus        │                      Trojan.MSIL.Agent                       │
+│       Jiangmin       │                     TrojanSpy.MSIL.dgxq                      │
+│     K7AntiVirus      │                     Trojan ( 005c96041 )                     │
+│         K7GW         │                     Trojan ( 005c96041 )                     │
+│      Kaspersky       │                HEUR:Trojan-Spy.MSIL.Noon.gen                 │
+│       Kingsoft       │                     Win32.Troj.Unknown.a                     │
+│     Malwarebytes     │                        Trojan.MalPack                        │
+│      MaxSecure       │               Trojan.Malware.327458646.susgen                │
+│   MicroWorld-eScan   │                  Trojan.GenericKD.76752143                   │
+│      Microsoft       │                   Trojan:Win32/Kryptik!rfn                   │
+│    NANO-Antivirus    │                  Trojan.Win32.Genie.kyjrgt                   │
+│       Paloalto       │                          generic.ml                          │
+│        Panda         │                         Trj/Chgt.AD                          │
+│        Rising        │ Malware.Obfus/MSIL@AI.100 (RDM.MSIL2:z1mu5b+2N5LAQqXDiwLSig) │
+│       Sangfor        │                   Suspicious.Win32.Save.a                    │
+│     SentinelOne      │                   Static AI - Malicious PE                   │
+│        Sophos        │                        Troj/Krypt-ABH                        │
+│       Symantec       │                        MSIL.Packed.19                        │
+│       Tencent        │                Malware.Win32.Gencirc.1494ed48                │
+│      TrendMicro      │                     TROJ_GEN.R06EC0DFR25                     │
+│ TrendMicro-HouseCall │                     TROJ_GEN.R06EC0DFR25                     │
+│        VBA32         │                  Dropper.MSIL.Multiseq.Heur                  │
+│        VIPRE         │                  Trojan.GenericKD.76752143                   │
+│       ViRobot        │                  Trojan.Win.Z.Genie.565248                   │
+│       Webroot        │                        Win.Trojan.Gen                        │
+│        Yandex        │                    Trojan.Igent.b4ECfi.4                     │
+│        Zillya        │                  Trojan.Agent.Win32.4288431                  │
+│      ZoneAlarm       │                        Troj/Krypt-AQM                        │
+└──────────────────────┴──────────────────────────────────────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+>>> Rule name: Microsoft_Visual_Studio_NET
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                    Matched String/Byte                                                                     ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Microsoft_Visual_C_v70_Basic_NET_additional
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                                                Matched String/Byte                                                                                                 ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Microsoft_Visual_C_Basic_NET
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                                                Matched String/Byte                                                                                                 ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Microsoft_Visual_Studio_NET_additional
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                    Matched String/Byte                                                                     ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Microsoft_Visual_C_v70_Basic_NET
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                                                Matched String/Byte                                                                                                 ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: NET_executable_
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                                    Matched String/Byte                                                                                     ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: NET_executable
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                                    Matched String/Byte                                                                                     ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Microsoft_Visual_C__v7_0___Basic__NET
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                                                                                Matched String/Byte                                                                                                 ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x8961a │ b'\xff%\x00 @\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' │
+└─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[IP_Address]> 1.0.0.0
+[IP_Address]> 16.0.0.0
+[IP_Address]> 1.0.0.0
+[IP_Address]> 1.0.0.0
+[IP_Address]> 1.0.0.0

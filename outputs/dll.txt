@@ -1,0 +1,769 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/6411e21322f66424d566b3aeba7cbc53aa55025792cfa6d3d5ec8fd017d13a87.dll --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                               
+
+                   <------------------------------------------>
+                   <  This tool is very dangerous. Be careful >
+           __      <   while using it!!                       >
+         _|  |_    <------------------------------------------>
+       _|      |_   /
+      |  _    _  | /
+      | |_|  |_| |
+   _  |  _    _  |  _
+  |_|_|_| |__| |_|_|_|
+    |_|_        _|_|   <- Mr. Virus
+      |_|      |_| 
+
+
+[*] Analyzing: /home/kali/Downloads/6411e21322f66424d566b3aeba7cbc53aa55025792cfa6d3d5ec8fd017d13a87.dll
+[*] Target OS: Windows
+
+[*] File Type: Windows Executable
+
+[*] Performing extraction of imports and exports. Please wait...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Registry ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│           RegDeleteValueW           │ 0x2023c000 │
+│             RegCloseKey             │ 0x2023c010 │
+│          RegQueryInfoKeyW           │ 0x2023c014 │
+│            RegDeleteKeyW            │ 0x2023c018 │
+│             RegFlushKey             │ 0x2023c020 │
+│           RegCreateKeyExW           │ 0x2023c024 │
+│          RegQueryValueExW           │ 0x2023c040 │
+│            RegEnumValueW            │ 0x2023c044 │
+│           RegSetValueExW            │ 0x2023c048 │
+│            RegCreateKeyW            │ 0x2023c050 │
+│            RegOpenKeyExW            │ 0x2023c054 │
+│            RegEnumKeyExW            │ 0x2023c05c │
+└─────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about File ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│       GetFileVersionInfoW       │ 0x2023c2cc │
+│     GetFileVersionInfoSizeW     │ 0x2023c2d0 │
+│          PathCombineW           │ 0x2023c28c │
+│         SetFilePointer          │ 0x2023c0ac │
+│          SetEndOfFile           │ 0x2023c0b0 │
+│         UnmapViewOfFile         │ 0x2023c0b4 │
+│         FlushViewOfFile         │ 0x2023c0c0 │
+│           GetFileSize           │ 0x2023c0d0 │
+│          MapViewOfFile          │ 0x2023c0d4 │
+│        CreateDirectoryW         │ 0x2023c0d8 │
+│  GetFileInformationByHandleEx   │ 0x2023c0dc │
+│         FindFirstFileW          │ 0x2023c0e0 │
+│        GetFullPathNameW         │ 0x2023c0f8 │
+│          FindNextFileW          │ 0x2023c0fc │
+│            FindClose            │ 0x2023c124 │
+│           CreateFileW           │ 0x2023c12c │
+│       GetFileAttributesW        │ 0x2023c130 │
+│       SetFileAttributesW        │ 0x2023c138 │
+│   GetFileInformationByHandle    │ 0x2023c140 │
+│      GetFileAttributesExW       │ 0x2023c144 │
+│           DeleteFileW           │ 0x2023c14c │
+│      SetCurrentDirectoryW       │ 0x2023c160 │
+│           MoveFileExW           │ 0x2023c168 │
+│     GetSystemTimeAsFileTime     │ 0x2023c174 │
+│           GetFileType           │ 0x2023c178 │
+│            ReadFile             │ 0x2023c1c0 │
+│            WriteFile            │ 0x2023c1d4 │
+│       GetModuleFileNameW        │ 0x2023c1d8 │
+│           CreateFileA           │ 0x2023c1fc │
+│       CreateFileMappingW        │ 0x2023c210 │
+└─────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Networking/Web ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│                   send                    │ 0x2023c2dc │
+│              WSAGetLastError              │ 0x2023c2e0 │
+│                getsockopt                 │ 0x2023c2e4 │
+└───────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Process ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│          OpenProcessToken          │ 0x2023c030 │
+│       AdjustTokenPrivileges        │ 0x2023c038 │
+│        GetCurrentProcessId         │ 0x2023c068 │
+│              TlsFree               │ 0x2023c07c │
+│         GetCurrentProcess          │ 0x2023c0a8 │
+│            CloseHandle             │ 0x2023c0c4 │
+│          TerminateProcess          │ 0x2023c108 │
+│             CreatePipe             │ 0x2023c11c │
+│            OpenProcess             │ 0x2023c134 │
+│          GetCurrentThread          │ 0x2023c194 │
+│       WaitForSingleObjectEx        │ 0x2023c198 │
+│          CreateNamedPipeA          │ 0x2023c1d0 │
+│       WaitForMultipleObjects       │ 0x2023c1dc │
+│           PeekNamedPipe            │ 0x2023c1e4 │
+│        WaitForSingleObject         │ 0x2023c1e8 │
+│            ExitProcess             │ 0x2023c208 │
+│           CreateProcessW           │ 0x2023c20c │
+│          ConnectNamedPipe          │ 0x2023c218 │
+│        EnterCriticalSection        │ 0x2023c230 │
+│          ReleaseSemaphore          │ 0x2023c234 │
+│        LeaveCriticalSection        │ 0x2023c238 │
+│     InitializeCriticalSection      │ 0x2023c23c │
+│       DeleteCriticalSection        │ 0x2023c240 │
+│            TlsSetValue             │ 0x2023c274 │
+│              TlsAlloc              │ 0x2023c280 │
+└────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Memory Management ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│                GetProcessHeap                │ 0x2023c074 │
+│                  HeapAlloc                   │ 0x2023c204 │
+│                 VirtualQuery                 │ 0x2023c214 │
+│                 VirtualFree                  │ 0x2023c220 │
+│                 VirtualAlloc                 │ 0x2023c224 │
+│                  LocalFree                   │ 0x2023c250 │
+│                   HeapFree                   │ 0x2023c278 │
+│                    memset                    │ 0x2023c2bc │
+│                    memcpy                    │ 0x2023c2c0 │
+│                     free                     │ 0x2023c350 │
+│                    malloc                    │ 0x2023c35c │
+│                   realloc                    │ 0x2023c360 │
+└──────────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Dll/Resource Handling ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│                   LoadLibraryW                   │ 0x2023c154 │
+│                 GetModuleHandleW                 │ 0x2023c16c │
+│                  LoadLibraryExW                  │ 0x2023c22c │
+│                   FreeLibrary                    │ 0x2023c24c │
+└──────────────────────────────────────────────────┴────────────┘
+                         * WARNING *                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Evasion/Bypassing ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│         SetUnhandledExceptionFilter          │ 0x2023c070 │
+│           UnhandledExceptionFilter           │ 0x2023c080 │
+│              IsDebuggerPresent               │ 0x2023c084 │
+│              CreateFileMappingA              │ 0x2023c0cc │
+│                 SetFileTime                  │ 0x2023c114 │
+│           CreateToolhelp32Snapshot           │ 0x2023c13c │
+│                GetProcAddress                │ 0x2023c164 │
+│           GetSystemTimeAsFileTime            │ 0x2023c174 │
+│                    Sleep                     │ 0x2023c18c │
+│            WaitForSingleObjectEx             │ 0x2023c198 │
+│            WaitForMultipleObjects            │ 0x2023c1dc │
+│             WaitForSingleObject              │ 0x2023c1e8 │
+│               GetModuleHandleA               │ 0x2023c1f0 │
+│              OutputDebugStringW              │ 0x2023c25c │
+│                GetTickCount64                │ 0x2023c264 │
+│          QueryPerformanceFrequency           │ 0x2023c268 │
+│           QueryPerformanceCounter            │ 0x2023c26c │
+└──────────────────────────────────────────────┴────────────┘
+                         * WARNING *                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about System/Persistence ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│                DeviceIoControl                │ 0x2023c104 │
+└───────────────────────────────────────────────┴────────────┘
+                      * WARNING *                       
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Cryptography ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│          CryptAcquireContextW           │ 0x2023c004 │
+│             CryptGenRandom              │ 0x2023c008 │
+│           CryptReleaseContext           │ 0x2023c00c │
+└─────────────────────────────────────────┴────────────┘
+                           * WARNING *                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Information Gathering ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│                  VerQueryValueW                  │ 0x2023c2d4 │
+│              LookupPrivilegeValueA               │ 0x2023c034 │
+│            IsProcessorFeaturePresent             │ 0x2023c06c │
+│                   TlsGetValue                    │ 0x2023c078 │
+│                 GetStartupInfoW                  │ 0x2023c088 │
+│                  GetLocaleInfoA                  │ 0x2023c090 │
+│                      GetACP                      │ 0x2023c094 │
+│                  GetSystemInfo                   │ 0x2023c0c8 │
+│                  Process32First                  │ 0x2023c0e4 │
+│            GetConsoleScreenBufferInfo            │ 0x2023c0ec │
+│             CreateToolhelp32Snapshot             │ 0x2023c13c │
+│               GetDiskFreeSpaceExW                │ 0x2023c148 │
+│                  Process32Next                   │ 0x2023c150 │
+│                 GetProcessTimes                  │ 0x2023c17c │
+│              GetTimeZoneInformation              │ 0x2023c190 │
+│                  GetThreadTimes                  │ 0x2023c1a0 │
+│                  GetStringTypeW                  │ 0x2023c1bc │
+│                     ReadFile                     │ 0x2023c1c0 │
+│                    GetVersion                    │ 0x2023c1f4 │
+│                   VirtualQuery                   │ 0x2023c214 │
+│                GetExitCodeProcess                │ 0x2023c21c │
+│                   GetConsoleCP                   │ 0x2023c258 │
+│             QueryPerformanceCounter              │ 0x2023c26c │
+│                  GetVersionExW                   │ 0x2023c270 │
+│                GetCurrentThreadId                │ 0x2023c27c │
+└──────────────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Functions or Strings about Other/Unknown ┃  Address   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│               GetLastError               │ 0x2023c0bc │
+│               SetLastError               │ 0x2023c0f0 │
+│               GetStdHandle               │ 0x2023c100 │
+│                 SetEvent                 │ 0x2023c184 │
+│           MultiByteToWideChar            │ 0x2023c1a4 │
+│           WideCharToMultiByte            │ 0x2023c1b8 │
+│                  wcschr                  │ 0x2023c298 │
+│                 _wcsicmp                 │ 0x2023c554 │
+└──────────────────────────────────────────┴────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃           Linked DLL Files            ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              VERSION.dll              │
+│              SHLWAPI.dll              │
+│              WS2_32.dll               │
+│             ADVAPI32.dll              │
+│             KERNEL32.dll              │
+│           VCRUNTIME140.dll            │
+│    api-ms-win-crt-math-l1-1-0.dll     │
+│   api-ms-win-crt-locale-l1-1-0.dll    │
+│   api-ms-win-crt-string-l1-1-0.dll    │
+│   api-ms-win-crt-runtime-l1-1-0.dll   │
+│    api-ms-win-crt-stdio-l1-1-0.dll    │
+│   api-ms-win-crt-convert-l1-1-0.dll   │
+│    api-ms-win-crt-time-l1-1-0.dll     │
+│ api-ms-win-crt-environment-l1-1-0.dll │
+│   api-ms-win-crt-process-l1-1-0.dll   │
+│    api-ms-win-crt-heap-l1-1-0.dll     │
+│    api-ms-win-crt-conio-l1-1-0.dll    │
+│ api-ms-win-crt-filesystem-l1-1-0.dll  │
+└───────────────────────────────────────┘
+
+[*] Parsing DEBUG information...
+>>> PDB Name: d:\a\1\b\bin\win32\python38.pdb
+>>> Debug Signature: 419CD9E2894345D4A8179B7C6FD61A871
+
+[*] Checking the target PDB in our malicious PDB database...
+
+[*] Performing special artifact detection. Please wait...
+[!] There is no special artifact pattern found!
+
+
+[*] Looking for: Windows Registry Key
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃         Registry Keys          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Software\\Python\\PythonCore\\ │
+└────────────────────────────────┘
+
+[*] Looking for: Interesting String Patterns
+Analyzing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃         Interesting Patterns          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ d:\\a\\1\\b\\bin\\win32\\python38.pdb │
+│           _LoaderBasics.exe           │
+│        ExtensionFileLoader.exe        │
+│         _NamespaceLoader.exe          │
+│              loader.exe               │
+│          BuiltinImporter.exe          │
+│          FrozenImporter.exe           │
+│                os.exe                 │
+│              python3.dll              │
+│                 d.dll                 │
+│             python38.dll              │
+│              VERSION.dll              │
+│              SHLWAPI.dll              │
+│              WS2_32.dll               │
+│             ADVAPI32.dll              │
+│             KERNEL32.dll              │
+│           VCRUNTIME140.dll            │
+│    api-ms-win-crt-math-l1-1-0.dll     │
+│   api-ms-win-crt-locale-l1-1-0.dll    │
+│   api-ms-win-crt-string-l1-1-0.dll    │
+│   api-ms-win-crt-runtime-l1-1-0.dll   │
+│    api-ms-win-crt-stdio-l1-1-0.dll    │
+│   api-ms-win-crt-convert-l1-1-0.dll   │
+│    api-ms-win-crt-time-l1-1-0.dll     │
+│ api-ms-win-crt-environment-l1-1-0.dll │
+│   api-ms-win-crt-process-l1-1-0.dll   │
+│    api-ms-win-crt-heap-l1-1-0.dll     │
+│    api-ms-win-crt-conio-l1-1-0.dll    │
+│ api-ms-win-crt-filesystem-l1-1-0.dll  │
+│             advapi32.dll              │
+│    api-ms-win-core-path-l1-1-0.dll    │
+│             kernel32.dll              │
+│              pyvenv.cfg               │
+└───────────────────────────────────────┘
+
+[*] Performing embedded PE file detection...
+[!] There is no embedded PE file!
+
+
+[*] Performing YARA rule matching...
+>>> Rule name: DebuggerException__ConsoleCtrl
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃     Matched String/Byte     ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x3922ea │ b'GenerateConsoleCtrlEvent' │
+└──────────┴─────────────────────────────┘
+ 
+>>> Rule name: SEH__vectored
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃        Matched String/Byte        ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x391ea8 │  b'AddVectoredExceptionHandler'   │
+│ 0x391e64 │ b'RemoveVectoredExceptionHandler' │
+└──────────┴───────────────────────────────────┘
+ 
+>>> Rule name: anti_dbg
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte  ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x392826 │   b'KERNEL32.dll'    │
+│ 0x39324c │ b'IsDebuggerPresent' │
+│ 0x39272e │ b'OutputDebugString' │
+└──────────┴──────────────────────┘
+ 
+>>> Rule name: network_tcp_listen
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x391c7a │    b'WS2_32.dll'    │
+│ 0x3095a6 │       b'bind'       │
+│ 0x23e64c │      b'accept'      │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: network_tcp_socket
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x391c7a │    b'WS2_32.dll'    │
+│ 0x245755 │      b'socket'      │
+│ 0x259d35 │       b'send'       │
+│ 0x253572 │     b'connect'      │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: escalate_priv
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃   Matched String/Byte    ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x391e38 │     b'ADVAPI32.dll'      │
+│ 0x391cc4 │ b'AdjustTokenPrivileges' │
+└──────────┴──────────────────────────┘
+ 
+>>> Rule name: win_registry
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x391e38 │   b'ADVAPI32.dll'   │
+│ 0x391dec │   b'RegCloseKey'    │
+│ 0x391dec │   b'RegCloseKey'    │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: win_token
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃   Matched String/Byte    ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x391e38 │     b'ADVAPI32.dll'      │
+│ 0x391cc4 │ b'AdjustTokenPrivileges' │
+│ 0x391c98 │   b'OpenProcessToken'    │
+│ 0x391cac │ b'LookupPrivilegeValueA' │
+└──────────┴──────────────────────────┘
+ 
+>>> Rule name: win_files_operation
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x392826 │   b'KERNEL32.dll'   │
+│ 0x3021d8 │    b'WriteFile'     │
+│ 0x391eda │  b'SetFilePointer'  │
+│ 0x3021d8 │    b'WriteFile'     │
+│ 0x256c4c │     b'ReadFile'     │
+│ 0x392550 │   b'CreateFileA'    │
+│ 0x39211c │    b'FindClose'     │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: Str_Win32_Winsock2_Library
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x391c7a │    b'WS2_32.dll'    │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: ldpreload
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x34c256 │      b'dlopen'      │
+│ 0x3911db │      b'fopen'       │
+│ 0x23e64c │      b'accept'      │
+│ 0x242792 │       b'open'       │
+│ 0x254348 │      b'rmdir'       │
+│ 0x245a73 │      b'UNLINK'      │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: Big_Numbers1
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                                                                         Matched String/Byte                                                                         ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x3139b8 │ b'7\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x00' │
+└──────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Big_Numbers2
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                                                                                                                 Matched String/Byte                                                                                                                 ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x313998 │ b'7\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x00' │
+└──────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Big_Numbers3
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                                                                                                                    Matched String/Byte                                                                                                                     ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x313978 │ b'7\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\… │
+└──────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: Big_Numbers4
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                                                                                                                    Matched String/Byte                                                                                                                     ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x314ee2 │ b'7\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\x007\… │
+└──────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: CRC32_poly_Constant
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x22fef7 │  b' \x83\xb8\xed'   │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: CRC32_table
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                       Matched String/Byte                       ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x24aff0 │ b'\x00\x00\x00\x00\x960\x07w,a\x0e\xee\xbaQ\t\x99\x19\xc4m\x07' │
+└──────────┴─────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: CRC16_table
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                                                                                     Matched String/Byte                                                                                     ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x24bac0 │ b'\x00\x00!\x10B c0\x84@\xa5P\xc6`\xe7p\x08\x81)\x91J\xa1k\xb1\x8c\xc1\xad\xd1\xce\xe1\xef\xf11\x12\x10\x02s2R"\xb5R\x94B\xf7r\xd6b9\x93\x18\x83{\xb3Z\xa3\xbd\xd3\x9c\xc3\xff\xf3\xde\xe3' │
+└──────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: MD5_Constants
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x84ea3 │     b'\x01#Eg'      │
+│ 0x84eaa │ b'\x89\xab\xcd\xef' │
+│ 0x84eb1 │ b'\xfe\xdc\xba\x98' │
+│ 0x84eb8 │     b'vT2\x10'      │
+│ 0x848b5 │    b'x\xa4j\xd7'    │
+└─────────┴─────────────────────┘
+ 
+>>> Rule name: RIPEMD160_Constants
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x84ea3 │     b'\x01#Eg'      │
+│ 0x84eaa │ b'\x89\xab\xcd\xef' │
+│ 0x84eb1 │ b'\xfe\xdc\xba\x98' │
+│ 0x84eb8 │     b'vT2\x10'      │
+│ 0x9b65f │ b'\xf0\xe1\xd2\xc3' │
+└─────────┴─────────────────────┘
+ 
+>>> Rule name: SHA1_Constants
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x84ea3 │     b'\x01#Eg'      │
+│ 0x84eaa │ b'\x89\xab\xcd\xef' │
+│ 0x84eb1 │ b'\xfe\xdc\xba\x98' │
+│ 0x84eb8 │     b'vT2\x10'      │
+│ 0x9b65f │ b'\xf0\xe1\xd2\xc3' │
+│ 0x9b50f │  b'\xd6\xc1b\xca'   │
+└─────────┴─────────────────────┘
+ 
+>>> Rule name: SHA512_Constants
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x9c2f4 │    b'\x98/\x8aB'    │
+│ 0x9c386 │     b'\x91D7q'      │
+│ 0x9c3f7 │ b'\xcf\xfb\xc0\xb5' │
+│ 0x9c494 │ b'\xa5\xdb\xb5\xe9' │
+│ 0x9f65c │    b'"\xae(\xd7'    │
+└─────────┴─────────────────────┘
+ 
+>>> Rule name: SHA2_BLAKE2_IVs
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x2baf │     b'g\xe6\tj'     │
+│ 0x2bbf │  b'\x85\xaeg\xbb'   │
+│ 0x2bcd │     b'r\xf3n<'      │
+│ 0x2bdb │    b':\xf5O\xa5'    │
+│ 0x2be9 │    b'\x7fR\x0eQ'    │
+│ 0x2bf7 │  b'\x8ch\x05\x9b'   │
+│ 0x2c05 │ b'\xab\xd9\x83\x1f' │
+│ 0x2c13 │  b'\x19\xcd\xe0['   │
+└────────┴─────────────────────┘
+ 
+>>> Rule name: BASE64_table
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                         Matched String/Byte                         ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x24ba30 │ b'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/' │
+└──────────┴─────────────────────────────────────────────────────────────────────┘
+ 
+>>> Rule name: SHA3_interleaved
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃         Matched String/Byte         ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x244750 │ b'\x01\x00\x00\x00\x8b\x80\x00\x00' │
+│ 0x244770 │ b'\x00\x00\x00\x00\x81\x00\x00\x80' │
+│ 0x244798 │ b'\x00\x00\x00\x00\x88\x00\x00\x80' │
+│ 0x244730 │ b'\x00\x00\x00\x00\x0b\x00\x00\x00' │
+│ 0x244718 │ b'\x01\x00\x00\x00\x00\x80\x00\x00' │
+│ 0x244710 │ b'\x01\x00\x00\x00\x8b\x00\x00\x00' │
+│ 0x244740 │ b'\x01\x00\x00\x00\x82\x80\x00\x00' │
+│ 0x244748 │ b'\x00\x00\x00\x00\x03\x80\x00\x00' │
+│ 0x244760 │ b'\x01\x00\x00\x00\x8a\x00\x00\x80' │
+│ 0x2447a8 │ b'\x00\x00\x00\x00\x82\x80\x00\x80' │
+│ 0x244788 │ b'\x00\x00\x00\x00\x03\x80\x00\x80' │
+│ 0x244700 │ b'\x00\x00\x00\x00\x8b\x00\x00\x80' │
+│ 0x244780 │ b'\x00\x00\x00\x00\x83\x00\x00\x00' │
+│ 0x244738 │  b'\x00\x00\x00\x00\n\x00\x00\x00'  │
+│ 0x244708 │ b'\x00\x00\x00\x00\x80\x80\x00\x80' │
+│ 0x244728 │ b'\x01\x00\x00\x00\x82\x00\x00\x80' │
+│ 0x244758 │ b'\x01\x00\x00\x00\x0b\x00\x00\x80' │
+│ 0x244720 │ b'\x01\x00\x00\x00\x88\x80\x00\x80' │
+│ 0x244778 │ b'\x00\x00\x00\x00\x08\x00\x00\x80' │
+│ 0x2446f0 │ b'\x01\x00\x00\x00\x00\x00\x00\x00' │
+│ 0x2446f8 │ b'\x00\x00\x00\x00\x89\x00\x00\x00' │
+│ 0x244768 │ b'\x01\x00\x00\x00\x81\x00\x00\x80' │
+└──────────┴─────────────────────────────────────┘
+ 
+                                        * Informations About Sections *                                        
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Section Name ┃ Virtual Size ┃ Virtual Address ┃ Size Of Raw Data ┃ Pointer to Raw Data ┃      Entropy       ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│    .text     │   0x23ab89   │     0x1000      │     0x23ac00     │        0x400        │ 6.658073016251577  │
+│    .rdata    │   0x158314   │    0x23c000     │     0x158400     │      0x23b000       │ 5.931988900875091  │
+│    .data     │   0x3b8f0    │    0x395000     │     0x21000      │      0x393400       │ 3.1276677549837895 │
+│    .rsrc     │    0xa18     │    0x3d1000     │      0xc00       │      0x3b4400       │ 4.344280256161741  │
+│    .reloc    │   0x26530    │    0x3d2000     │     0x26600      │      0x3b5000       │ 6.786433192951179  │
+└──────────────┴──────────────┴─────────────────┴──────────────────┴─────────────────────┴────────────────────┘
+
+[*] Performing analysis via Vivisect and Floss...
+[*] Initializing viv.analyze. Please wait...
+[*] Performing stack string extraction. Please wait...
+extracting stackstrings:  52%|███████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                          | 4525/8621 [00:22<00:20, 197.15 functions/s]extracting stackstrings:  53%|████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                         | 4544/8621 [00:22<00:19, 203.88 functions/s]
+[!] An error occured while analyzing functions! This file might have some anti-analysis technique!
+
+-> Statistics for: /home/kali/Downloads/6411e21322f66424d566b3aeba7cbc53aa55025792cfa6d3d5ec8fd017d13a87.dll
+>> Time Date Stamp: Mon Jul 20 15:43:49 2020 UTC
+>>>> MD5: b6b71c446433ce7a32437d63a7b31484
+>>>> SHA1: 8caa97be4e383d125eec22efe353055d4dd298c6
+>>>> SHA256: 6411e21322f66424d566b3aeba7cbc53aa55025792cfa6d3d5ec8fd017d13a87
+>> IMPHASH: 4e6ddafb4dbe3e9b050630d3a06fc0bc
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Categories       ┃ Number of Functions or Strings ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  All Imports,Exports  │              1964              │
+│  Categorized Imports  │              140               │
+│       Registry        │               12               │
+│         File          │               30               │
+│    Networking/Web     │               3                │
+│        Process        │               25               │
+│   Memory Management   │               12               │
+│ Dll/Resource Handling │               4                │
+│   Evasion/Bypassing   │               17               │
+│  System/Persistence   │               1                │
+│     Cryptography      │               3                │
+│ Information Gathering │               25               │
+│     Other/Unknown     │               8                │
+└───────────────────────┴────────────────────────────────┘
+[*] Analyzing: /home/kali/Downloads/6411e21322f66424d566b3aeba7cbc53aa55025792cfa6d3d5ec8fd017d13a87.dll
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃        File Type        ┃    Pattern    ┃  Offset  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ Windows Executable File │ b'MZ\x90\x00' │   0x0    │
+│   PKZIP Archive File    │ b'PK\x03\x04' │ 0x3445ae │
+│   PKZIP Archive File    │ b'PK\x05\x06' │ 0x341b2b │
+│ Dalvik Executable File  │   b'dex\n'    │ 0x23c23c │
+│ Dalvik Executable File  │   b'dex\n'    │ 0x23c3f3 │
+│ Dalvik Executable File  │   b'dex\n'    │ 0x303227 │
+│ Dalvik Executable File  │   b'dex\n'    │ 0x3035b9 │
+│ Dalvik Executable File  │   b'dex\n'    │ 0x328c3c │
+│ Dalvik Executable File  │   b'dex\n'    │ 0x32bb53 │
+└─────────────────────────┴───────────────┴──────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+[*] Target OS: Windows
+
+[*] Using Method 1: Hidden PE signature scan via strings
+[!] There is no embedded PE executable pattern found!
+
+[*] Using Method 1: Hidden PE signature scan via strings (16-bit)
+[!] There is no embedded PE executable pattern found!
+
+[*] Using Method 2: Detecting and merging split data
+[*] Locating start offsets...
+[*] Locating end offsets...
+[!] There is no split data found!
+
+[*] Using Method 3: Extract PE file from Bitmap data
+[!] There is no valid Bitmap file pattern found!
+
+[*] Using Method 4: Locate and decrypt hidden PE file
+[!] There is no encrypted PE pattern found!
+
+[*] Performing Windows API import/export extraction. Please wait...
+┏━━━━━━━━━━━━━━━━━━━┓
+┃     Discovery     ┃
+┡━━━━━━━━━━━━━━━━━━━┩
+│ Process Discovery │
+│  Query Registry   │
+└───────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃   Privilege Escalation    ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Access Token Manipulation │
+└───────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃            Persistence            ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Boot or Logon Autostart Execution │
+└───────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━┓
+┃  Defense Evasion   ┃
+┡━━━━━━━━━━━━━━━━━━━━┩
+│  Modify Registry   │
+│ Time Based Evasion │
+└────────────────────┘
+[*] Performing language detection. Please wait!!
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Programming Language ┃    Probability     ┃ Pattern Occurences ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│        Python        │ 11.333333333333334 │         17         │
+│          C#          │        2.0         │         3          │
+│          C           │ 86.66666666666667  │        130         │
+└──────────────────────┴────────────────────┴────────────────────┘
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.loader/rugmi
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │   9   │
+│    downloader     │   3   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│    loader    │   3   │
+│    rugmi     │   3   │
+│    hijack    │   2   │
+└──────────────┴───────┘
+
+[*] Detection: 14/76
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Detected By ┃              Results               ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  AhnLab-V3  │ Infostealer/Win.ACRStealer.R714314 │
+│    Bkav     │        W32.AIDetectMalware         │
+│   Cylance   │               Unsafe               │
+│ ESET-NOD32  │  Win32/TrojanDownloader.Rugmi.AVH  │
+│   Elastic   │  malicious (moderate confidence)   │
+│  Fortinet   │         W32/PossibleThreat         │
+│    GData    │     Win32.Trojan.Agent.Y2TL5Q      │
+│ Gridinsoft  │     Trojan.Win32.Downloader.cl     │
+│   Ikarus    │   Trojan-Downloader.Win32.Rugmi    │
+│  Kaspersky  │      Trojan.Win32.Loader.poi       │
+│  Kingsoft   │       Win32.Trojan.Loader.a        │
+│  Microsoft  │       Trojan:Win32/Rugmi!rfn       │
+│   Rising    │   Trojan.HiJack!8.1159F (CLOUD)    │
+│   Sophos    │           Mal/Generic-S            │
+└─────────────┴────────────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+>>> Rule name: HasRichSignature
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│  0xf0  │       b'Rich'       │
+└────────┴─────────────────────┘
+ 
+>>> Rule name: Microsoft_Visual_Cpp_v50v60_MFC
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x410  │  b'U\x8b\xec\x8b'   │
+└────────┴─────────────────────┘
+ 
+>>> Rule name: Borland_Delphi_30_additional
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x460  │  b'U\x8b\xec\x83'   │
+└────────┴─────────────────────┘
+ 
+>>> Rule name: Borland_Delphi_30_
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x460  │  b'U\x8b\xec\x83'   │
+└────────┴─────────────────────┘
+ 
+>>> Rule name: Borland_Delphi_v40_v50
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x460  │  b'U\x8b\xec\x83'   │
+└────────┴─────────────────────┘
+ 
+>>> Rule name: Borland_Delphi_v30
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x460  │  b'U\x8b\xec\x83'   │
+└────────┴─────────────────────┘
+ 
+>>> Rule name: Borland_Delphi_DLL
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x460  │  b'U\x8b\xec\x83'   │
+└────────┴─────────────────────┘
+ 
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[URL]> http://python.org/dev/peps/pep-0263/
+[URL]> http://schemas.microsoft.com/SMI/2016/WindowsSettings
+[URL]> http://ocsp.thawte.com0
+[URL]> http://crl.thawte.com/ThawteTimestampingCA.crl0
+[URL]> http://ts-ocsp.ws.symantec.com07
+[URL]> http://ts-aia.ws.symantec.com/tss-ca-g2.cer0
+[URL]> http://ts-crl.ws.symantec.com/tss-ca-g2.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0L
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+
+
+dipnot = bunun çıktısı çok daha uzun normalde ama uzun sürdüğü için biraz erken bitirdim.

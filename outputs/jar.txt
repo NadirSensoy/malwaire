@@ -1,0 +1,546 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/2c119d0db5765cfa99d3d904c506509b9355184315decb7944e572034c7ab277.jar --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                               
+
+       _______________
+      |@@@@|     |####|
+      |@@@@|     |####|
+      |@@@@|     |####|
+      \@@@@|     |####/
+       \@@@|     |###/
+        `@@|_____|##'
+             (O)
+        .-''''''''''-.             Congratulations!
+      .'  * * * * * * `.
+     :  *             * :                  You just analyzed your 1000th sample :)
+    : ~ Malware Hunter ~ :
+    :         of         :
+    :    ~ The Year ~    :             You won 100BTC!!!
+     :  *             * :
+      `.  * * * * * * .'
+        `-..........-'
+
+[*] Analyzing: /home/kali/Downloads/2c119d0db5765cfa99d3d904c506509b9355184315decb7944e572034c7ab277.jar
+[*] Target OS: Android
+[*] File Type: JAR
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/apkAnalyzer.py", line 621, in <module>
+    apka.PerformJAR()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/apkAnalyzer.py", line 335, in PerformJAR
+    self.print_file_report(file_report_obj=file_report)
+                                           ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'file_report' where it is not associated with a value
+[*] Analyzing: /home/kali/Downloads/2c119d0db5765cfa99d3d904c506509b9355184315decb7944e572034c7ab277.jar
+[*] Ole File: False
+[*] Encrypted: False
+
+[*] Analyzing file structure...
+           * Document Structure *            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                 File Name                 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         kingDavid/FirstRun.class/         │
+│ kingDavid/FirstRun.class/caesium_27.class │
+│ kingDavid/FirstRun.class/caesium_26.class │
+│ kingDavid/FirstRun.class/caesium_25.class │
+│ kingDavid/FirstRun.class/caesium_24.class │
+│            kingDavid/l.class/             │
+│    kingDavid/l.class/caesium_27.class     │
+│    kingDavid/l.class/caesium_26.class     │
+│    kingDavid/l.class/caesium_25.class     │
+│            kingDavid/u.class/             │
+│    kingDavid/u.class/caesium_27.class     │
+│    kingDavid/u.class/caesium_26.class     │
+│            kingDavid/o.class/             │
+│    kingDavid/o.class/caesium_27.class     │
+│    kingDavid/o.class/caesium_26.class     │
+│    kingDavid/o.class/caesium_25.class     │
+│    kingDavid/o.class/caesium_24.class     │
+│    kingDavid/o.class/caesium_31.class     │
+│    kingDavid/o.class/caesium_30.class     │
+│    kingDavid/o.class/caesium_29.class     │
+│    kingDavid/o.class/caesium_28.class     │
+│            kingDavid/j.class/             │
+│    kingDavid/j.class/caesium_27.class     │
+│            kingDavid/c.class/             │
+│    kingDavid/c.class/caesium_27.class     │
+│    kingDavid/c.class/caesium_26.class     │
+│    kingDavid/c.class/caesium_25.class     │
+│    kingDavid/c.class/caesium_24.class     │
+│    kingDavid/c.class/caesium_31.class     │
+│    kingDavid/c.class/caesium_30.class     │
+│    kingDavid/c.class/caesium_29.class     │
+│    kingDavid/c.class/caesium_28.class     │
+│    kingDavid/c.class/caesium_19.class     │
+│    kingDavid/c.class/caesium_18.class     │
+│            kingDavid/p.class/             │
+│    kingDavid/p.class/caesium_27.class     │
+│    kingDavid/p.class/caesium_26.class     │
+│    kingDavid/p.class/caesium_25.class     │
+│    kingDavid/p.class/caesium_24.class     │
+│    kingDavid/p.class/caesium_31.class     │
+│    kingDavid/p.class/caesium_30.class     │
+│    kingDavid/p.class/caesium_29.class     │
+│            kingDavid/a.class/             │
+│    kingDavid/a.class/caesium_27.class     │
+│            kingDavid/d.class/             │
+│    kingDavid/d.class/caesium_27.class     │
+│    kingDavid/d.class/caesium_26.class     │
+│    kingDavid/d.class/caesium_25.class     │
+│    kingDavid/d.class/caesium_24.class     │
+│    kingDavid/d.class/caesium_31.class     │
+│    kingDavid/d.class/caesium_30.class     │
+│    kingDavid/d.class/caesium_29.class     │
+│    kingDavid/d.class/caesium_28.class     │
+│            kingDavid/h.class/             │
+│    kingDavid/h.class/caesium_27.class     │
+│    kingDavid/h.class/caesium_26.class     │
+│    kingDavid/h.class/caesium_25.class     │
+│    kingDavid/h.class/caesium_24.class     │
+│    kingDavid/h.class/caesium_31.class     │
+│    kingDavid/h.class/caesium_30.class     │
+│    kingDavid/h.class/caesium_29.class     │
+│    kingDavid/h.class/caesium_28.class     │
+│    kingDavid/h.class/caesium_19.class     │
+│    kingDavid/h.class/caesium_18.class     │
+│            kingDavid/m.class/             │
+│    kingDavid/m.class/caesium_27.class     │
+│    kingDavid/m.class/caesium_26.class     │
+│    kingDavid/m.class/caesium_25.class     │
+│            kingDavid/f.class/             │
+│    kingDavid/f.class/caesium_27.class     │
+│    kingDavid/f.class/caesium_26.class     │
+│    kingDavid/f.class/caesium_25.class     │
+│    kingDavid/f.class/caesium_24.class     │
+│    kingDavid/f.class/caesium_31.class     │
+│    kingDavid/f.class/caesium_30.class     │
+│            kingDavid/t.class/             │
+│    kingDavid/t.class/caesium_27.class     │
+│    kingDavid/t.class/caesium_26.class     │
+│    kingDavid/t.class/caesium_25.class     │
+│            kingDavid/g.class/             │
+│    kingDavid/g.class/caesium_27.class     │
+│    kingDavid/g.class/caesium_26.class     │
+│    kingDavid/g.class/caesium_25.class     │
+│    kingDavid/g.class/caesium_24.class     │
+│    kingDavid/g.class/caesium_31.class     │
+│    kingDavid/g.class/caesium_30.class     │
+│    kingDavid/g.class/caesium_29.class     │
+│            kingDavid/b.class/             │
+│    kingDavid/b.class/caesium_27.class     │
+│    kingDavid/b.class/caesium_26.class     │
+│            kingDavid/n.class/             │
+│    kingDavid/n.class/caesium_27.class     │
+│         kingDavid/McHelper.class/         │
+│ kingDavid/McHelper.class/caesium_27.class │
+│ kingDavid/McHelper.class/caesium_26.class │
+│            kingDavid/k.class/             │
+│    kingDavid/k.class/caesium_27.class     │
+│    kingDavid/k.class/caesium_26.class     │
+│            kingDavid/q.class/             │
+│    kingDavid/q.class/caesium_27.class     │
+│    kingDavid/q.class/caesium_26.class     │
+│    kingDavid/q.class/caesium_25.class     │
+│            kingDavid/s.class/             │
+│    kingDavid/s.class/caesium_27.class     │
+│    kingDavid/s.class/caesium_26.class     │
+│    kingDavid/s.class/caesium_25.class     │
+│    kingDavid/s.class/caesium_24.class     │
+│    kingDavid/s.class/caesium_31.class     │
+│    kingDavid/s.class/caesium_30.class     │
+│    kingDavid/s.class/caesium_29.class     │
+│            kingDavid/r.class/             │
+│    kingDavid/r.class/caesium_27.class     │
+│    kingDavid/r.class/caesium_26.class     │
+│    kingDavid/r.class/caesium_25.class     │
+│            kingDavid/e.class/             │
+│    kingDavid/e.class/caesium_27.class     │
+│    kingDavid/e.class/caesium_26.class     │
+│    kingDavid/e.class/caesium_25.class     │
+│    kingDavid/e.class/caesium_24.class     │
+│    kingDavid/e.class/caesium_31.class     │
+│    kingDavid/e.class/caesium_30.class     │
+│            kingDavid/i.class/             │
+│    kingDavid/i.class/caesium_27.class     │
+│    kingDavid/i.class/caesium_26.class     │
+│      kingDavid/resources/config.txt       │
+│           kingDavid/resources/            │
+│                kingDavid/                 │
+│           META-INF/MANIFEST.MF            │
+│                 META-INF/                 │
+└───────────────────────────────────────────┘
+
+[*] Searching for interesting links...
+There is no interesting links found.
+
+[*] Performing YARA rule matching...
+>>> Rule name: Suspicious_Macro_Presence
+┏━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset ┃ Matched String/Byte ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│  0x30  │      b'.class'      │
+└────────┴─────────────────────┘
+ 
+
+[*] Looking for Macros...
+>>> VBA MACRO: Not found.
+
+
+>>> XLM MACRO: Not found.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━┓
+┃     File Type      ┃    Pattern    ┃ Offset  ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━┩
+│ PKZIP Archive File │ b'PK\x03\x04' │   0x0   │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x32ed  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x3347  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x33a1  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x33fb  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x3455  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x6094  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x60e7  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x613a  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x618d  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xa071  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xa0c4  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xa117  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xeafd  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xeb50  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xeba3  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xebf6  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xec49  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xec9c  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xecef  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xed42  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xed95  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1325a │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x132ad │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1643b │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1648e │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x164e1 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16534 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16587 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x165da │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1662d │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16680 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x166d3 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16726 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16779 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x168c0 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16913 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16966 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x169b9 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16a0c │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16a5f │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16ab2 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x16b05 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1721f │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x17272 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a602 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a655 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a6a8 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a6fb │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a74e │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a7a1 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a7f4 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a847 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a89a │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1a9f5 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1aa48 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1aa9b │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1aaee │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ab41 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ab94 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1abe7 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ac3a │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ac8d │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ace0 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ad33 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1e7d4 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1e827 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1e87a │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1e8cd │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1e9f0 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ea43 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ea96 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1eae9 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1eb3c │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1eb8f │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1ebe2 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1f002 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1f055 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1f0a8 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1f0fb │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x220dc │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2212f │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x22182 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x221d5 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x22228 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2227b │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x222ce │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x22321 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2527d │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x252d0 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x25323 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2546a │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x254bd │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2aaa3 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2aafd │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2ab57 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2adf2 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2ae45 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2ae98 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2af78 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2afcb │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2b01e │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2b071 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2b90d │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2b960 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2b9b3 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2ba06 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2ba59 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2baac │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2baff │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2bb52 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2c739 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2c78c │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2c7df │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2c832 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x30d07 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x30d5a │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x30dad │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x30e00 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x30e53 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x30ea6 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x30ef9 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x3116e │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x311c1 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x31214 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x31343 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x31387 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x313c1 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x314c1 │
+│ PKZIP Archive File │ b'PK\x05\x06' │ 0x33bc1 │
+└────────────────────┴───────────────┴─────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+[*] Target OS: Android
+
+[*] Parsing file contents...
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      File Type                       ┃                 File Name                 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  compiled Java class data, version 50.0 (Java 1.6)   │         kingDavid/FirstRun.class/         │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/l.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/u.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/o.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/j.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/c.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/p.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/a.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/d.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/h.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/m.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/f.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/t.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/g.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/b.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/n.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │         kingDavid/McHelper.class/         │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/k.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/q.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/s.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/r.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/e.class/             │
+│  compiled Java class data, version 50.0 (Java 1.6)   │            kingDavid/i.class/             │
+│              very short file (no magic)              │ kingDavid/FirstRun.class/caesium_27.class │
+│              very short file (no magic)              │ kingDavid/FirstRun.class/caesium_26.class │
+│              very short file (no magic)              │ kingDavid/FirstRun.class/caesium_25.class │
+│              very short file (no magic)              │ kingDavid/FirstRun.class/caesium_24.class │
+│              very short file (no magic)              │    kingDavid/l.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/l.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/l.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/u.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/u.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_29.class     │
+│              very short file (no magic)              │    kingDavid/o.class/caesium_28.class     │
+│              very short file (no magic)              │    kingDavid/j.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_29.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_28.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_19.class     │
+│              very short file (no magic)              │    kingDavid/c.class/caesium_18.class     │
+│              very short file (no magic)              │    kingDavid/p.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/p.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/p.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/p.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/p.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/p.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/p.class/caesium_29.class     │
+│              very short file (no magic)              │    kingDavid/a.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_29.class     │
+│              very short file (no magic)              │    kingDavid/d.class/caesium_28.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_29.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_28.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_19.class     │
+│              very short file (no magic)              │    kingDavid/h.class/caesium_18.class     │
+│              very short file (no magic)              │    kingDavid/m.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/m.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/m.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/f.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/f.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/f.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/f.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/f.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/f.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/t.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/t.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/t.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/g.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/g.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/g.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/g.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/g.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/g.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/g.class/caesium_29.class     │
+│              very short file (no magic)              │    kingDavid/b.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/b.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/n.class/caesium_27.class     │
+│              very short file (no magic)              │ kingDavid/McHelper.class/caesium_27.class │
+│              very short file (no magic)              │ kingDavid/McHelper.class/caesium_26.class │
+│              very short file (no magic)              │    kingDavid/k.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/k.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/q.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/q.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/q.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/s.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/s.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/s.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/s.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/s.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/s.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/s.class/caesium_29.class     │
+│              very short file (no magic)              │    kingDavid/r.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/r.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/r.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/e.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/e.class/caesium_26.class     │
+│              very short file (no magic)              │    kingDavid/e.class/caesium_25.class     │
+│              very short file (no magic)              │    kingDavid/e.class/caesium_24.class     │
+│              very short file (no magic)              │    kingDavid/e.class/caesium_31.class     │
+│              very short file (no magic)              │    kingDavid/e.class/caesium_30.class     │
+│              very short file (no magic)              │    kingDavid/i.class/caesium_27.class     │
+│              very short file (no magic)              │    kingDavid/i.class/caesium_26.class     │
+│         ASCII text, with no line terminators         │      kingDavid/resources/config.txt       │
+│                        empty                         │           kingDavid/resources/            │
+│                        empty                         │                kingDavid/                 │
+│                        empty                         │                 META-INF/                 │
+│ JAR Manifest, ASCII text, with CRLF line terminators │           META-INF/MANIFEST.MF            │
+└──────────────────────────────────────────────────────┴───────────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━┓
+┃ Interesting Files ┃
+┡━━━━━━━━━━━━━━━━━━━┩
+└───────────────────┘
+
+There is no interesting things found!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.java/strrat
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │  18   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│     java     │  11   │
+│    strrat    │   3   │
+└──────────────┴───────┘
+
+[*] Detection: 16/76
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃   Detected By    ┃             Results             ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     Alibaba      │ TrojanSpy:JAVA/Generic.fc0dd790 │
+│     Arcabit      │     Trojan.Generic.D495C867     │
+│   BitDefender    │    Trojan.GenericKD.76925031    │
+│      DrWeb       │        Java.BackDoor.98         │
+│    ESET-NOD32    │       multiple detections       │
+│     Emsisoft     │  Trojan.GenericKD.76925031 (B)  │
+│     Fortinet     │        Java/StrRat.A!tr         │
+│      GData       │    Trojan.GenericKD.76925031    │
+│    Gridinsoft    │         Ransom.U.Gen.tr         │
+│      Ikarus      │     Trojan-Spy.Java.StrRat      │
+│    Kaspersky     │    HEUR:Trojan.Java.Generic     │
+│     Kingsoft     │       Win32.Troj.Undef.a        │
+│ MicroWorld-eScan │    Trojan.GenericKD.76925031    │
+│     Symantec     │         Trojan.Gen.NPE          │
+│     Tencent      │    Java.Trojan.Generic.Twhl     │
+│      VIPRE       │    Trojan.GenericKD.76925031    │
+└──────────────────┴─────────────────────────────────┘
+                                                                                                                                                                    
+                                                                    * CrowdSourced IDS Reports *                                                                    
+┏━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Alert Number ┃ SRC IP ┃ SRC Port ┃    DST IP     ┃ DST Port ┃ Alert Severity ┃                 Rule Category                  ┃           Rule Source            ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      1       │  none  │   none   │ 37.120.199.54 │   4787   │      high      │ Malware Command and Control Activity Detected  │ Proofpoint Emerging Threats Open │
+│      2       │  none  │   none   │ 208.95.112.1  │    80    │     medium     │ Device Retrieving External IP Address Detected │ Proofpoint Emerging Threats Open │
+│      3       │  none  │   none   │    8.8.8.8    │    53    │     medium     │ Device Retrieving External IP Address Detected │ Proofpoint Emerging Threats Open │
+│      4       │  none  │   none   │    8.8.8.8    │    53    │      low       │                 Misc activity                  │ Proofpoint Emerging Threats Open │
+│      5       │  none  │   none   │    8.8.8.8    │    53    │      low       │            Potentially Bad Traffic             │ Proofpoint Emerging Threats Open │
+└──────────────┴────────┴──────────┴───────────────┴──────────┴────────────────┴────────────────────────────────────────────────┴──────────────────────────────────┘
+
+[*] Alert Summary: /home/kali/Downloads/2c119d0db5765cfa99d3d904c506509b9355184315decb7944e572034c7ab277.jar
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Alert Level ┃ Number of Alerts ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│    HIGH     │        1         │
+│   MEDIUM    │        2         │
+│     LOW     │        2         │
+│    INFO     │        0         │
+└─────────────┴──────────────────┘
+ 
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/2c119d0db5765cfa99d3d904c506509b9355184315decb7944e572034c7ab277.jar
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[!] There is no possible domain strings found.

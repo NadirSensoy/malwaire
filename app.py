@@ -40,27 +40,74 @@ UPLOAD_FOLDER.mkdir(exist_ok=True)
 REPORTS_FOLDER.mkdir(exist_ok=True)
 
 # Qu1cksc0pe yapılandırması
-QUICKSCOPE_PATH = "/home/kali/Desktop/Qu1cksc0pe"
+QUICKSCOPE_PATH = "./Qu1cksc0pe"
 
 # İzin verilen dosya türleri (malware analizi için)
 ALLOWED_EXTENSIONS = {
-    'exe', 'dll', 'bin', 'com', 'scr', 'pif', 'bat', 'cmd', 
-    'msi', 'jar', 'apk', 'dex', 'elf', 'so', 'dmg', 'pkg',
-    'zip', 'rar', '7z', 'tar', 'gz'
+    # Windows Executables
+    'exe', 'dll', 'bin', 'msi',
+    # Java/Android
+    'jar', 'apk',
+    
+    # Linux/Unix
+    'elf',
+    
+    # macOS
+    'macho',
+    
+    # Scripts
+    'ps1', 'psm1', 'psd1', 
+    
+    # Archives
+    'zip', 'rar', 'ace',
+    
+    # Documents (potential macro malware)
+    'doc', 'docx', 'docm', 'dot', 'dotx', 'dotm',
+    'xls', 'xlsx', 'xlsm', 'xlsb', 'xlt', 'xltx', 'xltm',
+    'ppt', 'pptx', 'pptm', 'pot', 'potx', 'potm',
+    'pdf', 'rtf', 'odt', 'ods', 'odp',
+    
+    # Email
+    'eml'
+
 }
 
 # Global objeler
 file_handler = FileHandler(UPLOAD_FOLDER)
 quickscope_runner = QuickScopeRunner(QUICKSCOPE_PATH)
-ai_analyzer = AIAnalyzer(api_key="AIzaSyCAA73c2EH5sBiHP3ONQKDolpQH1CbC5hU")
+# OpenAI API anahtarını environment variable'dan al
+openai_api_key = os.getenv('OPENAI_API_KEY', None)
+ai_analyzer = AIAnalyzer(api_key=openai_api_key)
 
 # Aktif analiz işlemleri takibi
 active_analyses = {}
 
 def allowed_file(filename):
-    """Dosya tipinin analiz için uygun olup olmadığını kontrol eder"""
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    """
+    Dosya tipinin analiz için uygun olup olmadığını kontrol eder.
+    Uzantısız dosyalar da kabul edilir (malware'ler genelde uzantısız olabilir).
+    """
+    if not filename:
+        return False
+    
+    # Uzantısız dosyalar kabul edilir
+    if '.' not in filename:
+        return True
+    
+    # Uzantılı dosyalar için kontrol
+    extension = filename.rsplit('.', 1)[1].lower()
+    
+    # Bilinen zararsız uzantıları reddet
+    dangerous_extensions = {
+        'txt', 'md', 'readme', 'license', 'changelog',
+        'gitignore', 'gitkeep', 'dockerignore'
+    }
+    
+    if extension in dangerous_extensions:
+        return False
+    
+    # İzin verilen uzantılar veya bilinmeyen uzantılar kabul edilir
+    return extension in ALLOWED_EXTENSIONS or len(extension) <= 4
 
 def get_file_info(filepath):
     """Dosya hakkında temel bilgileri toplar"""
@@ -108,7 +155,13 @@ def upload_file():
             return jsonify({'error': 'Dosya seçilmedi'}), 400
         
         if not allowed_file(file.filename):
-            return jsonify({'error': 'Desteklenmeyen dosya türü'}), 400
+            # Daha detaylı hata mesajı
+            extension = file.filename.rsplit('.', 1)[1].lower() if '.' in file.filename else 'uzantısız'
+            return jsonify({
+                'error': f'Desteklenmeyen dosya türü: .{extension}', 
+                'details': 'Malware analizi için executable, archive, script veya şüpheli dosya türleri desteklenmektedir.',
+                'supported_types': 'exe, dll, apk, zip, jar, elf, py, js, pdf, doc, vb...'
+            }), 400
         
         # Analiz seçeneklerini al
         enable_virustotal = request.form.get('enable_virustotal', 'false').lower() == 'true'
@@ -247,6 +300,7 @@ def run_analysis(file_id, file_path, analysis_options=None):
             'analysis_date': datetime.now().isoformat(),
             'file_info': quickscope_result['file_info'],
             'quickscope_output': quickscope_result['output'],
+            'raw_output': raw_output,  # Ham Qu1cksc0pe çıktısı
             'ai_analysis': ai_result,
             'analysis_options': analysis_options,
             'status': 'completed'
@@ -316,7 +370,7 @@ def view_report(file_id):
         with open(report_path, 'r', encoding='utf-8') as f:
             report_data = json.load(f)
         
-        return render_template('report.html', report=report_data)
+        return render_template('report_new.html', report=report_data)
     
     except Exception as e:
         return render_template('error.html', 

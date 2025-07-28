@@ -1,0 +1,1232 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/6d3a89cae7263417d22aeb13098e81c875c30b0122f8d08e2f7bad1c99089a71.tar --archive --domain --packer --resource --sigcheck --mitre --lang --vtFile
+
+
+SIMON SAYS:
+
+         -o          o-
+          +hydNNNNdyh+          <--------------------------->
+        +mMMMMMMMMMMMMm+        <  Do not click every link. >
+       dMMm:NMMMMMMN:mMMb       <      Please listen me!!   >
+      hMMMMMMMMMMMMMMMMMMh      <--------------------------->
+  ..  yyyyyyyyyyyyyyyyyyyy  ..    /
+.mMMm MMMMMMMMMMMMMMMMMMMM mMMm. /
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-
+ +yy+ MMMMMMMMMMMMMMMMMMMM +yy+  <- Mr. Simon
+      mMMMMMMMMMMMMMMMMMMm
+       /++MMMMh++hMMMM++/
+          MMMMo  oMMMM
+          MMMMo  oMMMM
+          oNMm-  -mMNs 
+
+
+[*] Analyzing: /home/kali/Downloads/6d3a89cae7263417d22aeb13098e81c875c30b0122f8d08e2f7bad1c99089a71.tar
+[!] Archive type not supported.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃           File Type            ┃       Pattern        ┃  Offset  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│    Windows Executable File     │    b'MZ\x90\x00'     │  0x200   │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0x3c2a00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0x57ec00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0x694000 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0x82dc00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0x901c00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0x96e000 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0x984e00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xd92a00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xdd9a00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xdde400 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xde2a00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xde7400 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xdebc00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xdf0c00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xdf5600 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xdfa200 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xdfec00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe03400 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe08000 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe0d800 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe12200 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe17200 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe1be00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe20800 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe27400 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe2dc00 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe3f200 │
+│    Windows Executable File     │    b'MZ\x90\x00'     │ 0xe43e00 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0x145e1  │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xe51900 │
+│       PKZIP Archive File       │    b'PK\x03\x04'     │ 0xe5352b │
+│       PKZIP Archive File       │    b'PK\x05\x06'     │ 0x1492e  │
+│       PKZIP Archive File       │    b'PK\x05\x06'     │ 0xe5494a │
+│ Portable Network Graphics File │ b'\x89PNG\r\n\x1a\n' │ 0x954560 │
+│       Tape Archive File        │       b'ustar'       │  0x101   │
+│       Tape Archive File        │       b'ustar'       │ 0x3c2901 │
+│       Tape Archive File        │       b'ustar'       │ 0x44b101 │
+│       Tape Archive File        │       b'ustar'       │ 0x44e501 │
+│       Tape Archive File        │       b'ustar'       │ 0x57eb01 │
+│       Tape Archive File        │       b'ustar'       │ 0x693f01 │
+│       Tape Archive File        │       b'ustar'       │ 0x82db01 │
+│       Tape Archive File        │       b'ustar'       │ 0x8fed01 │
+│       Tape Archive File        │       b'ustar'       │ 0x8fef01 │
+│       Tape Archive File        │       b'ustar'       │ 0x8ff101 │
+│       Tape Archive File        │       b'ustar'       │ 0x901b01 │
+│       Tape Archive File        │       b'ustar'       │ 0x96df01 │
+│       Tape Archive File        │       b'ustar'       │ 0x984b01 │
+│       Tape Archive File        │       b'ustar'       │ 0x984d01 │
+│       Tape Archive File        │       b'ustar'       │ 0xd92901 │
+│       Tape Archive File        │       b'ustar'       │ 0xdd9701 │
+│       Tape Archive File        │       b'ustar'       │ 0xdd9901 │
+│       Tape Archive File        │       b'ustar'       │ 0xdde301 │
+│       Tape Archive File        │       b'ustar'       │ 0xde2901 │
+│       Tape Archive File        │       b'ustar'       │ 0xde7301 │
+│       Tape Archive File        │       b'ustar'       │ 0xdebb01 │
+│       Tape Archive File        │       b'ustar'       │ 0xdf0b01 │
+│       Tape Archive File        │       b'ustar'       │ 0xdf5501 │
+│       Tape Archive File        │       b'ustar'       │ 0xdfa101 │
+│       Tape Archive File        │       b'ustar'       │ 0xdfeb01 │
+│       Tape Archive File        │       b'ustar'       │ 0xe03301 │
+│       Tape Archive File        │       b'ustar'       │ 0xe07f01 │
+│       Tape Archive File        │       b'ustar'       │ 0xe0d701 │
+│       Tape Archive File        │       b'ustar'       │ 0xe12101 │
+│       Tape Archive File        │       b'ustar'       │ 0xe17101 │
+│       Tape Archive File        │       b'ustar'       │ 0xe1bd01 │
+│       Tape Archive File        │       b'ustar'       │ 0xe20701 │
+│       Tape Archive File        │       b'ustar'       │ 0xe27301 │
+│       Tape Archive File        │       b'ustar'       │ 0xe2db01 │
+│       Tape Archive File        │       b'ustar'       │ 0xe3f101 │
+│       Tape Archive File        │       b'ustar'       │ 0xe43d01 │
+│ Portable Document Format (PDF) │       b'%PDF-'       │ 0x2d00b0 │
+└────────────────────────────────┴──────────────────────┴──────────┘
+[*] Do you want to extract executable files from target file[Y/n]?: y
+
+[*] Carving executable file found on offset: 512 | Size: 3948544 bytes
+>>> Data saved into: qu1cksc0pe_carved-512.bin
+
+[*] Carving executable file found on offset: 3942912 | Size: 581632 bytes
+>>> Data saved into: qu1cksc0pe_carved-3942912.bin
+
+[*] Carving executable file found on offset: 5762048 | Size: 1150976 bytes
+>>> Data saved into: qu1cksc0pe_carved-5762048.bin
+
+[*] Carving executable file found on offset: 6897664 | Size: 1683456 bytes
+>>> Data saved into: qu1cksc0pe_carved-6897664.bin
+
+[*] Carving executable file found on offset: 8576000 | Size: 860160 bytes
+>>> Data saved into: qu1cksc0pe_carved-8576000.bin
+
+[*] Carving executable file found on offset: 9444352 | Size: 450560 bytes
+>>> Data saved into: qu1cksc0pe_carved-9444352.bin
+
+[*] Carving executable file found on offset: 9887744 | Size: 94208 bytes
+>>> Data saved into: qu1cksc0pe_carved-9887744.bin
+
+[*] Carving executable file found on offset: 9981440 | Size: 4288512 bytes
+>>> Data saved into: qu1cksc0pe_carved-9981440.bin
+
+[*] Carving executable file found on offset: 14232064 | Size: 307200 bytes
+>>> Data saved into: qu1cksc0pe_carved-14232064.bin
+
+[*] Carving executable file found on offset: 14522880 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14522880.bin
+
+[*] Carving executable file found on offset: 14541824 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14541824.bin
+
+[*] Carving executable file found on offset: 14559744 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14559744.bin
+
+[*] Carving executable file found on offset: 14578688 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14578688.bin
+
+[*] Carving executable file found on offset: 14597120 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14597120.bin
+
+[*] Carving executable file found on offset: 14617600 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14617600.bin
+
+[*] Carving executable file found on offset: 14636544 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14636544.bin
+
+[*] Carving executable file found on offset: 14656000 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14656000.bin
+
+[*] Carving executable file found on offset: 14674944 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14674944.bin
+
+[*] Carving executable file found on offset: 14693376 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14693376.bin
+
+[*] Carving executable file found on offset: 14712832 | Size: 16384 bytes
+>>> Data saved into: qu1cksc0pe_carved-14712832.bin
+
+[*] Carving executable file found on offset: 14735360 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14735360.bin
+
+[*] Carving executable file found on offset: 14754304 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14754304.bin
+
+[*] Carving executable file found on offset: 14774784 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14774784.bin
+
+[*] Carving executable file found on offset: 14794240 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14794240.bin
+
+[*] Carving executable file found on offset: 14813184 | Size: 20480 bytes
+>>> Data saved into: qu1cksc0pe_carved-14813184.bin
+
+[*] Carving executable file found on offset: 14840832 | Size: 20480 bytes
+>>> Data saved into: qu1cksc0pe_carved-14840832.bin
+
+[*] Carving executable file found on offset: 14867456 | Size: 65536 bytes
+>>> Data saved into: qu1cksc0pe_carved-14867456.bin
+
+[*] Carving executable file found on offset: 14938624 | Size: 12288 bytes
+>>> Data saved into: qu1cksc0pe_carved-14938624.bin
+
+[*] Carving executable file found on offset: 14958080 | Size: 135168 bytes
+>>> Data saved into: qu1cksc0pe_carved-14958080.bin
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: downloader.rugmi
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│    downloader     │   3   │
+│      trojan       │   3   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│    rugmi     │   3   │
+└──────────────┴───────┘
+
+[*] Detection: 8/76
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Detected By ┃                Results                ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  AhnLab-V3  │  Infostealer/Win.ACRStealer.R715115   │
+│  Antiy-AVL  │        GrayWare/Win32.Wacapew         │
+│    DrWeb    │         Trojan.Inject5.61480          │
+│ ESET-NOD32  │    Win64/TrojanDownloader.Rugmi.FD    │
+│  Fortinet   │         W64/Rugmi.FD!tr.dldr          │
+│ Gridinsoft  │           Malware.U.Gen.tr            │
+│   Ikarus    │     Trojan-Downloader.Win64.Rugmi     │
+│   Rising    │ Trojan.HijackLoader!1.12810 (CLASSIC) │
+└─────────────┴───────────────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/6d3a89cae7263417d22aeb13098e81c875c30b0122f8d08e2f7bad1c99089a71.tar
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.thawte.com0
+[URL]> http://crl.thawte.com/ThawteTimestampingCA.crl0
+[URL]> http://ts-ocsp.ws.symantec.com07
+[URL]> http://ts-aia.ws.symantec.com/tss-ca-g2.cer0
+[URL]> http://ts-crl.ws.symantec.com/tss-ca-g2.crl0
+[URL]> http://certs.godaddy.com/repository/1301
+[URL]> http://ocsp.godaddy.com/05
+[URL]> http://crl.godaddy.com/gdroot-g2.crl0F
+[URL]> https://certs.godaddy.com/repository/0
+[URL]> http://certs.godaddy.com/repository/1301
+[URL]> http://crl.godaddy.com/gdig2s5-6.crl0
+[URL]> http://certificates.godaddy.com/repository/0
+[URL]> http://ocsp.godaddy.com/0@
+[URL]> http://certificates.godaddy.com/repository/gdig2.crt0
+[URL]> http://certs.godaddy.com/repository/1301
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.thawte.com0
+[URL]> http://crl.thawte.com/ThawteTimestampingCA.crl0
+[URL]> http://ts-ocsp.ws.symantec.com07
+[URL]> http://ts-aia.ws.symantec.com/tss-ca-g2.cer0
+[URL]> http://ts-crl.ws.symantec.com/tss-ca-g2.crl0
+[URL]> https://www.verisign.com/rpa
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0
+[URL]> http://sf.symcb.com/sf.crl0W
+[URL]> http://sf.symcd.com0
+[URL]> http://sf.symcb.com/sf.crt0
+[URL]> http://crl.microsoft.com/pki/crl/products/MicrosoftCodeVerifRoot.crl0
+[URL]> https://www.verisign.com/rpa
+[URL]> https://www.verisign.com/cps0
+[URL]> https://www.verisign.com/rpa0
+[URL]> http://logo.verisign.com/vslogo.gif04
+[URL]> http://crl.verisign.com/pca3-g5.crl04
+[URL]> http://ocsp.verisign.com0
+[URL]> https://www.verisign.com/rpa
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0
+[URL]> http://rb.symcb.com/rb.crl0W
+[URL]> http://rb.symcd.com0
+[URL]> http://rb.symcb.com/rb.crt0
+[URL]> http://s.symcd.com0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> http://crl.microsoft.com/pki/crl/products/MicrosoftCodeVerifRoot.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> https://127.0.0.1:8283
+[URL]> https://api-china.beta.valve.org
+[URL]> https://api.beta.steampowered.com
+[URL]> http://10.1.1.18:8282
+[URL]> https://api.steamchina.com
+[URL]> https://partner.steam-api.com
+[URL]> https://api.steampowered.com
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://ocsp.thawte.com0
+[URL]> http://crl.thawte.com/ThawteTimestampingCA.crl0
+[URL]> http://ts-ocsp.ws.symantec.com07
+[URL]> http://ts-aia.ws.symantec.com/tss-ca-g2.cer0
+[URL]> http://ts-crl.ws.symantec.com/tss-ca-g2.crl0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0L
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl0v
+[URL]> http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt0%
+[URL]> http://ocsp.usertrust.com0
+[URL]> https://sectigo.com/CPS0
+[URL]> http://crl.sectigo.com/SectigoRSATimeStampingCA.crl0t
+[URL]> http://crt.sectigo.com/SectigoRSATimeStampingCA.crt0
+[URL]> http://ocsp.sectigo.com0
+[URL]> http://crl3.digicert.com/sha2-assured-cs-g1.crl05
+[URL]> http://crl4.digicert.com/sha2-assured-cs-g1.crl0K
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0N
+[URL]> http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0
+[URL]> http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O
+[URL]> https://www.digicert.com/CPS0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0.
+[URL]> http://s.symcd.com06
+[URL]> http://s.symcb.com/universal-root.crl0
+[URL]> https://d.symcb.com/cps0%
+[URL]> https://d.symcb.com/rpa0@
+[URL]> http://ts-crl.ws.symantec.com/sha256-tss-ca.crl0
+[URL]> http://ts-ocsp.ws.symantec.com0
+[URL]> http://ts-aia.ws.symantec.com/sha256-tss-ca.cer0
+[URL]> http://www.winimage.com/zLibDll
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0
+[URL]> http://ocsp.digicert.com0X
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://ocsp.digicert.com0C
+[URL]> http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
+[URL]> http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
+[URL]> https://
+[URL]> http://www.nvidia.com/object/3D_TV_play.html
+[URL]> http://www.nvidia.com/content/drivers/redirect.asp?language=%s
+[URL]> http://www.mitsubishi-tv.com/
+

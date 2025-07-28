@@ -1,0 +1,210 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/ebcd6b0a0f103c33d402657c8c3c9f96de4c872d1f3a77de3132a56cf7dd66de.docx --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                              
+
+ _____ _   _  __  _____  _   __ _____ _____ ___________ _____         @
+|  _  | | | |/  |/  __ \| | / //  ___/  __ \  _  | ___ \  ___|      @ @ @
+| | | | | | | | || /  \/| |/ / \  --.| /  \/ |/| | |_/ / |__       @@ @ @@
+| | | | | | | | || |    |    \   --. \ |   |  /| |  __/|  __|    @@@@@@@@@@@
+\  \/ / |_| |_| || \__/\| |\  \/\__/ / \__/\ |_/ / |   | |___      @@ @ @@
+ \_/\_|\___/ \___/\____/\_| \_/\____/ \____/\___/\_|   \____/       @ @ @
+                                                                      @
+                                   |             |
+  All in One malware analysis tool.| By CYB3RMX_ | Version: 1.8.5
+  ---------------------------------|             |
+
+
+[*] Analyzing: /home/kali/Downloads/ebcd6b0a0f103c33d402657c8c3c9f96de4c872d1f3a77de3132a56cf7dd66de.docx
+[*] Target OS: Android
+
+[!] It looks like the target AndroidManifest.xml is corrupted!!
+
+[*] Looking for package name...
+
+[*] General Informations about /home/kali/Downloads/ebcd6b0a0f103c33d402657c8c3c9f96de4c872d1f3a77de3132a56cf7dd66de.docx
+>>>> Possible Package Name: None
+
+[*] Sending query to Google Play Store about target application.
+>>>> Google Play Store: Not Found
+
+
+There is no permissions found!
+
+
+[*] Performing YARA rule matching...
+There is no rules matched for /home/kali/Downloads/ebcd6b0a0f103c33d402657c8c3c9f96de4c872d1f3a77de3132a56cf7dd66de.docx
+
+[*] Performing library analysis...
+Decompiler(JADX) not found. Skipping...
+
+[*] Performing malware family detection. Please wait!!
+
+[*] Performing source code analysis...
+Couldn't locate source codes. Did target file decompiled correctly?
+>>> Hint: Don't forget to specify decompiler path in Systems/Android/libScanner.conf
+
+[*] Looking for possible IP address patterns. Please wait...
+[!] There is no possible IP address pattern found!
+
+[*] Looking for URL values. Please wait...
+[!] There is no URL pattern found!
+
+[*] Do you want to check target app's security? This process will take a while.[Y/n]: y
+[!] An error occured while parsing AndroidManifest.xml. Did your APK file decompiled correctly?
+[*] Analyzing: /home/kali/Downloads/ebcd6b0a0f103c33d402657c8c3c9f96de4c872d1f3a77de3132a56cf7dd66de.docx
+[*] Ole File: False
+[*] Encrypted: False
+
+[*] Analyzing file structure...
+     * Document Structure *     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          File Name           ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│            _rels/            │
+│          docProps/           │
+│            word/             │
+│     [Content_Types].xml      │
+│       docProps/app.xml       │
+│      docProps/core.xml       │
+│         word/_rels/          │
+│         word/theme/          │
+│      word/document.xml       │
+│      word/fontTable.xml      │
+│      word/settings.xml       │
+│       word/styles.xml        │
+│     word/webSettings.xml     │
+│    word/theme/theme1.xml     │
+│ word/_rels/document.xml.rels │
+│         _rels/.rels          │
+└──────────────────────────────┘
+
+[*] Searching for interesting links...
+            * Interesting Links *             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                    Link                    ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         http://opendope.org/xpaths         │
+│       http://opendope.org/conditions       │
+│       http://opendope.org/questions        │
+│       http://opendope.org/components       │
+│ http://opendope.org/SmartArt/DataHierarchy │
+└────────────────────────────────────────────┘
+
+[*] Performing YARA rule matching...
+There is no rules matched for /home/kali/Downloads/ebcd6b0a0f103c33d402657c8c3c9f96de4c872d1f3a77de3132a56cf7dd66de.docx
+
+[*] Looking for Macros...
+>>> VBA MACRO: Not found.
+
+
+>>> XLM MACRO: Not found.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃     File Type      ┃    Pattern    ┃ Offset ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ PKZIP Archive File │ b'PK\x03\x04' │  0x0   │
+│ PKZIP Archive File │ b'PK\x03\x04' │  0x24  │
+│ PKZIP Archive File │ b'PK\x03\x04' │  0x4b  │
+│ PKZIP Archive File │ b'PK\x03\x04' │  0x6e  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x1f5  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x385  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x518  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x541  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x56a  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x7ce  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x9af  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0xd72  │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x18a0 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x19e3 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2010 │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x2109 │
+│ PKZIP Archive File │ b'PK\x05\x06' │ 0x25ec │
+└────────────────────┴───────────────┴────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+[*] Target OS: Android
+
+[*] Parsing file contents...
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                             File Type                                              ┃          File Name           ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                                               empty                                                │            _rels/            │
+│                                               empty                                                │          docProps/           │
+│                                               empty                                                │            word/             │
+│                                               empty                                                │         word/_rels/          │
+│                                               empty                                                │         word/theme/          │
+│        XML 1.0 document, ASCII text, with very long lines (967), with CRLF line terminators        │     [Content_Types].xml      │
+│        XML 1.0 document, ASCII text, with very long lines (967), with CRLF line terminators        │      word/fontTable.xml      │
+│        XML 1.0 document, ASCII text, with very long lines (967), with CRLF line terminators        │      word/settings.xml       │
+│        XML 1.0 document, ASCII text, with very long lines (967), with CRLF line terminators        │       word/styles.xml        │
+│        XML 1.0 document, ASCII text, with very long lines (647), with CRLF line terminators        │       docProps/app.xml       │
+│        XML 1.0 document, ASCII text, with very long lines (678), with CRLF line terminators        │      docProps/core.xml       │
+│        XML 1.0 document, ASCII text, with very long lines (1024), with no line terminators         │      word/document.xml       │
+│        XML 1.0 document, ASCII text, with very long lines (519), with CRLF line terminators        │     word/webSettings.xml     │
+│ XML 1.0 document, Unicode text, UTF-8 text, with very long lines (953), with CRLF line terminators │    word/theme/theme1.xml     │
+│                       XML 1.0 document, ASCII text, with no line terminators                       │ word/_rels/document.xml.rels │
+│        XML 1.0 document, ASCII text, with very long lines (533), with CRLF line terminators        │         _rels/.rels          │
+└────────────────────────────────────────────────────────────────────────────────────────────────────┴──────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━┓
+┃ Interesting Files ┃
+┡━━━━━━━━━━━━━━━━━━━┩
+└───────────────────┘
+                                                  * URLs *                                                  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                  Pattern                                  ┃             File             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       http://schemas.openxmlformats.org/package/2006/content-types        │     [Content_Types].xml      │
+│        http://schemas.openxmlformats.org/markup-compatibility/2006        │      word/fontTable.xml      │
+│        http://schemas.openxmlformats.org/markup-compatibility/2006        │      word/settings.xml       │
+│        http://schemas.openxmlformats.org/markup-compatibility/2006        │       word/styles.xml        │
+│ http://schemas.openxmlformats.org/officeDocument/2006/extended-properties │       docProps/app.xml       │
+│  http://schemas.openxmlformats.org/package/2006/metadata/core-properties  │      docProps/core.xml       │
+│       http://schemas.openxmlformats.org/wordprocessingml/2006/main        │      word/document.xml       │
+│        http://schemas.openxmlformats.org/markup-compatibility/2006        │     word/webSettings.xml     │
+│           http://schemas.openxmlformats.org/drawingml/2006/main           │    word/theme/theme1.xml     │
+│       http://schemas.openxmlformats.org/package/2006/relationships        │ word/_rels/document.xml.rels │
+│       http://schemas.openxmlformats.org/package/2006/relationships        │         _rels/.rels          │
+└───────────────────────────────────────────────────────────────────────────┴──────────────────────────────┘
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │   3   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+└──────────────┴───────┘
+
+[*] Detection: 4/76
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Detected By ┃          Results          ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│    Bkav     │  CVE-2023-36884.Exploit   │
+│ ESET-NOD32  │       DOC/Agent.MI        │
+│    GData    │ Macro.Trojan.Agent.CCEI9Z │
+│   Ikarus    │     Trojan.Doc.Agent      │
+└─────────────┴───────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/ebcd6b0a0f103c33d402657c8c3c9f96de4c872d1f3a77de3132a56cf7dd66de.docx
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[!] There is no possible domain strings found.

@@ -1,0 +1,255 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                               
+
+ _____ _   _  __  _____  _   __ _____ _____ ___________ _____         @
+|  _  | | | |/  |/  __ \| | / //  ___/  __ \  _  | ___ \  ___|      @ @ @
+| | | | | | | | || /  \/| |/ / \  --.| /  \/ |/| | |_/ / |__       @@ @ @@
+| | | | | | | | || |    |    \   --. \ |   |  /| |  __/|  __|    @@@@@@@@@@@
+\  \/ / |_| |_| || \__/\| |\  \/\__/ / \__/\ |_/ / |   | |___      @@ @ @@
+ \_/\_|\___/ \___/\____/\_| \_/\____/ \____/\___/\_|   \____/       @ @ @
+                                                                      @
+                                   |             |
+  All in One malware analysis tool.| By CYB3RMX_ | Version: 1.8.5
+  ---------------------------------|             |
+
+
+[*] Analyzing: /home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+[*] Target OS: Windows
+
+[*] File Type: Windows Executable
+
+[*] Performing extraction of imports and exports. Please wait...
+Analyzing.. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:03
+[!] There is no pattern about function/API imports!
+
+
+[!] There is no information about DEBUG section!
+
+[*] Performing special artifact detection. Please wait...
+[!] There is no special artifact pattern found!
+
+
+[*] Looking for: Windows Registry Key
+[!] There is no pattern about registry keys!
+
+
+[*] Looking for: Interesting String Patterns
+Analyzing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃    Interesting Patterns     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Office\\Office12\\EXCEL.EXE │
+│   1\\VBA\\VBA6\\VBE6.DLL    │
+│  Shared\\OFFICE12\\MSO.DLL  │
+└─────────────────────────────┘
+
+[*] Performing embedded PE file detection...
+[!] There is no embedded PE file!
+
+
+[*] Performing YARA rule matching...
+There is no rules matched for /home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/windows_static_analyzer.py", line 755, in <module>
+    windows_analyzer.section_parser()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/windows_static_analyzer.py", line 359, in section_parser
+    for sect in self.binaryfile.sections:
+                ^^^^^^^^^^^^^^^
+AttributeError: 'WindowsAnalyzer' object has no attribute 'binaryfile'
+[*] Analyzing: /home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+[*] Ole File: True
+[*] Encrypted: True
+
+[*] Analyzing file structure...
+[!] Error: Unable to unzip file.
+
+[*] Performing YARA rule matching...
+>>> Rule name: Contains_VBA_macro_code
+┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Offset  ┃                                 Matched String/Byte                                 ┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   0x0   │                         b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1'                         │
+│  0x500  │ b'_\x00V\x00B\x00A\x00_\x00P\x00R\x00O\x00J\x00E\x00C\x00T\x00_\x00C\x00U\x00R\x00' │
+│ 0x4ccc9 │                                    b'VBAProject'                                    │
+│ 0x4b4e9 │                                b'Attribut\x00e VB_'                                 │
+└─────────┴─────────────────────────────────────────────────────────────────────────────────────┘
+ 
+
+[*] Performing Ole file analysis...
+              * Ole Directory *               
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃               Name                ┃  Size  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│            Root Entry             │  9664  │
+│              CompObj              │  114   │
+│    DocumentSummaryInformation     │  244   │
+│        SummaryInformation         │  200   │
+│        MBD002D26C0/CompObj        │   99   │
+│        MBD002D26C0/Package        │ 15484  │
+│          MBD002D26C1/Ole          │  802   │
+│             Workbook              │ 285478 │
+│     _VBA_PROJECT_CUR/PROJECT      │  527   │
+│    _VBA_PROJECT_CUR/PROJECTwm     │  104   │
+│    _VBA_PROJECT_CUR/VBA/Sheet1    │  977   │
+│    _VBA_PROJECT_CUR/VBA/Sheet2    │  977   │
+│    _VBA_PROJECT_CUR/VBA/Sheet3    │  977   │
+│ _VBA_PROJECT_CUR/VBA/ThisWorkbook │  985   │
+│ _VBA_PROJECT_CUR/VBA/_VBA_PROJECT │  2644  │
+│     _VBA_PROJECT_CUR/VBA/dir      │  553   │
+└───────────────────────────────────┴────────┘
+
+[*] Checking URL values...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                URL Values                                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ https://bestthingswithbetterplacetogetbackwithgoodthingsformygirlfriendwholovesme.Europe@ct.rocks/NOHEqF │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+[*] Looking for Macros...
+>>> VBA MACRO: Found.
+>>> VBA Stomping: Not found.
+┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Threat Levels ┃   Macros    ┃                             Descriptions                             ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  Suspicious   │ Hex Strings │ Hex-encoded strings were detected, may be used to obfuscate strings  │
+└───────────────┴─────────────┴──────────────────────────────────────────────────────────────────────┘
+
+>>> XLM MACRO: Not found.
+
+>>> Do you want to extract macros [Y/n]?: y
+[*] Attempting to extraction...
+
+/home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+_VBA_PROJECT_CUR/VBA/ThisWorkbook
+ThisWorkbook.cls
+Attribute VB_Name = "ThisWorkbook"
+Attribute VB_Base = "0{00020819-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+/home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+_VBA_PROJECT_CUR/VBA/Sheet1
+Sheet1.cls
+Attribute VB_Name = "Sheet1"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+/home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+_VBA_PROJECT_CUR/VBA/Sheet2
+Sheet2.cls
+Attribute VB_Name = "Sheet2"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+/home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+_VBA_PROJECT_CUR/VBA/Sheet3
+Sheet3.cls
+Attribute VB_Name = "Sheet3"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+xlm_macro
+xlm_macro
+xlm_macro.txt
+' 0085     14 BOUNDSHEET : Sheet Information
+' 0085     14 BOUNDSHEET : Sheet Information
+' 0085     14 BOUNDSHEET : Sheet Information
+' Warning: FILEPASS record found, file is password protected
+
+[*] Extraction completed.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃        File Type        ┃               Pattern               ┃ Offset ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│   PKZIP Archive File    │            b'PK\x03\x04'            │ 0x800  │
+│   PKZIP Archive File    │            b'PK\x03\x04'            │ 0xb6b  │
+│   PKZIP Archive File    │            b'PK\x03\x04'            │ 0xea2  │
+│   PKZIP Archive File    │            b'PK\x03\x04'            │ 0xed1  │
+│   PKZIP Archive File    │            b'PK\x03\x04'            │ 0x3db8 │
+│   PKZIP Archive File    │            b'PK\x03\x04'            │ 0x4076 │
+│   PKZIP Archive File    │            b'PK\x05\x06'            │ 0x4466 │
+│  Microsoft Word 2007+   │    b'PK\x03\x04\x14\x00\x06\x00'    │ 0x800  │
+│  Microsoft Word 2007+   │    b'PK\x03\x04\x14\x00\x06\x00'    │ 0xb6b  │
+│  Microsoft Word 2007+   │    b'PK\x03\x04\x14\x00\x06\x00'    │ 0xea2  │
+│  Microsoft Word 2007+   │    b'PK\x03\x04\x14\x00\x06\x00'    │ 0xed1  │
+│  Microsoft Word 2007+   │    b'PK\x03\x04\x14\x00\x06\x00'    │ 0x3db8 │
+│  Microsoft Word 2007+   │    b'PK\x03\x04\x14\x00\x06\x00'    │ 0x4076 │
+│ Composite Document File │ b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1' │  0x0   │
+└─────────────────────────┴─────────────────────────────────────┴────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.cve170199/msexcel
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │   3   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│  cve170199   │   2   │
+│   msexcel    │   2   │
+└──────────────┴───────┘
+
+[*] Detection: 15/76
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃     Detected By      ┃                       Results                       ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       Arcabit        │            Exploit.CVE-2017-0199.05.Gen             │
+│     BitDefender      │            Exploit.CVE-2017-0199.05.Gen             │
+│      ESET-NOD32      │ probably a variant of Win32/Exploit.CVE-2017-0199.C │
+│       Emsisoft       │          Exploit.CVE-2017-0199.05.Gen (B)           │
+│       Fortinet       │          MSExcel/CVE_2017_0199.G1!exploit           │
+│        GData         │            Exploit.CVE-2017-0199.05.Gen             │
+│        Ikarus        │                  Trojan.Office.Doc                  │
+│   MicroWorld-eScan   │            Exploit.CVE-2017-0199.05.Gen             │
+│        Rising        │       Exploit.CVE-2017-0199!1.1010A (CLASSIC)       │
+│     SentinelOne      │             Static AI - Suspicious OLE              │
+│       Symantec       │                  Scr.Malcode!gen59                  │
+│       TACHYON        │            Downloader/W97.CVE-2017-0199             │
+│      TrendMicro      │                  HEUR_CVE170199.L                   │
+│ TrendMicro-HouseCall │                  HEUR_CVE170199.L                   │
+│        VIPRE         │            Exploit.CVE-2017-0199.05.Gen             │
+└──────────────────────┴─────────────────────────────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/d5783a093a8d7e7df7e2562715624e8b7f5e30271b3245ff43adc35f982724a5.xls
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[URL]> https://bestthingswithbetterplacetogetbackwithgoodthingsformygirlfriendwholovesme.Europe@ct.rocks/NOHEqF

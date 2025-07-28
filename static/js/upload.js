@@ -39,7 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initializeSocket() {
         try {
-            socket = io();
+            socket = io({
+                timeout: 7200000,  // 2 saat timeout (ms)
+                pingTimeout: 7200000,  // 2 saat ping timeout
+                pingInterval: 30000,   // 30 saniye ping interval
+                forceNew: true,
+                transports: ['websocket', 'polling']
+            });
             
             socket.on('connect', function() {
                 console.log('Socket.IO bağlantısı kuruldu');
@@ -106,9 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         selectedFile = file;
         
-        // Dosya bilgilerini göster
+        // Dosya bilgilerini ve tahmini süreyi göster
         fileName.textContent = file.name;
         fileSize.textContent = formatFileSize(file.size);
+        
+        // Tahmini analiz süresini göster
+        const estimatedTime = getEstimatedAnalysisTime(file);
+        const sizeElement = document.getElementById('fileSize');
+        sizeElement.innerHTML = `${formatFileSize(file.size)} - <span class="text-info">~${estimatedTime} analiz süresi</span>`;
         
         fileInfo.classList.remove('d-none');
         uploadBtn.disabled = false;
@@ -309,6 +320,28 @@ document.addEventListener('DOMContentLoaded', function() {
         setButtonLoading(uploadBtn, false);
     }
 
+    function getEstimatedAnalysisTime(file) {
+        const fileName = file.name.toLowerCase();
+        const fileSize = file.size;
+        const extension = fileName.split('.').pop();
+        
+        // Dosya boyutu kontrolü (50MB'den büyük dosyalar)
+        const isLargeFile = fileSize > 50 * 1024 * 1024;
+        
+        // Dosya tipine göre tahmini süre
+        if (extension === 'apk') {
+            return '30 dakika';
+        } else if (['dll', 'exe', 'bin', 'so', 'dylib'].includes(extension)) {
+            return isLargeFile ? '60 dakika' : '30 dakika';
+        } else if (['doc', 'docm', 'docx', 'xls', 'xlsm', 'xlsx', 'pdf', 'one', 'htm', 'html', 'rtf'].includes(extension)) {
+            return '15 dakika';
+        } else if (isLargeFile) {
+            return '60 dakika';
+        } else {
+            return '10 dakika';
+        }
+    }
+
     // Global fonksiyonlar
     window.clearFile = clearFile;
     window.cancelAnalysis = cancelAnalysis;
@@ -373,23 +406,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Eksik yardımcı fonksiyonlar
     function validateFile(file) {
         const maxSize = 100 * 1024 * 1024; // 100MB
-        const allowedTypes = [
-            'application/x-executable',
-            'application/x-msdownload',
-            'application/x-dosexec',
-            'application/octet-stream',
-            'application/x-pe',
-            'application/x-elf',
-            'application/x-mach-o',
-            'application/java-archive',
-            'application/zip',
-            'application/x-rar-compressed',
-            'application/x-7z-compressed',
-            'application/pdf',
-            'text/plain',
-            'application/x-msdos-program'
-        ];
-
+        
         // Dosya boyutu kontrolü
         if (file.size > maxSize) {
             return {
@@ -406,20 +423,19 @@ document.addEventListener('DOMContentLoaded', function() {
             };
         }
 
-        // Dosya uzantısı kontrolü (isteğe bağlı)
+        // Dosya uzantısı kontrolü - sadece açıkça zararsız dosyaları reddet
         const fileName = file.name.toLowerCase();
-        const dangerousExtensions = ['.bat', '.cmd', '.scr', '.pif'];
-        const executableExtensions = ['.exe', '.dll', '.sys', '.bin', '.apk', '.dex', '.so', '.dylib'];
+        const rejectedExtensions = ['.txt', '.md', '.readme', '.license', '.changelog', '.gitignore', '.gitkeep', '.dockerignore'];
         
-        // İzin verilen dosya türleri
-        if (!allowedTypes.includes(file.type) && file.type !== '') {
-            // MIME type belirsizse uzantıya bak
-            const hasAllowedExtension = executableExtensions.some(ext => fileName.endsWith(ext));
-            if (!hasAllowedExtension) {
-                console.log('Dosya tipi uyarısı:', file.type, 'Dosya adı:', fileName);
-            }
+        // Zararsız uzantıları reddet
+        if (rejectedExtensions.some(ext => fileName.endsWith(ext))) {
+            return {
+                valid: false,
+                error: 'Bu dosya türü analiz için uygun değil. Sadece potansiyel malware dosyaları yükleyin.'
+            };
         }
 
+        // Diğer tüm dosyalar kabul edilir (uzantısız dahil)
         return { valid: true };
     }
 
@@ -499,6 +515,28 @@ document.addEventListener('DOMContentLoaded', function() {
         clearFile();
         uploadForm.style.display = 'block';
         setButtonLoading(uploadBtn, false);
+    }
+
+    function getEstimatedAnalysisTime(file) {
+        const fileName = file.name.toLowerCase();
+        const fileSize = file.size;
+        const extension = fileName.split('.').pop();
+        
+        // Dosya boyutu kontrolü (50MB'den büyük dosyalar)
+        const isLargeFile = fileSize > 50 * 1024 * 1024;
+        
+        // Dosya tipine göre tahmini süre
+        if (extension === 'apk') {
+            return '30 dakika';
+        } else if (['dll', 'exe', 'bin', 'so', 'dylib'].includes(extension)) {
+            return isLargeFile ? '60 dakika' : '30 dakika';
+        } else if (['doc', 'docm', 'docx', 'xls', 'xlsm', 'xlsx', 'pdf', 'one', 'htm', 'html', 'rtf'].includes(extension)) {
+            return '15 dakika';
+        } else if (isLargeFile) {
+            return '60 dakika';
+        } else {
+            return '10 dakika';
+        }
     }
 
     console.log('📁 Upload sayfası hazır - Malware dosyalarınızı güvenle yükleyebilirsiniz');

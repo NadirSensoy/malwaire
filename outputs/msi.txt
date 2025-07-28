@@ -1,0 +1,1541 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/e232869b381721c74e6c907a073a501783ac1b79065612ff92149355873e6217.msi --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                        
+
+
+  .-------------------------------------.
+  | [____DOWNLOADING FREE RTX 5090____] |
+  |  _________________________________  |
+  | |:::::::::::::::::60%|            | |
+  |  """""""""""""""""""""""""""""""""  |
+  |_____________________________________|
+
+
+[*] Analyzing: /home/kali/Downloads/e232869b381721c74e6c907a073a501783ac1b79065612ff92149355873e6217.msi
+[*] Target OS: Windows
+
+[*] File Type: Microsoft Software Installer
+
+[*] Performing Microsoft Software Installer analysis...
+
+[*] Performing extraction of imports and exports. Please wait...
+Analyzing.. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:02:13
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Registry ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│            RegOpenKeyExW            │ 0x31b220 │
+│           RegQueryValueEx           │ 0x31b2da │
+│          RegQueryInfoKeyW           │ 0x31b2c6 │
+│             RegSetValue             │ 0x31b2ee │
+│          RegQueryValueExW           │ 0x31b2da │
+│             RegCloseKey             │ 0x31b212 │
+│           RegCreateKeyExW           │ 0x31b272 │
+│           RegSetValueExW            │ 0x31b2ee │
+│            RegDeleteKeyW            │ 0x31b284 │
+│           RegDeleteValueW           │ 0x31b294 │
+│            RegEnumKeyExW            │ 0x31b2a6 │
+│           CLSIDFromProgID           │ 0x31b4a4 │
+│            RegEnumValueW            │ 0x31b2b6 │
+└─────────────────────────────────────┴──────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about File ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│         CreateDirectory         │ 0x1fcace │
+│            GetFiles             │ 0x31b850 │
+│           CreateFile            │ 0x1fcbea │
+│           CreateFile            │ 0x31b622 │
+│         RemoveDirectory         │ 0x1fcc82 │
+│           CreateFileW           │ 0x1fcbea │
+│           CreateFileW           │ 0x31b622 │
+│            ReadFile             │ 0x1fcb8a │
+│            ReadFile             │ 0x31b860 │
+│            WriteFile            │ 0x1fcba4 │
+│            WriteFile            │ 0x31b606 │
+│           DeleteFile            │ 0x1fccb2 │
+│           DeleteFile            │ 0x31b8e2 │
+│           DeleteFileW           │ 0x1fccb2 │
+│           DeleteFileW           │ 0x31b8e2 │
+│          FindFirstFile          │ 0x1fccc0 │
+│          FindFirstFile          │ 0x31b5a6 │
+│          FindFirstFile          │ 0x31bc22 │
+│         FindFirstFileEx         │ 0x31bc22 │
+│          FindNextFile           │ 0x1fcca2 │
+│          FindNextFile           │ 0x31b5b8 │
+│          FindNextFile           │ 0x31bc36 │
+│          FindNextFileW          │ 0x1fcca2 │
+│          FindNextFileW          │ 0x31b5b8 │
+│           GetTempPath           │ 0x1fccd2 │
+│           GetTempPath           │ 0x31b612 │
+│         SetFilePointer          │ 0x1fccf0 │
+│         SetFilePointer          │ 0x31b6dc │
+│         SetFilePointer          │ 0x31b86c │
+│        SetFilePointerEx         │ 0x31b86c │
+│     GetSystemTimeAsFileTime     │ 0x1fd064 │
+│     GetSystemTimeAsFileTime     │ 0x31baec │
+│           GetFileType           │ 0x1fcd02 │
+│           GetFileType           │ 0x31bc14 │
+│        GetModuleFileName        │ 0x1fcc46 │
+│        GetModuleFileName        │ 0x1fcfea │
+│        GetModuleFileName        │ 0x31b6fe │
+│        GetModuleFileName        │ 0x31b996 │
+│        GetModuleFilename        │ 0x1fcc46 │
+│        GetModuleFilename        │ 0x1fcfea │
+│        GetModuleFilename        │ 0x31b6fe │
+│        GetModuleFilename        │ 0x31b996 │
+│       GetModuleFileNameW        │ 0x1fcc46 │
+│       GetModuleFileNameW        │ 0x31b996 │
+│       GetModuleFileNameA        │ 0x1fcfea │
+│       GetModuleFileNameA        │ 0x31b6fe │
+│        FlushFileBuffers         │ 0x1fd0fa │
+│        FlushFileBuffers         │ 0x31ba2c │
+│          SetEndOfFile           │ 0x1fced2 │
+│       SetFileAttributesW        │ 0x31b8cc │
+│       GetFileAttributesW        │ 0x1fcc6c │
+│       GetFileAttributesW        │ 0x31b9ac │
+│        GetFileAttributes        │ 0x1fcc6c │
+│        GetFileAttributes        │ 0x31b9ac │
+│           GetFileSize           │ 0x31b850 │
+│          GetFileSizeEx          │ 0x31b850 │
+│         FindFirstFileW          │ 0x1fccc0 │
+│         FindFirstFileW          │ 0x31b5a6 │
+│     GetFileVersionInfoSize      │ 0x31b4c0 │
+│     GetFileVersionInfoSizeW     │ 0x31b4c0 │
+│       GetFileVersionInfo        │ 0x31b4c0 │
+│       GetFileVersionInfo        │ 0x31b4da │
+│       GetFileVersionInfoW       │ 0x31b4da │
+│        SHGetFolderPathW         │ 0x31b43e │
+│            FindClose            │ 0x1fcc96 │
+│            FindClose            │ 0x31b59a │
+│        GetFullPathNameW         │ 0x31b8b8 │
+│         SetHandleCount          │ 0x1fce86 │
+│          GetFolderPath          │ 0x31b440 │
+│           GetFileTime           │ 0x31b880 │
+│        FindFirstFileExA         │ 0x31bc22 │
+│          GetTempPathW           │ 0x1fccd2 │
+│          GetTempPathW           │ 0x31b612 │
+│         FileAttributes          │ 0x1fcc6f │
+│         FileAttributes          │ 0x31b8cf │
+│         FileAttributes          │ 0x31b9af │
+│        CreateDirectoryW         │ 0x1fcace │
+│          ShellExecuteW          │ 0x31b452 │
+└─────────────────────────────────┴──────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Networking/Web ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│                  connect                  │  0x4de5  │
+│                  connect                  │  0x4e00  │
+│                  connect                  │ 0x1e00ee │
+│                  connect                  │ 0x1fcb3b │
+│                  connect                  │ 0x1fcbc2 │
+│                  connect                  │ 0x202e42 │
+│                  connect                  │ 0x202ef1 │
+│                  connect                  │ 0x202f18 │
+│                  connect                  │ 0x329143 │
+│                  connect                  │ 0x32a4d5 │
+│                  connect                  │ 0x32a548 │
+│                  connect                  │ 0x32a5bd │
+│                  connect                  │ 0x32a7b1 │
+│                  connect                  │ 0x32a8b2 │
+│                  connect                  │ 0x32a99e │
+│                  connect                  │ 0x32aa46 │
+│                  connect                  │ 0x32aa7f │
+│                  connect                  │ 0x32aab4 │
+│                  connect                  │ 0x32ab77 │
+│                  connect                  │ 0x32aba3 │
+│                  connect                  │ 0x32abc8 │
+│                  connect                  │ 0x32abe0 │
+│                  connect                  │ 0x32ac03 │
+│                  connect                  │ 0x32ac19 │
+│                  connect                  │ 0x32ac3f │
+│                  connect                  │ 0x32ac65 │
+│                  connect                  │ 0x32ac84 │
+│                  connect                  │ 0x32acb7 │
+│                  connect                  │ 0x32acea │
+│                  connect                  │ 0x32ad11 │
+│                  connect                  │ 0x32ad4c │
+│                  connect                  │ 0x32ad87 │
+│                  connect                  │ 0x32adab │
+│                  connect                  │ 0x32ade3 │
+│                  connect                  │ 0x32ae1b │
+│                  connect                  │ 0x32ae47 │
+│                  connect                  │ 0x32ae73 │
+│                  connect                  │ 0x32aeae │
+│                  connect                  │ 0x32aee6 │
+│                  connect                  │ 0x32c298 │
+│                  connect                  │ 0x32c482 │
+│                  connect                  │ 0x32c574 │
+│                  connect                  │ 0x32c663 │
+│                  connect                  │ 0x32c7e7 │
+│                  connect                  │ 0x32c9ee │
+│                  connect                  │ 0x32caf0 │
+│                  connect                  │ 0x32cda6 │
+│                  connect                  │ 0x32d062 │
+│                  connect                  │ 0x32d08b │
+│                  connect                  │ 0x32d0bb │
+│                  connect                  │ 0x32d0e2 │
+│                  connect                  │ 0x32d10c │
+│                  connect                  │ 0x32d14b │
+│                  connect                  │ 0x32d183 │
+│                  connect                  │ 0x32d1c2 │
+│                  connect                  │ 0x32d1f2 │
+│                  connect                  │ 0x32d229 │
+│                  connect                  │ 0x32d26b │
+│                  connect                  │ 0x32d2a7 │
+│                  connect                  │ 0x32d2dc │
+│                  connect                  │ 0x508b1a │
+│                  connect                  │ 0x508b8b │
+│                  connect                  │ 0x508cbb │
+│                  connect                  │ 0x508d2f │
+│                  connect                  │ 0x508d9d │
+│                  connect                  │ 0x508e10 │
+│                  connect                  │ 0x508e82 │
+│                  connect                  │ 0x508eee │
+│                  connect                  │ 0x509340 │
+│                  connect                  │ 0x50b06a │
+│                  connect                  │ 0x50b093 │
+│                  connect                  │ 0x50b0c3 │
+│                  connect                  │ 0x50b0ea │
+│                  connect                  │ 0x50b114 │
+│                  connect                  │ 0x50b153 │
+│                  connect                  │ 0x50b18b │
+│                  connect                  │ 0x50b1ca │
+│                  connect                  │ 0x50b1fa │
+│                  connect                  │ 0x50b231 │
+│                  connect                  │ 0x50b273 │
+│                  connect                  │ 0x50b2af │
+│                  connect                  │ 0x50b2e4 │
+│                  connect                  │ 0x6e6b49 │
+│                  connect                  │ 0x6e6bba │
+│                  connect                  │ 0x6e6cea │
+│                  connect                  │ 0x6e6d5e │
+│                  connect                  │ 0x6e6dcc │
+│                  connect                  │ 0x6e6e3f │
+│                  connect                  │ 0x6e6eb1 │
+│                  connect                  │ 0x6e6f1d │
+│                  connect                  │ 0x6e736f │
+│                  connect                  │ 0x6ef4b5 │
+│                  connect                  │ 0x6ef61b │
+│                  connect                  │ 0x6ef66a │
+│                  connect                  │ 0x6ef700 │
+│                  connect                  │ 0x6efc8e │
+│                  connect                  │ 0x6eff28 │
+│                  connect                  │ 0x6f02e6 │
+│                  connect                  │ 0x6f0308 │
+│                  connect                  │ 0x6f069b │
+│                  connect                  │ 0x6f0af0 │
+│                  connect                  │ 0x6f0c57 │
+│                  connect                  │ 0x6f0d89 │
+│                  connect                  │ 0x6f0edb │
+│                  connect                  │ 0x6f1288 │
+│                  connect                  │ 0x6f1293 │
+│                  connect                  │ 0x6f139b │
+│                  connect                  │ 0x6f1486 │
+│                  connect                  │ 0x6f14e5 │
+│                  connect                  │ 0x6f1545 │
+│                  connect                  │ 0x6f1583 │
+│                  connect                  │ 0x6f1614 │
+│                  connect                  │ 0x6f1740 │
+│                  connect                  │ 0x6f1775 │
+│                  connect                  │ 0x6f17a2 │
+│                  connect                  │ 0x6f17dd │
+│                  connect                  │ 0x6f1811 │
+│                  connect                  │ 0x6f183e │
+│                  connect                  │ 0x6f1bad │
+│                  connect                  │ 0x6f1dde │
+│                  connect                  │ 0x6f1ff8 │
+│                  connect                  │ 0x6f2155 │
+│                  connect                  │ 0x6f2538 │
+│                  connect                  │ 0x6f27b9 │
+│                  connect                  │ 0x6f2dab │
+│                  connect                  │ 0x6f2ded │
+│                  connect                  │ 0x6f2e24 │
+│                  connect                  │ 0x6f2ec9 │
+│                  connect                  │ 0x6f2f2a │
+│                  connect                  │ 0x6f2f70 │
+│                  connect                  │ 0x6f31b3 │
+│                  connect                  │ 0x6f327f │
+│                  connect                  │ 0x6f330b │
+│                  connect                  │ 0x6f8072 │
+│                  connect                  │ 0x6f809b │
+│                  connect                  │ 0x6f80cb │
+│                  connect                  │ 0x6f80f2 │
+│                  connect                  │ 0x6f811c │
+│                  connect                  │ 0x6f815b │
+│                  connect                  │ 0x6f8193 │
+│                  connect                  │ 0x6f81d2 │
+│                  connect                  │ 0x6f8202 │
+│                  connect                  │ 0x6f8239 │
+│                  connect                  │ 0x6f827b │
+│                  connect                  │ 0x6f82b7 │
+│                  connect                  │ 0x6f82ec │
+│                  connect                  │ 0x8d3b81 │
+│                  connect                  │ 0x8d3bf2 │
+│                  connect                  │ 0x8d3d22 │
+│                  connect                  │ 0x8d3d96 │
+│                  connect                  │ 0x8d3e04 │
+│                  connect                  │ 0x8d3e77 │
+│                  connect                  │ 0x8d3ee9 │
+│                  connect                  │ 0x8d3f55 │
+│                  connect                  │ 0x8d43a7 │
+│                  connect                  │ 0x8dc4ed │
+│                  connect                  │ 0x8dc653 │
+│                  connect                  │ 0x8dc6a2 │
+│                  connect                  │ 0x8dc738 │
+│                  connect                  │ 0x8dccc6 │
+│                  connect                  │ 0x8dcf60 │
+│                  connect                  │ 0x8dd31e │
+│                  connect                  │ 0x8dd340 │
+│                  connect                  │ 0x8dd6d3 │
+│                  connect                  │ 0x8ddb28 │
+│                  connect                  │ 0x8ddc8f │
+│                  connect                  │ 0x8dddc1 │
+│                  connect                  │ 0x8ddf13 │
+│                  connect                  │ 0x8de2c0 │
+│                  connect                  │ 0x8de2cb │
+│                  connect                  │ 0x8de3d3 │
+│                  connect                  │ 0x8de4be │
+│                  connect                  │ 0x8de51d │
+│                  connect                  │ 0x8de57d │
+│                  connect                  │ 0x8de5bb │
+│                  connect                  │ 0x8de64c │
+│                  connect                  │ 0x8de778 │
+│                  connect                  │ 0x8de7ad │
+│                  connect                  │ 0x8de7da │
+│                  connect                  │ 0x8de815 │
+│                  connect                  │ 0x8de849 │
+│                  connect                  │ 0x8de876 │
+│                  connect                  │ 0x8debe5 │
+│                  connect                  │ 0x8dee16 │
+│                  connect                  │ 0x8df030 │
+│                  connect                  │ 0x8df18d │
+│                  connect                  │ 0x8df570 │
+│                  connect                  │ 0x8df7f1 │
+│                  connect                  │ 0x8dfde3 │
+│                  connect                  │ 0x8dfe25 │
+│                  connect                  │ 0x8dfe5c │
+│                  connect                  │ 0x8dff01 │
+│                  connect                  │ 0x8dff62 │
+│                  connect                  │ 0x8dffa8 │
+│                  connect                  │ 0x8e01eb │
+│                  connect                  │ 0x8e02b7 │
+│                  connect                  │ 0x8e0343 │
+│                  connect                  │ 0x8e607a │
+│                  connect                  │ 0x8e60a3 │
+│                  connect                  │ 0x8e60d3 │
+│                  connect                  │ 0x8e60fa │
+│                  connect                  │ 0x8e6124 │
+│                  connect                  │ 0x8e6163 │
+│                  connect                  │ 0x8e619b │
+│                  connect                  │ 0x8e61da │
+│                  connect                  │ 0x8e620a │
+│                  connect                  │ 0x8e6241 │
+│                  connect                  │ 0x8e6283 │
+│                  connect                  │ 0x8e62bf │
+│                  connect                  │ 0x8e62f4 │
+│                  connect                  │ 0xac1baa │
+│                  connect                  │ 0xac1c1b │
+│                  connect                  │ 0xac1d4b │
+│                  connect                  │ 0xac1dbf │
+│                  connect                  │ 0xac1e2d │
+│                  connect                  │ 0xac1ea0 │
+│                  connect                  │ 0xac1f12 │
+│                  connect                  │ 0xac1f7e │
+│                  connect                  │ 0xac23d0 │
+│                  connect                  │ 0xaca516 │
+│                  connect                  │ 0xaca67c │
+│                  connect                  │ 0xaca6cb │
+│                  connect                  │ 0xaca761 │
+│                  connect                  │ 0xacacef │
+│                  connect                  │ 0xacaf89 │
+│                  connect                  │ 0xacb347 │
+│                  connect                  │ 0xacb369 │
+│                  connect                  │ 0xacb6fc │
+│                  connect                  │ 0xacbb51 │
+│                  connect                  │ 0xacbcb8 │
+│                  connect                  │ 0xacbdea │
+│                  connect                  │ 0xacbf3c │
+│                  connect                  │ 0xacc2e9 │
+│                  connect                  │ 0xacc2f4 │
+│                  connect                  │ 0xacc3fc │
+│                  connect                  │ 0xacc4e7 │
+│                  connect                  │ 0xacc546 │
+│                  connect                  │ 0xacc5a6 │
+│                  connect                  │ 0xacc5e4 │
+│                  connect                  │ 0xacc675 │
+│                  connect                  │ 0xacc7a1 │
+│                  connect                  │ 0xacc7d6 │
+│                  connect                  │ 0xacc803 │
+│                  connect                  │ 0xacc83e │
+│                  connect                  │ 0xacc872 │
+│                  connect                  │ 0xacc89f │
+│                  connect                  │ 0xaccc0e │
+│                  connect                  │ 0xacce3f │
+│                  connect                  │ 0xacd059 │
+│                  connect                  │ 0xacd1b6 │
+│                  connect                  │ 0xacd599 │
+│                  connect                  │ 0xacd81a │
+│                  connect                  │ 0xacde0c │
+│                  connect                  │ 0xacde4e │
+│                  connect                  │ 0xacde85 │
+│                  connect                  │ 0xacdf2a │
+│                  connect                  │ 0xacdf8b │
+│                  connect                  │ 0xacdfd1 │
+│                  connect                  │ 0xace214 │
+│                  connect                  │ 0xace2e0 │
+│                  connect                  │ 0xace36c │
+│                  connect                  │ 0xad466e │
+│                  connect                  │ 0xad5082 │
+│                  connect                  │ 0xad50ab │
+│                  connect                  │ 0xad50db │
+│                  connect                  │ 0xad5102 │
+│                  connect                  │ 0xad512c │
+│                  connect                  │ 0xad516b │
+│                  connect                  │ 0xad51a3 │
+│                  connect                  │ 0xad51e2 │
+│                  connect                  │ 0xad5212 │
+│                  connect                  │ 0xad5249 │
+│                  connect                  │ 0xad528b │
+│                  connect                  │ 0xad52c7 │
+│                  connect                  │ 0xad52fc │
+│                  connect                  │ 0xcb0bd0 │
+│                  connect                  │ 0xcb0c41 │
+│                  connect                  │ 0xcb0d71 │
+│                  connect                  │ 0xcb0de5 │
+│                  connect                  │ 0xcb0e53 │
+│                  connect                  │ 0xcb0ec6 │
+│                  connect                  │ 0xcb0f38 │
+│                  connect                  │ 0xcb0fa4 │
+│                  connect                  │ 0xcb13f6 │
+│                  connect                  │ 0xcb953c │
+│                  connect                  │ 0xcb96a2 │
+│                  connect                  │ 0xcb96f1 │
+│                  connect                  │ 0xcb9787 │
+│                  connect                  │ 0xcb9d15 │
+│                  connect                  │ 0xcb9faf │
+│                  connect                  │ 0xcba36d │
+│                  connect                  │ 0xcba38f │
+│                  connect                  │ 0xcba722 │
+│                  connect                  │ 0xcbab77 │
+│                  connect                  │ 0xcbacde │
+│                  connect                  │ 0xcbae10 │
+│                  connect                  │ 0xcbaf62 │
+│                  connect                  │ 0xcbb30f │
+│                  connect                  │ 0xcbb31a │
+│                  connect                  │ 0xcbb422 │
+│                  connect                  │ 0xcbb50d │
+│                  connect                  │ 0xcbb56c │
+│                  connect                  │ 0xcbb5cc │
+│                  connect                  │ 0xcbb60a │
+│                  connect                  │ 0xcbb69b │
+│                  connect                  │ 0xcbb7c7 │
+│                  connect                  │ 0xcbb7fc │
+│                  connect                  │ 0xcbb829 │
+│                  connect                  │ 0xcbb864 │
+│                  connect                  │ 0xcbb898 │
+│                  connect                  │ 0xcbb8c5 │
+│                  connect                  │ 0xcbbc34 │
+│                  connect                  │ 0xcbbe65 │
+│                  connect                  │ 0xcbc07f │
+│                  connect                  │ 0xcbc1dc │
+│                  connect                  │ 0xcbc5bf │
+│                  connect                  │ 0xcbc840 │
+│                  connect                  │ 0xcbce32 │
+│                  connect                  │ 0xcbce74 │
+│                  connect                  │ 0xcbceab │
+│                  connect                  │ 0xcbcf50 │
+│                  connect                  │ 0xcbcfb1 │
+│                  connect                  │ 0xcbcff7 │
+│                  connect                  │ 0xcbd23a │
+│                  connect                  │ 0xcbd306 │
+│                  connect                  │ 0xcbd392 │
+│                  connect                  │ 0xcc20c0 │
+│                  connect                  │ 0xcc2180 │
+│                  connect                  │ 0xcc2220 │
+│                  connect                  │ 0xcc23fc │
+│                  Connect                  │  0x4de5  │
+│                  Connect                  │  0x4e00  │
+│                  Connect                  │ 0x1e00ee │
+│                  Connect                  │ 0x1fcb3b │
+│                  Connect                  │ 0x1fcbc2 │
+│                  Connect                  │ 0x202e42 │
+│                  Connect                  │ 0x202ef1 │
+│                  Connect                  │ 0x202f18 │
+│                  Connect                  │ 0x329143 │
+│                  Connect                  │ 0x32a4d5 │
+│                  Connect                  │ 0x32a548 │
+│                  Connect                  │ 0x32a5bd │
+│                  Connect                  │ 0x32a7b1 │
+│                  Connect                  │ 0x32a8b2 │
+│                  Connect                  │ 0x32a99e │
+│                  Connect                  │ 0x32aa46 │
+│                  Connect                  │ 0x32aa7f │
+│                  Connect                  │ 0x32aab4 │
+│                  Connect                  │ 0x32ab77 │
+│                  Connect                  │ 0x32aba3 │
+│                  Connect                  │ 0x32abc8 │
+│                  Connect                  │ 0x32abe0 │
+│                  Connect                  │ 0x32ac03 │
+│                  Connect                  │ 0x32ac19 │
+│                  Connect                  │ 0x32ac3f │
+│                  Connect                  │ 0x32ac65 │
+│                  Connect                  │ 0x32ac84 │
+│                  Connect                  │ 0x32acb7 │
+│                  Connect                  │ 0x32acea │
+│                  Connect                  │ 0x32ad11 │
+│                  Connect                  │ 0x32ad4c │
+│                  Connect                  │ 0x32ad87 │
+│                  Connect                  │ 0x32adab │
+│                  Connect                  │ 0x32ade3 │
+│                  Connect                  │ 0x32ae1b │
+│                  Connect                  │ 0x32ae47 │
+│                  Connect                  │ 0x32ae73 │
+│                  Connect                  │ 0x32aeae │
+│                  Connect                  │ 0x32aee6 │
+│                  Connect                  │ 0x32c298 │
+│                  Connect                  │ 0x32c482 │
+│                  Connect                  │ 0x32c574 │
+│                  Connect                  │ 0x32c663 │
+│                  Connect                  │ 0x32c7e7 │
+│                  Connect                  │ 0x32c9ee │
+│                  Connect                  │ 0x32caf0 │
+│                  Connect                  │ 0x32cda6 │
+│                  Connect                  │ 0x32d062 │
+│                  Connect                  │ 0x32d08b │
+│                  Connect                  │ 0x32d0bb │
+│                  Connect                  │ 0x32d0e2 │
+│                  Connect                  │ 0x32d10c │
+│                  Connect                  │ 0x32d14b │
+│                  Connect                  │ 0x32d183 │
+│                  Connect                  │ 0x32d1c2 │
+│                  Connect                  │ 0x32d1f2 │
+│                  Connect                  │ 0x32d229 │
+│                  Connect                  │ 0x32d26b │
+│                  Connect                  │ 0x32d2a7 │
+│                  Connect                  │ 0x32d2dc │
+│                  Connect                  │ 0x508b1a │
+│                  Connect                  │ 0x508b8b │
+│                  Connect                  │ 0x508cbb │
+│                  Connect                  │ 0x508d2f │
+│                  Connect                  │ 0x508d9d │
+│                  Connect                  │ 0x508e10 │
+│                  Connect                  │ 0x508e82 │
+│                  Connect                  │ 0x508eee │
+│                  Connect                  │ 0x509340 │
+│                  Connect                  │ 0x50b06a │
+│                  Connect                  │ 0x50b093 │
+│                  Connect                  │ 0x50b0c3 │
+│                  Connect                  │ 0x50b0ea │
+│                  Connect                  │ 0x50b114 │
+│                  Connect                  │ 0x50b153 │
+│                  Connect                  │ 0x50b18b │
+│                  Connect                  │ 0x50b1ca │
+│                  Connect                  │ 0x50b1fa │
+│                  Connect                  │ 0x50b231 │
+│                  Connect                  │ 0x50b273 │
+│                  Connect                  │ 0x50b2af │
+│                  Connect                  │ 0x50b2e4 │
+│                  Connect                  │ 0x6e6b49 │
+│                  Connect                  │ 0x6e6bba │
+│                  Connect                  │ 0x6e6cea │
+│                  Connect                  │ 0x6e6d5e │
+│                  Connect                  │ 0x6e6dcc │
+│                  Connect                  │ 0x6e6e3f │
+│                  Connect                  │ 0x6e6eb1 │
+│                  Connect                  │ 0x6e6f1d │
+│                  Connect                  │ 0x6e736f │
+│                  Connect                  │ 0x6ef4b5 │
+│                  Connect                  │ 0x6ef61b │
+│                  Connect                  │ 0x6ef66a │
+│                  Connect                  │ 0x6ef700 │
+│                  Connect                  │ 0x6efc8e │
+│                  Connect                  │ 0x6eff28 │
+│                  Connect                  │ 0x6f02e6 │
+│                  Connect                  │ 0x6f0308 │
+│                  Connect                  │ 0x6f069b │
+│                  Connect                  │ 0x6f0af0 │
+│                  Connect                  │ 0x6f0c57 │
+│                  Connect                  │ 0x6f0d89 │
+│                  Connect                  │ 0x6f0edb │
+│                  Connect                  │ 0x6f1288 │
+│                  Connect                  │ 0x6f1293 │
+│                  Connect                  │ 0x6f139b │
+│                  Connect                  │ 0x6f1486 │
+│                  Connect                  │ 0x6f14e5 │
+│                  Connect                  │ 0x6f1545 │
+│                  Connect                  │ 0x6f1583 │
+│                  Connect                  │ 0x6f1614 │
+│                  Connect                  │ 0x6f1740 │
+│                  Connect                  │ 0x6f1775 │
+│                  Connect                  │ 0x6f17a2 │
+│                  Connect                  │ 0x6f17dd │
+│                  Connect                  │ 0x6f1811 │
+│                  Connect                  │ 0x6f183e │
+│                  Connect                  │ 0x6f1bad │
+│                  Connect                  │ 0x6f1dde │
+│                  Connect                  │ 0x6f1ff8 │
+│                  Connect                  │ 0x6f2155 │
+│                  Connect                  │ 0x6f2538 │
+│                  Connect                  │ 0x6f27b9 │
+│                  Connect                  │ 0x6f2dab │
+│                  Connect                  │ 0x6f2ded │
+│                  Connect                  │ 0x6f2e24 │
+│                  Connect                  │ 0x6f2ec9 │
+│                  Connect                  │ 0x6f2f2a │
+│                  Connect                  │ 0x6f2f70 │
+│                  Connect                  │ 0x6f31b3 │
+│                  Connect                  │ 0x6f327f │
+│                  Connect                  │ 0x6f330b │
+│                  Connect                  │ 0x6f8072 │
+│                  Connect                  │ 0x6f809b │
+│                  Connect                  │ 0x6f80cb │
+│                  Connect                  │ 0x6f80f2 │
+│                  Connect                  │ 0x6f811c │
+│                  Connect                  │ 0x6f815b │
+│                  Connect                  │ 0x6f8193 │
+│                  Connect                  │ 0x6f81d2 │
+│                  Connect                  │ 0x6f8202 │
+│                  Connect                  │ 0x6f8239 │
+│                  Connect                  │ 0x6f827b │
+│                  Connect                  │ 0x6f82b7 │
+│                  Connect                  │ 0x6f82ec │
+│                  Connect                  │ 0x8d3b81 │
+│                  Connect                  │ 0x8d3bf2 │
+│                  Connect                  │ 0x8d3d22 │
+│                  Connect                  │ 0x8d3d96 │
+│                  Connect                  │ 0x8d3e04 │
+│                  Connect                  │ 0x8d3e77 │
+│                  Connect                  │ 0x8d3ee9 │
+│                  Connect                  │ 0x8d3f55 │
+│                  Connect                  │ 0x8d43a7 │
+│                  Connect                  │ 0x8dc4ed │
+│                  Connect                  │ 0x8dc653 │
+│                  Connect                  │ 0x8dc6a2 │
+│                  Connect                  │ 0x8dc738 │
+│                  Connect                  │ 0x8dccc6 │
+│                  Connect                  │ 0x8dcf60 │
+│                  Connect                  │ 0x8dd31e │
+│                  Connect                  │ 0x8dd340 │
+│                  Connect                  │ 0x8dd6d3 │
+│                  Connect                  │ 0x8ddb28 │
+│                  Connect                  │ 0x8ddc8f │
+│                  Connect                  │ 0x8dddc1 │
+│                  Connect                  │ 0x8ddf13 │
+│                  Connect                  │ 0x8de2c0 │
+│                  Connect                  │ 0x8de2cb │
+│                  Connect                  │ 0x8de3d3 │
+│                  Connect                  │ 0x8de4be │
+│                  Connect                  │ 0x8de51d │
+│                  Connect                  │ 0x8de57d │
+│                  Connect                  │ 0x8de5bb │
+│                  Connect                  │ 0x8de64c │
+│                  Connect                  │ 0x8de778 │
+│                  Connect                  │ 0x8de7ad │
+│                  Connect                  │ 0x8de7da │
+│                  Connect                  │ 0x8de815 │
+│                  Connect                  │ 0x8de849 │
+│                  Connect                  │ 0x8de876 │
+│                  Connect                  │ 0x8debe5 │
+│                  Connect                  │ 0x8dee16 │
+│                  Connect                  │ 0x8df030 │
+│                  Connect                  │ 0x8df18d │
+│                  Connect                  │ 0x8df570 │
+│                  Connect                  │ 0x8df7f1 │
+│                  Connect                  │ 0x8dfde3 │
+│                  Connect                  │ 0x8dfe25 │
+│                  Connect                  │ 0x8dfe5c │
+│                  Connect                  │ 0x8dff01 │
+│                  Connect                  │ 0x8dff62 │
+│                  Connect                  │ 0x8dffa8 │
+│                  Connect                  │ 0x8e01eb │
+│                  Connect                  │ 0x8e02b7 │
+│                  Connect                  │ 0x8e0343 │
+│                  Connect                  │ 0x8e607a │
+│                  Connect                  │ 0x8e60a3 │
+│                  Connect                  │ 0x8e60d3 │
+│                  Connect                  │ 0x8e60fa │
+│                  Connect                  │ 0x8e6124 │
+│                  Connect                  │ 0x8e6163 │
+│                  Connect                  │ 0x8e619b │
+│                  Connect                  │ 0x8e61da │
+│                  Connect                  │ 0x8e620a │
+│                  Connect                  │ 0x8e6241 │
+│                  Connect                  │ 0x8e6283 │
+│                  Connect                  │ 0x8e62bf │
+│                  Connect                  │ 0x8e62f4 │
+│                  Connect                  │ 0xac1baa │
+│                  Connect                  │ 0xac1c1b │
+│                  Connect                  │ 0xac1d4b │
+│                  Connect                  │ 0xac1dbf │
+│                  Connect                  │ 0xac1e2d │
+│                  Connect                  │ 0xac1ea0 │
+│                  Connect                  │ 0xac1f12 │
+│                  Connect                  │ 0xac1f7e │
+│                  Connect                  │ 0xac23d0 │
+│                  Connect                  │ 0xaca516 │
+│                  Connect                  │ 0xaca67c │
+│                  Connect                  │ 0xaca6cb │
+│                  Connect                  │ 0xaca761 │
+│                  Connect                  │ 0xacacef │
+│                  Connect                  │ 0xacaf89 │
+│                  Connect                  │ 0xacb347 │
+│                  Connect                  │ 0xacb369 │
+│                  Connect                  │ 0xacb6fc │
+│                  Connect                  │ 0xacbb51 │
+│                  Connect                  │ 0xacbcb8 │
+│                  Connect                  │ 0xacbdea │
+│                  Connect                  │ 0xacbf3c │
+│                  Connect                  │ 0xacc2e9 │
+│                  Connect                  │ 0xacc2f4 │
+│                  Connect                  │ 0xacc3fc │
+│                  Connect                  │ 0xacc4e7 │
+│                  Connect                  │ 0xacc546 │
+│                  Connect                  │ 0xacc5a6 │
+│                  Connect                  │ 0xacc5e4 │
+│                  Connect                  │ 0xacc675 │
+│                  Connect                  │ 0xacc7a1 │
+│                  Connect                  │ 0xacc7d6 │
+│                  Connect                  │ 0xacc803 │
+│                  Connect                  │ 0xacc83e │
+│                  Connect                  │ 0xacc872 │
+│                  Connect                  │ 0xacc89f │
+│                  Connect                  │ 0xaccc0e │
+│                  Connect                  │ 0xacce3f │
+│                  Connect                  │ 0xacd059 │
+│                  Connect                  │ 0xacd1b6 │
+│                  Connect                  │ 0xacd599 │
+│                  Connect                  │ 0xacd81a │
+│                  Connect                  │ 0xacde0c │
+│                  Connect                  │ 0xacde4e │
+│                  Connect                  │ 0xacde85 │
+│                  Connect                  │ 0xacdf2a │
+│                  Connect                  │ 0xacdf8b │
+│                  Connect                  │ 0xacdfd1 │
+│                  Connect                  │ 0xace214 │
+│                  Connect                  │ 0xace2e0 │
+│                  Connect                  │ 0xace36c │
+│                  Connect                  │ 0xad466e │
+│                  Connect                  │ 0xad5082 │
+│                  Connect                  │ 0xad50ab │
+│                  Connect                  │ 0xad50db │
+│                  Connect                  │ 0xad5102 │
+│                  Connect                  │ 0xad512c │
+│                  Connect                  │ 0xad516b │
+│                  Connect                  │ 0xad51a3 │
+│                  Connect                  │ 0xad51e2 │
+│                  Connect                  │ 0xad5212 │
+│                  Connect                  │ 0xad5249 │
+│                  Connect                  │ 0xad528b │
+│                  Connect                  │ 0xad52c7 │
+│                  Connect                  │ 0xad52fc │
+│                  Connect                  │ 0xcb0bd0 │
+│                  Connect                  │ 0xcb0c41 │
+│                  Connect                  │ 0xcb0d71 │
+│                  Connect                  │ 0xcb0de5 │
+│                  Connect                  │ 0xcb0e53 │
+│                  Connect                  │ 0xcb0ec6 │
+│                  Connect                  │ 0xcb0f38 │
+│                  Connect                  │ 0xcb0fa4 │
+│                  Connect                  │ 0xcb13f6 │
+│                  Connect                  │ 0xcb953c │
+│                  Connect                  │ 0xcb96a2 │
+│                  Connect                  │ 0xcb96f1 │
+│                  Connect                  │ 0xcb9787 │
+│                  Connect                  │ 0xcb9d15 │
+│                  Connect                  │ 0xcb9faf │
+│                  Connect                  │ 0xcba36d │
+│                  Connect                  │ 0xcba38f │
+│                  Connect                  │ 0xcba722 │
+│                  Connect                  │ 0xcbab77 │
+│                  Connect                  │ 0xcbacde │
+│                  Connect                  │ 0xcbae10 │
+│                  Connect                  │ 0xcbaf62 │
+│                  Connect                  │ 0xcbb30f │
+│                  Connect                  │ 0xcbb31a │
+│                  Connect                  │ 0xcbb422 │
+│                  Connect                  │ 0xcbb50d │
+│                  Connect                  │ 0xcbb56c │
+│                  Connect                  │ 0xcbb5cc │
+│                  Connect                  │ 0xcbb60a │
+│                  Connect                  │ 0xcbb69b │
+│                  Connect                  │ 0xcbb7c7 │
+│                  Connect                  │ 0xcbb7fc │
+│                  Connect                  │ 0xcbb829 │
+│                  Connect                  │ 0xcbb864 │
+│                  Connect                  │ 0xcbb898 │
+│                  Connect                  │ 0xcbb8c5 │
+│                  Connect                  │ 0xcbbc34 │
+│                  Connect                  │ 0xcbbe65 │
+│                  Connect                  │ 0xcbc07f │
+│                  Connect                  │ 0xcbc1dc │
+│                  Connect                  │ 0xcbc5bf │
+│                  Connect                  │ 0xcbc840 │
+│                  Connect                  │ 0xcbce32 │
+│                  Connect                  │ 0xcbce74 │
+│                  Connect                  │ 0xcbceab │
+│                  Connect                  │ 0xcbcf50 │
+│                  Connect                  │ 0xcbcfb1 │
+│                  Connect                  │ 0xcbcff7 │
+│                  Connect                  │ 0xcbd23a │
+│                  Connect                  │ 0xcbd306 │
+│                  Connect                  │ 0xcbd392 │
+│                  Connect                  │ 0xcc20c0 │
+│                  Connect                  │ 0xcc2180 │
+│                  Connect                  │ 0xcc2220 │
+│                  Connect                  │ 0xcc23fc │
+│                  accept                   │ 0x6efe1c │
+│                  accept                   │ 0x8dce54 │
+│                  accept                   │ 0xacae7d │
+│                  accept                   │ 0xcb9ea3 │
+│                  Accept                   │ 0x6efe1c │
+│                  Accept                   │ 0x8dce54 │
+│                  Accept                   │ 0xacae7d │
+│                  Accept                   │ 0xcb9ea3 │
+│                   send                    │ 0x30c104 │
+│                   send                    │ 0x30c13e │
+│                   send                    │ 0x30c202 │
+│                   send                    │ 0x30c294 │
+│                   send                    │ 0x30c7ca │
+│                   send                    │ 0x310b69 │
+│                   send                    │ 0x313a25 │
+│                   send                    │ 0x31b30e │
+│                   send                    │ 0x6ef743 │
+│                   send                    │ 0x6efaca │
+│                   send                    │ 0x6efaf2 │
+│                   send                    │ 0x6efafe │
+│                   send                    │ 0x6efb0b │
+│                   send                    │ 0x6efb11 │
+│                   send                    │ 0x6efe7c │
+│                   send                    │ 0x6f007d │
+│                   send                    │ 0x6f00c9 │
+│                   send                    │ 0x6f02ba │
+│                   send                    │ 0x6f0311 │
+│                   send                    │ 0x6f0706 │
+│                   send                    │ 0x6f074c │
+│                   send                    │ 0x6f0917 │
+│                   send                    │ 0x6f095e │
+│                   send                    │ 0x6f1191 │
+│                   send                    │ 0x6f2e83 │
+│                   send                    │ 0x6f304a │
+│                   send                    │ 0x6f306b │
+│                   send                    │ 0x6f3093 │
+│                   send                    │ 0x6f30a0 │
+│                   send                    │ 0x8dc77b │
+│                   send                    │ 0x8dcb02 │
+│                   send                    │ 0x8dcb2a │
+│                   send                    │ 0x8dcb36 │
+│                   send                    │ 0x8dcb43 │
+│                   send                    │ 0x8dcb49 │
+│                   send                    │ 0x8dceb4 │
+│                   send                    │ 0x8dd0b5 │
+│                   send                    │ 0x8dd101 │
+│                   send                    │ 0x8dd2f2 │
+│                   send                    │ 0x8dd349 │
+│                   send                    │ 0x8dd73e │
+│                   send                    │ 0x8dd784 │
+│                   send                    │ 0x8dd94f │
+│                   send                    │ 0x8dd996 │
+│                   send                    │ 0x8de1c9 │
+│                   send                    │ 0x8dfebb │
+│                   send                    │ 0x8e0082 │
+│                   send                    │ 0x8e00a3 │
+│                   send                    │ 0x8e00cb │
+│                   send                    │ 0x8e00d8 │
+│                   send                    │ 0xaca7a4 │
+│                   send                    │ 0xacab2b │
+│                   send                    │ 0xacab53 │
+│                   send                    │ 0xacab5f │
+│                   send                    │ 0xacab6c │
+│                   send                    │ 0xacab72 │
+│                   send                    │ 0xacaedd │
+│                   send                    │ 0xacb0de │
+│                   send                    │ 0xacb12a │
+│                   send                    │ 0xacb31b │
+│                   send                    │ 0xacb372 │
+│                   send                    │ 0xacb767 │
+│                   send                    │ 0xacb7ad │
+│                   send                    │ 0xacb978 │
+│                   send                    │ 0xacb9bf │
+│                   send                    │ 0xacc1f2 │
+│                   send                    │ 0xacdee4 │
+│                   send                    │ 0xace0ab │
+│                   send                    │ 0xace0cc │
+│                   send                    │ 0xace0f4 │
+│                   send                    │ 0xace101 │
+│                   send                    │ 0xcb97ca │
+│                   send                    │ 0xcb9b51 │
+│                   send                    │ 0xcb9b79 │
+│                   send                    │ 0xcb9b85 │
+│                   send                    │ 0xcb9b92 │
+│                   send                    │ 0xcb9b98 │
+│                   send                    │ 0xcb9f03 │
+│                   send                    │ 0xcba104 │
+│                   send                    │ 0xcba150 │
+│                   send                    │ 0xcba341 │
+│                   send                    │ 0xcba398 │
+│                   send                    │ 0xcba78d │
+│                   send                    │ 0xcba7d3 │
+│                   send                    │ 0xcba99e │
+│                   send                    │ 0xcba9e5 │
+│                   send                    │ 0xcbb218 │
+│                   send                    │ 0xcbcf0a │
+│                   send                    │ 0xcbd0d1 │
+│                   send                    │ 0xcbd0f2 │
+│                   send                    │ 0xcbd11a │
+│                   send                    │ 0xcbd127 │
+│                   Send                    │ 0x30c104 │
+│                   Send                    │ 0x30c13e │
+│                   Send                    │ 0x30c202 │
+│                   Send                    │ 0x30c294 │
+│                   Send                    │ 0x30c7ca │
+│                   Send                    │ 0x310b69 │
+│                   Send                    │ 0x313a25 │
+│                   Send                    │ 0x31b30e │
+│                   Send                    │ 0x6ef743 │
+│                   Send                    │ 0x6efaca │
+│                   Send                    │ 0x6efaf2 │
+│                   Send                    │ 0x6efafe │
+│                   Send                    │ 0x6efb0b │
+│                   Send                    │ 0x6efb11 │
+│                   Send                    │ 0x6efe7c │
+│                   Send                    │ 0x6f007d │
+│                   Send                    │ 0x6f00c9 │
+│                   Send                    │ 0x6f02ba │
+│                   Send                    │ 0x6f0311 │
+│                   Send                    │ 0x6f0706 │
+│                   Send                    │ 0x6f074c │
+│                   Send                    │ 0x6f0917 │
+│                   Send                    │ 0x6f095e │
+│                   Send                    │ 0x6f1191 │
+│                   Send                    │ 0x6f2e83 │
+│                   Send                    │ 0x6f304a │
+│                   Send                    │ 0x6f306b │
+│                   Send                    │ 0x6f3093 │
+│                   Send                    │ 0x6f30a0 │
+│                   Send                    │ 0x8dc77b │
+│                   Send                    │ 0x8dcb02 │
+│                   Send                    │ 0x8dcb2a │
+│                   Send                    │ 0x8dcb36 │
+│                   Send                    │ 0x8dcb43 │
+│                   Send                    │ 0x8dcb49 │
+│                   Send                    │ 0x8dceb4 │
+│                   Send                    │ 0x8dd0b5 │
+│                   Send                    │ 0x8dd101 │
+│                   Send                    │ 0x8dd2f2 │
+│                   Send                    │ 0x8dd349 │
+│                   Send                    │ 0x8dd73e │
+│                   Send                    │ 0x8dd784 │
+│                   Send                    │ 0x8dd94f │
+│                   Send                    │ 0x8dd996 │
+│                   Send                    │ 0x8de1c9 │
+│                   Send                    │ 0x8dfebb │
+│                   Send                    │ 0x8e0082 │
+│                   Send                    │ 0x8e00a3 │
+│                   Send                    │ 0x8e00cb │
+│                   Send                    │ 0x8e00d8 │
+│                   Send                    │ 0xaca7a4 │
+│                   Send                    │ 0xacab2b │
+│                   Send                    │ 0xacab53 │
+│                   Send                    │ 0xacab5f │
+│                   Send                    │ 0xacab6c │
+│                   Send                    │ 0xacab72 │
+│                   Send                    │ 0xacaedd │
+│                   Send                    │ 0xacb0de │
+│                   Send                    │ 0xacb12a │
+│                   Send                    │ 0xacb31b │
+│                   Send                    │ 0xacb372 │
+│                   Send                    │ 0xacb767 │
+│                   Send                    │ 0xacb7ad │
+│                   Send                    │ 0xacb978 │
+│                   Send                    │ 0xacb9bf │
+│                   Send                    │ 0xacc1f2 │
+│                   Send                    │ 0xacdee4 │
+│                   Send                    │ 0xace0ab │
+│                   Send                    │ 0xace0cc │
+│                   Send                    │ 0xace0f4 │
+│                   Send                    │ 0xace101 │
+│                   Send                    │ 0xcb97ca │
+│                   Send                    │ 0xcb9b51 │
+│                   Send                    │ 0xcb9b79 │
+│                   Send                    │ 0xcb9b85 │
+│                   Send                    │ 0xcb9b92 │
+│                   Send                    │ 0xcb9b98 │
+│                   Send                    │ 0xcb9f03 │
+│                   Send                    │ 0xcba104 │
+│                   Send                    │ 0xcba150 │
+│                   Send                    │ 0xcba341 │
+│                   Send                    │ 0xcba398 │
+│                   Send                    │ 0xcba78d │
+│                   Send                    │ 0xcba7d3 │
+│                   Send                    │ 0xcba99e │
+│                   Send                    │ 0xcba9e5 │
+│                   Send                    │ 0xcbb218 │
+│                   Send                    │ 0xcbcf0a │
+│                   Send                    │ 0xcbd0d1 │
+│                   Send                    │ 0xcbd0f2 │
+│                   Send                    │ 0xcbd11a │
+│                   Send                    │ 0xcbd127 │
+│                   bind                    │ 0x1eed27 │
+│                   Bind                    │ 0x1eed27 │
+│                   Ping                    │ 0x30c5d0 │
+│                   Ping                    │ 0x30c9f6 │
+│                   Ping                    │ 0x30ca41 │
+│                   Ping                    │ 0x30cb84 │
+│                   Ping                    │ 0x30dc1f │
+│                   Ping                    │ 0x30dc63 │
+│                   Ping                    │ 0x30e04b │
+│                   Ping                    │ 0x30e89b │
+│                   Ping                    │ 0x30e9d4 │
+│                   Ping                    │ 0x30ec84 │
+│                   Ping                    │ 0x30ee94 │
+│                   Ping                    │ 0x310160 │
+│                   Ping                    │ 0x310290 │
+│                   Ping                    │ 0x312044 │
+│                   Ping                    │ 0x3132ed │
+│                   Ping                    │ 0x6f2bf7 │
+│                   Ping                    │ 0x8dfc2f │
+│                   Ping                    │ 0xacdc58 │
+│                   Ping                    │ 0xcbcc7e │
+│                UrlEncoding                │ 0x32c41b │
+└───────────────────────────────────────────┴──────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃  Functions or Strings about Process   ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│             CreateProcess             │ 0x1fcc1e │
+│             CreateProcess             │ 0x31b7ce │
+│             CreateThread              │ 0x1fcbf8 │
+│             CreateThread              │ 0x31b630 │
+│              OpenProcess              │ 0x31b166 │
+│              OpenProcess              │ 0x31b50e │
+│           GetCurrentThread            │ 0x1fcd60 │
+│           GetCurrentThread            │ 0x31bad6 │
+│         AdjustTokenPrivileges         │ 0x31b17a │
+│              ExitProcess              │ 0x1fa24f │
+│              ExitProcess              │ 0x1fcf08 │
+│              ExitProcess              │ 0x315667 │
+│              ExitProcess              │ 0x31b9c2 │
+│           TerminateProcess            │ 0x1fcdf6 │
+│           TerminateProcess            │ 0x1ffb20 │
+│           TerminateProcess            │ 0x31b51c │
+│           TerminateProcess            │ 0x32a9de │
+│           TerminateProcess            │ 0x32a9fb │
+│           OpenProcessToken            │ 0x31b166 │
+│            CreateProcessW             │ 0x1fcc1e │
+│            CreateProcessW             │ 0x31b7ce │
+│        GetProcessWindowStation        │ 0x1fad78 │
+│          GetCurrentProcessId          │ 0x1fd04e │
+│          GetCurrentProcessId          │ 0x31b6c6 │
+│           GetCurrentProcess           │ 0x1fce0a │
+│           GetCurrentProcess           │ 0x1fd04e │
+│           GetCurrentProcess           │ 0x31b5d4 │
+│           GetCurrentProcess           │ 0x31b6c6 │
+│            CorExitProcess             │ 0x1fa24c │
+│            CorExitProcess             │ 0x315664 │
+│       InitializeCriticalSection       │ 0x1fce46 │
+│       InitializeCriticalSection       │ 0x3153b0 │
+│       InitializeCriticalSection       │ 0x31b932 │
+│       InitializeCriticalSection       │ 0x31bb66 │
+│ InitializeCriticalSectionAndSpinCount │ 0x1fce46 │
+│ InitializeCriticalSectionAndSpinCount │ 0x31bb66 │
+│         EnterCriticalSection          │ 0x1fce2e │
+│         EnterCriticalSection          │ 0x31b94e │
+│         DeleteCriticalSection         │ 0x1fceba │
+│         DeleteCriticalSection         │ 0x31b97e │
+│         LeaveCriticalSection          │ 0x1fce6e │
+│         LeaveCriticalSection          │ 0x31b966 │
+│               TlsAlloc                │ 0x1fcf4a │
+│               TlsAlloc                │ 0x31bb8e │
+│                TlsFree                │ 0x1fcf72 │
+│                TlsFree                │ 0x31bbb6 │
+│              CloseHandle              │ 0x1fcb08 │
+│              CloseHandle              │ 0x31b550 │
+│          WaitForSingleObject          │ 0x1fcb16 │
+│          WaitForSingleObject          │ 0x31b784 │
+│        WaitForMultipleObjects         │ 0x1fcb70 │
+│        WaitForMultipleObjects         │ 0x31b64c │
+│           GetPriorityClass            │ 0x31b7e0 │
+│             CreateEventW              │ 0x1fcaf8 │
+│             CreateEventW              │ 0x31b666 │
+│              TlsSetValue              │ 0x1fcf64 │
+│              TlsSetValue              │ 0x31bba8 │
+│              CreatePipe               │ 0x31b7ac │
+│           ConnectNamedPipe            │ 0x1fcb3b │
+│           ConnectNamedPipe            │ 0x1fcbc2 │
+│          DisconnectNamedPipe          │ 0x1fcb38 │
+└───────────────────────────────────────┴──────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Memory Management ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│                GetProcessHeap                │ 0x1fcee2 │
+│                GetProcessHeap                │ 0x31b75c │
+│                  HeapAlloc                   │ 0x1fcd10 │
+│                  HeapAlloc                   │ 0x31b72a │
+│                  HeapCreate                  │ 0x1fcf16 │
+│                 HeapDestroy                  │ 0x1fcf24 │
+│                   HeapFree                   │ 0x1fcd1c │
+│                   HeapFree                   │ 0x31b744 │
+│                 HeapReAlloc                  │ 0x1fd08a │
+│                 HeapReAlloc                  │ 0x31b736 │
+│                   HeapSize                   │ 0x1fd0de │
+│                   HeapSize                   │ 0x31b750 │
+│                 GlobalAlloc                  │ 0x31b834 │
+│                  GlobalFree                  │ 0x31b842 │
+│                  LocalFree                   │ 0x31b57e │
+│                   realloc                    │ 0x1fd08e │
+│                   realloc                    │ 0x31b73a │
+│                     free                     │ 0x1fac6f │
+│                     free                     │ 0x1fca8e │
+│                     free                     │ 0x1fcd20 │
+│                     free                     │ 0x1fcf75 │
+│                     free                     │ 0x1fd000 │
+│                     free                     │ 0x312ce6 │
+│                     free                     │ 0x312d22 │
+│                     free                     │ 0x312d5a │
+│                     free                     │ 0x312d8e │
+│                     free                     │ 0x31537b │
+│                     free                     │ 0x31b55e │
+│                     free                     │ 0x31b583 │
+│                     free                     │ 0x31b748 │
+│                     free                     │ 0x31b848 │
+│                     free                     │ 0x31bbb9 │
+│                     free                     │ 0x31bcae │
+└──────────────────────────────────────────────┴──────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Dll/Resource Handling ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│                   LoadLibrary                    │ 0x1fcabe │
+│                   LoadLibrary                    │ 0x31b6ee │
+│                   LoadLibrary                    │ 0x31bbc0 │
+│                   LoadLibraryW                   │ 0x1fcabe │
+│                   LoadLibraryW                   │ 0x31b6ee │
+│                  LoadLibraryExW                  │ 0x31bbc0 │
+│                 GetModuleHandle                  │ 0x1fcef4 │
+│                 GetModuleHandle                  │ 0x31b7ba │
+│                 GetModuleHandle                  │ 0x31b9d0 │
+│                 GetModuleHandle                  │ 0x31bbd2 │
+│                 GetModuleHandleW                 │ 0x1fcef4 │
+│                 GetModuleHandleW                 │ 0x31b7ba │
+│                   FreeLibrary                    │ 0x1fca8e │
+│                   FreeLibrary                    │ 0x31b55e │
+│                GetModuleHandleExW                │ 0x31bbd2 │
+│                 System.Resources                 │ 0x6e73b2 │
+│                 System.Resources                 │ 0x6e741f │
+│                 System.Resources                 │ 0x8d43ea │
+│                 System.Resources                 │ 0x8d4457 │
+│                 System.Resources                 │ 0x8e4602 │
+│                 System.Resources                 │ 0x8e466f │
+│                 System.Resources                 │ 0xac2413 │
+│                 System.Resources                 │ 0xac2480 │
+│                 System.Resources                 │ 0xad262b │
+│                 System.Resources                 │ 0xad2698 │
+│                 System.Resources                 │ 0xad2833 │
+│                 System.Resources                 │ 0xad28a0 │
+│                 System.Resources                 │ 0xcb1439 │
+│                 System.Resources                 │ 0xcb14a6 │
+│                 System.Resources                 │ 0xcc1651 │
+│                 System.Resources                 │ 0xcc16be │
+│                 System.Resources                 │ 0xcc1859 │
+│                 System.Resources                 │ 0xcc18c6 │
+└──────────────────────────────────────────────────┴──────────┘
+                        * WARNING *                        
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Evasion/Bypassing ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│           GetSystemTimeAsFileTime            │ 0x1fd064 │
+│           GetSystemTimeAsFileTime            │ 0x31baec │
+│             WaitForSingleObject              │ 0x1fcb16 │
+│             WaitForSingleObject              │ 0x31b784 │
+│            WaitForMultipleObjects            │ 0x1fcb70 │
+│            WaitForMultipleObjects            │ 0x31b64c │
+│              IsDebuggerPresent               │ 0x1fcdd2 │
+│              IsDebuggerPresent               │ 0x31bb1c │
+│                 GetTickCount                 │ 0x1fcc5c │
+│                 GetTickCount                 │ 0x31ba1c │
+│         SetUnhandledExceptionFilter          │ 0x1fcdb4 │
+│         SetUnhandledExceptionFilter          │ 0x31ba82 │
+│           UnhandledExceptionFilter           │ 0x1fcd98 │
+│           UnhandledExceptionFilter           │ 0x1fcdb7 │
+│           UnhandledExceptionFilter           │ 0x31ba66 │
+│           UnhandledExceptionFilter           │ 0x31ba85 │
+│              isDebuggerPresent               │ 0x1fcdd2 │
+│              isDebuggerPresent               │ 0x31bb1c │
+│                 SetFileTime                  │ 0x31b88e │
+│           QueryPerformanceCounter            │ 0x1fd034 │
+│           QueryPerformanceCounter            │ 0x31babc │
+│               GetModuleHandleA               │ 0x31b9d0 │
+│                GetProcAddress                │ 0x1fca9c │
+│                GetProcAddress                │ 0x31b56c │
+│                    Sleep                     │ 0x1fcf32 │
+│                    Sleep                     │ 0x31b676 │
+│                    Sleep                     │ 0x6efef2 │
+│                    Sleep                     │ 0x8dcf2a │
+│                    Sleep                     │ 0xacaf53 │
+│                    Sleep                     │ 0xcb9f79 │
+│           CreateToolhelp32Snapshot           │ 0x31b7f4 │
+└──────────────────────────────────────────────┴──────────┘
+                        * WARNING *                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about System/Persistence ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│                 OpenSCManager                 │ 0x31b1d8 │
+│                 ShellExecute                  │ 0x31b452 │
+│                 OpenServiceW                  │ 0x31b1ea │
+│                OpenSCManagerW                 │ 0x31b1d8 │
+│              CloseServiceHandle               │ 0x31b1c2 │
+│             SetNamedSecurityInfo              │ 0x31b136 │
+│             SetNamedSecurityInfoW             │ 0x31b136 │
+└───────────────────────────────────────────────┴──────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about COMObject ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│             CoInitialize             │ 0x31b46e │
+│           CoCreateInstance           │ 0x31b490 │
+│            CoUninitialize            │ 0x31b47e │
+└──────────────────────────────────────┴──────────┘
+                     * WARNING *                      
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Cryptography ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│              EncodePointer              │ 0x1fcde6 │
+│              DecodePointer              │ 0x1fcd76 │
+│              DecodePointer              │ 0x31bcfa │
+└─────────────────────────────────────────┴──────────┘
+                          * WARNING *                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Information Gathering ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│                     ReadFile                     │ 0x1fcb8a │
+│                     ReadFile                     │ 0x31b860 │
+│             QueryPerformanceCounter              │ 0x1fd034 │
+│             QueryPerformanceCounter              │ 0x31babc │
+│             CreateToolhelp32Snapshot             │ 0x31b7f4 │
+│                 GetProcessTimes                  │ 0x31b920 │
+│             GetWindowThreadProcessId             │ 0x31b332 │
+│                    GetVersion                    │ 0x31b58a │
+│                   GetVersionEx                   │ 0x31b58a │
+│                  GetVersionExW                   │ 0x31b58a │
+│                  GetStartupInfo                  │ 0x1fcea8 │
+│                  GetStartupInfo                  │ 0x31bb30 │
+│                   FlsGetValue                    │ 0x1fac80 │
+│                   FlsGetValue                    │ 0x315388 │
+│                    GetMessage                    │ 0x31b362 │
+│                 GetSystemMetrics                 │ 0x31b34e │
+│                 GetCommandLineA                  │ 0x1fcd86 │
+│                 GetCommandLineA                  │ 0x31bc70 │
+│                  GetCommandLine                  │ 0x1fcd86 │
+│                  GetCommandLine                  │ 0x31bc70 │
+│                  GetCommandLine                  │ 0x31bc82 │
+│                 GetCommandLineW                  │ 0x31bc82 │
+│                 GetStartupInfoW                  │ 0x1fcea8 │
+│                 GetStartupInfoW                  │ 0x31bb30 │
+│                   TlsGetValue                    │ 0x1fcf56 │
+│                   TlsGetValue                    │ 0x31bb9a │
+│                GetCurrentThreadId                │ 0x1fcd60 │
+│                GetCurrentThreadId                │ 0x31bad6 │
+│              GetEnvironmentStrings               │ 0x1fd01a │
+│              GetEnvironmentStrings               │ 0x31bc94 │
+│              GetEnvironmentStringsW              │ 0x1fd01a │
+│              GetEnvironmentStringsW              │ 0x31bc94 │
+│                    GetCPInfo                     │ 0x1fd098 │
+│                    GetCPInfo                     │ 0x31bc64 │
+│                      GetACP                      │ 0x1fd0a4 │
+│                      GetACP                      │ 0x31bbfa │
+│                     GetOEMCP                     │ 0x1fd0ae │
+│                     GetOEMCP                     │ 0x31bc58 │
+│                  GetStringTypeW                  │ 0x1fd0cc │
+│                  GetStringTypeW                  │ 0x31bbe8 │
+│               GetTokenInformation                │ 0x31b230 │
+│            IsProcessorFeaturePresent             │ 0x1fcfce │
+│            IsProcessorFeaturePresent             │ 0x31baa0 │
+│                  GetSystemTime                   │ 0x1fd064 │
+│                  GetSystemTime                   │ 0x31baec │
+│                LookupAccountSidW                 │ 0x31b04a │
+│                   GetConsoleCP                   │ 0x1fcd3e │
+│                   GetConsoleCP                   │ 0x31bcd8 │
+│            GetUserObjectInformationW             │ 0x1fad90 │
+│                GetExitCodeProcess                │ 0x1fcc08 │
+│                GetExitCodeProcess                │ 0x31b76e │
+│                   EnumWindows                    │ 0x31b324 │
+│                  VerQueryValueW                  │ 0x31b4f0 │
+│                  FindNextFileA                   │ 0x31bc36 │
+│               GetWindowsDirectoryW               │ 0x31ba40 │
+│               GetWindowsDirectory                │ 0x31ba40 │
+│                  IsWow64Process                  │ 0x31358c │
+│                  Process32First                  │ 0x31b810 │
+│                 Process32FirstW                  │ 0x31b810 │
+│                  Process32Next                   │ 0x31b822 │
+│                  Process32NextW                  │ 0x31b822 │
+└──────────────────────────────────────────────────┴──────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Functions or Strings about Other/Unknown ┃ Address  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│             GetActiveWindow              │ 0x1fadc0 │
+│            GetLastActivePopup            │ 0x1fadac │
+│           WideCharToMultiByte            │ 0x1fcd28 │
+│           WideCharToMultiByte            │ 0x31b6a0 │
+│           MultiByteToWideChar            │ 0x1fcae2 │
+│           MultiByteToWideChar            │ 0x31b68a │
+│               GetStdHandle               │ 0x1fce98 │
+│               GetStdHandle               │ 0x31bc04 │
+│               GetLastError               │ 0x1fcaae │
+│               GetLastError               │ 0x31b530 │
+│               FlsSetValue                │ 0x1fac74 │
+│               FlsSetValue                │ 0x31539c │
+│             DispatchMessage              │ 0x31b384 │
+│             TranslateMessage             │ 0x31b370 │
+│           InterlockedIncrement           │ 0x1fcf7c │
+│           InterlockedIncrement           │ 0x31b8f0 │
+│           InterlockedDecrement           │ 0x1fcfa4 │
+│           InterlockedDecrement           │ 0x31b908 │
+│               LCMapStringW               │ 0x1fd0ea │
+│               LCMapStringW               │ 0x31b6b6 │
+│                 SetEvent                 │ 0x1fcb2c │
+│                 SetEvent                 │ 0x1fcb98 │
+│                 SetEvent                 │ 0x31b640 │
+│               SetLastError               │ 0x1fcf94 │
+│               SetLastError               │ 0x31b540 │
+│                lstrcmpiW                 │ 0x31b5fa │
+│                RtlUnwind                 │ 0x1fd07e │
+│                RtlUnwind                 │ 0x31bb5a │
+│               SetStdHandle               │ 0x1fce1e │
+│               SetStdHandle               │ 0x31bcc8 │
+└──────────────────────────────────────────┴──────────┘
+
+[*] Looking for: Windows Registry Key
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                    Registry Keys                                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Software\\Microsoft\\Windows\\CurrentVersion\\Authentication\\Credential Providers\\ │
+│                  Software\\Microsoft\\NET Framework Setup\\NDP\\v2                   │
+│              SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Client               │
+│                  Software\\Policies\\Microsoft\\Windows\\Installer                   │
+│               System\\CurrentControlSet\\Control\\SafeBoot\\Network\\                │
+│            SYSTEM\\CurrentControlSet\\Control\\LsaAuthentication Packages            │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+[*] Looking for: Interesting String Patterns
+Analyzing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:01
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                     Interesting Patterns                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ E:\\delivery\\Dev\\wix37_public\\build\\ship\\x86\\SfxCA.pdb │
+│ C:\\build\\work\\eca3d12b\\wix3\\build\\ship\\x86\\wixca.pdb │
+│                  WindowsBackstageShell.exe                   │
+│                    WindowsFileManager.exe                    │
+│                      WindowsClient.exe                       │
+│                       dllb0t6oyco.exe                        │
+│                      configgmo6xwtf.exe                      │
+│                      configeqbfwkgi.exe                      │
+│                      configrfix2t3m.exe                      │
+│                      ClientService.exe                       │
+│                         rundll32.exe                         │
+│                           msi.dll                            │
+│                         Cabinet.dll                          │
+│                         SHLWAPI.dll                          │
+│                         OLEAUT32.dll                         │
+│                         KERNEL32.dll                         │
+│                          SfxCA.dll                           │
+│                     InstallerActions.dll                     │
+│                     WindowsInstaller.dll                     │
+│                         Package.dll                          │
+│                           Core.dll                           │
+│                         Windows.dll                          │
+│                       Compression.dll                        │
+│                           Cab.dll                            │
+│                         kernel32.dll                         │
+│                          wixca.dll                           │
+│                         ADVAPI32.dll                         │
+│                          USER32.dll                          │
+│                         SHELL32.dll                          │
+│                          ole32.dll                           │
+│                         VERSION.dll                          │
+│                      ClientService.dll                       │
+│               WindowsAuthenticationPackage.dll               │
+│                WindowsCredentialProvider.dll                 │
+│                          arm64.dll                           │
+│                  SourceDirFulldbbvsztr.dll                   │
+│                          Client.dll                          │
+│                            -.dll                             │
+│                       exekivsb93j.dll                        │
+│                          -mheto.dll                          │
+│                         mscoree.dll                          │
+│                         KERNEL32.DLL                         │
+│                         WUSER32.DLL                          │
+│                           d3d9.dll                           │
+│                          dwmapi.dll                          │
+│                         rstrtmgr.dll                         │
+│                     CustomAction.config                      │
+│                          exe.config                          │
+│                          app.config                          │
+│                    resourcessystem.config                    │
+│                        system.config                         │
+│                        System.Config                         │
+│                      EmbeddedUI.config                       │
+│                     SeShutdownPrivilege                      │
+└──────────────────────────────────────────────────────────────┘
+
+[*] Performing embedded PE file detection...
+[*] There is possible 2 embedded PE file found!
+[*] Execute: python qu1cksc0pe.py --file /home/kali/Downloads/e232869b381721c74e6c907a073a501783ac1b79065612ff92149355873e6217.msi --sigcheck to extract them!
+
+
+[*] Performing YARA rule matching...
+>>> Rule name: Embedded_PE
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x1e2000 │    b'MZ\x90\x00'    │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: anti_dbg
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte  ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x1fcce0 │   b'KERNEL32.dll'    │
+│ 0x1fcdd2 │ b'IsDebuggerPresent' │
+└──────────┴──────────────────────┘
+ 
+>>> Rule name: escalate_priv
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃   Matched String/Byte    ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x31b2fe │     b'ADVAPI32.dll'      │
+│ 0x31b17a │ b'AdjustTokenPrivileges' │
+└──────────┴──────────────────────────┘
+ 
+>>> Rule name: win_registry
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x31b2fe │   b'ADVAPI32.dll'   │
+│ 0x31b212 │   b'RegCloseKey'    │
+│ 0x31b212 │   b'RegCloseKey'    │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: win_token
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃   Matched String/Byte    ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x31b2fe │     b'ADVAPI32.dll'      │
+│ 0x31b17a │ b'AdjustTokenPrivileges' │
+│ 0x31b166 │   b'OpenProcessToken'    │
+└──────────┴──────────────────────────┘
+ 
+>>> Rule name: win_files_operation
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x1fcce0 │   b'KERNEL32.dll'   │
+│ 0x1fcba4 │    b'WriteFile'     │
+│ 0x1fccf0 │  b'SetFilePointer'  │
+│ 0x1fcba4 │    b'WriteFile'     │
+│ 0x1fcb8a │     b'ReadFile'     │
+│ 0x1fcc96 │    b'FindClose'     │
+└──────────┴─────────────────────┘
+ 
+>>> Rule name: dotnet_binary_file
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃                    Matched String/Byte                     ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x1ee91c │ b'm\x00s\x00c\x00o\x00r\x00e\x00e\x00.\x00d\x00l\x00l\x00' │
+│ 0x6e73d3 │                        b'mscorlib'                         │
+└──────────┴────────────────────────────────────────────────────────────┘
+ 
+[*] Analyzing: /home/kali/Downloads/e232869b381721c74e6c907a073a501783ac1b79065612ff92149355873e6217.msi
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃           File Type            ┃               Pattern               ┃  Offset  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│    Windows Executable File     │            b'MZ\x90\x00'            │ 0x1e2000 │
+│    Windows Executable File     │            b'MZ\x90\x00'            │ 0x2ed000 │
+│ Portable Network Graphics File │        b'\x89PNG\r\n\x1a\n'         │ 0xad4136 │
+│ Portable Network Graphics File │        b'\x89PNG\r\n\x1a\n'         │ 0xad41d5 │
+│ Portable Network Graphics File │        b'\x89PNG\r\n\x1a\n'         │ 0xad434b │
+│    Composite Document File     │ b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1' │   0x0    │
+│   Microsoft Cabinet Archive    │         b'MSCF\x00\x00\x00'         │ 0x202e00 │
+│   Microsoft Cabinet Archive    │         b'MSCF\x00\x00\x00'         │ 0x32d000 │
+│   Microsoft Cabinet Archive    │         b'MSCF\x00\x00\x00'         │ 0x50b000 │
+│   Microsoft Cabinet Archive    │         b'MSCF\x00\x00\x00'         │ 0x6f8000 │
+│   Microsoft Cabinet Archive    │         b'MSCF\x00\x00\x00'         │ 0x8e6000 │
+│   Microsoft Cabinet Archive    │         b'MSCF\x00\x00\x00'         │ 0xad5000 │
+└────────────────────────────────┴─────────────────────────────────────┴──────────┘
+[*] Do you want to extract executable files from target file[Y/n]?: y
+
+[*] Carving executable file found on offset: 1974272 | Size: 159744 bytes
+>>> Data saved into: qu1cksc0pe_carved-1974272.bin
+
+[*] Carving executable file found on offset: 3067904 | Size: 229376 bytes
+>>> Data saved into: qu1cksc0pe_carved-3067904.bin
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: hacktool.connectwise
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│     hacktool      │   3   │
+│      trojan       │   2   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│ connectwise  │   4   │
+└──────────────┴───────┘
+
+[*] Detection: 5/76
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Detected By ┃                      Results                       ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  Kaspersky  │ not-a-virus:HEUR:RemoteAdmin.Win32.ConnectWise.gen │
+│   Rising    │        Hacktool.ConnectWise!8.13A88 (CLOUD)        │
+│   Tencent   │      Pua:HackTool.Win32.Connectwise.16001925       │
+│    VBA32    │             Exploit.MSIL.PrivEsc.Heur              │
+│   Zillya    │             Trojan.Stealer.Win32.37991             │
+└─────────────┴────────────────────────────────────────────────────┘
+                                                                                                                             
+                                                * CrowdSourced IDS Reports *                                                 
+┏━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Alert Number ┃ SRC IP ┃ SRC Port ┃ DST IP  ┃ DST Port ┃ Alert Severity ┃ Rule Category ┃           Rule Source            ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      1       │  none  │   none   │ 8.8.8.8 │    53    │      low       │ Misc activity │ Proofpoint Emerging Threats Open │
+└──────────────┴────────┴──────────┴─────────┴──────────┴────────────────┴───────────────┴──────────────────────────────────┘
+
+[*] Alert Summary: /home/kali/Downloads/e232869b381721c74e6c907a073a501783ac1b79065612ff92149355873e6217.msi
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Alert Level ┃ Number of Alerts ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│    HIGH     │        0         │
+│   MEDIUM    │        0         │
+│     LOW     │        1         │
+│    INFO     │        0         │
+└─────────────┴──────────────────┘
+ 
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/e232869b381721c74e6c907a073a501783ac1b79065612ff92149355873e6217.msi
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[URL]> http://ocsp.digicert.com0A
+[URL]> http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C
+[URL]> http://crl3.digicert.com/DigiCertTrustedRootG4.crl0
+[URL]> http://www.digicert.com/CPS0
+[URL]> http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S
+[URL]> http://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0
+[URL]> http://ocsp.digicert.com0
+[URL]> http://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0
+

@@ -1,0 +1,170 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/812048fdc274ffcafc6267d1b0dbc60026b4fb7eb2d1942f1c53e061bd6c48c4.macho --analyze --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                             
+
+
+  .-------------------------------------.
+  | [____DOWNLOADING FREE RTX 5090____] |
+  |  _________________________________  |
+  | |:::::::::::::::::60%|            | |
+  |  """""""""""""""""""""""""""""""""  |
+  |_____________________________________|
+
+
+[*] Analyzing: /home/kali/Downloads/812048fdc274ffcafc6267d1b0dbc60026b4fb7eb2d1942f1c53e061bd6c48c4.macho
+[*] Target OS: OSX
+
+/home/kali/Desktop/Qu1cksc0pe/Modules/apple_analyzer.py:58: SyntaxWarning: invalid escape sequence '\/'
+  m_c_p = [b"Payload\/", b"META-INF\/", b"\.plist"]
+/home/kali/Desktop/Qu1cksc0pe/Modules/apple_analyzer.py:58: SyntaxWarning: invalid escape sequence '\/'
+  m_c_p = [b"Payload\/", b"META-INF\/", b"\.plist"]
+/home/kali/Desktop/Qu1cksc0pe/Modules/apple_analyzer.py:58: SyntaxWarning: invalid escape sequence '\.'
+  m_c_p = [b"Payload\/", b"META-INF\/", b"\.plist"]
+[*] Binary Information
+>>>> magic: 
+>>>> arch: multi
+>>>> cpu_type: X86_64
+>>>> file_type: demand paged executable file
+>>>> number_of_load_commands: b'00000012'
+>>>> size_of_load_commands: b'00000618'
+>>>> sha256: 812048fdc274ffcafc6267d1b0dbc60026b4fb7eb2d1942f1c53e061bd6c48c4
+>>>> binary_size_bytes: 1648360
+
+[*] Parsing segment information...
+┏━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃     name     ┃ offset ┃ cmd  ┃ cmdsize ┃   vmaddr    ┃   vmsize    ┃ filesize ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│  __PAGEZERO  │ 0x1028 │ 0x19 │  0x48   │     0x0     │ 0x100000000 │   0x0    │
+│    __TEXT    │ 0x1070 │ 0x19 │  0x278  │ 0x100000000 │   0xc4000   │ 0xc4000  │
+│ __DATA_CONST │ 0x12e8 │ 0x19 │  0xe8   │ 0x1000c4000 │   0x1000    │  0x1000  │
+│  __LINKEDIT  │ 0x1468 │ 0x19 │  0x48   │ 0x1000c6000 │   0x4000    │  0x11d0  │
+└──────────────┴────────┴──────┴─────────┴─────────────┴─────────────┴──────────┘
+
+[*] Analyzing sections...
+┏━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┓
+┃          name          ┃        segment         ┃  offset  ┃   size   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━┩
+│         __text         │         __TEXT         │ 00000680 │ 00000001 │
+│        __stubs         │         __TEXT         │ 00004358 │ 00000001 │
+│     __init_offsets     │         __TEXT         │ 00004418 │ 00000001 │
+│ __gcc_except_tab__TEXT │ __gcc_except_tab__TEXT │ 0000441c │ 00000001 │
+│        __const         │         __TEXT         │ 000045d0 │ 00000001 │
+│       __cstring        │         __TEXT         │ 000c3999 │ 00000001 │
+│     __unwind_info      │      __DATA_CONST      │ 000c39a0 │ 00000001 │
+│         __got          │         __DATA         │ 000c4000 │ 00000001 │
+└────────────────────────┴────────────────────────┴──────────┴──────────┘
+
+[*] Analyzing libraries...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                     Dynamic Libraries                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│                  /usr/lib/libc++.1.dylib                  │
+│ /usr/lib/libSystem.B.dylib (Possible malicious purposes!) │
+└───────────────────────────────────────────────────────────┘
+
+[*] Performing pattern scan...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Patterns about Memory Management ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│              alloc               │
+└──────────────────────────────────┘
+
+-> Statistics for: /home/kali/Downloads/812048fdc274ffcafc6267d1b0dbc60026b4fb7eb2d1942f1c53e061bd6c48c4.macho
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃    Categories     ┃ Number of Patterns ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ Memory Management │         1          │
+└───────────────────┴────────────────────┘
+[*] Analyzing: /home/kali/Downloads/812048fdc274ffcafc6267d1b0dbc60026b4fb7eb2d1942f1c53e061bd6c48c4.macho
+[!] Analysis technique is not implemented for now. Please send the file to the developer for further analysis.
+
+[*] Performing magic number analysis...
+[!] There is no valid pattern found!
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+
+Target OS couldn't detected!
+
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Potential Threat Label: trojan.amos/stealer
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Categories ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│      trojan       │  16   │
+└───────────────────┴───────┘
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Threat Names ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│     amos     │   9   │
+│   stealer    │   4   │
+│   infostl    │   2   │
+└──────────────┴───────┘
+
+[*] Detection: 25/76
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃   Detected By    ┃            Results            ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      ALYac       │   Trojan.GenericKDZ.112661    │
+│       AVG        │    MacOS:Stealer-CH [Pws]     │
+│     Arcabit      │     Trojan.Generic.D1B815     │
+│      Avast       │    MacOS:Stealer-CH [Pws]     │
+│      Avira       │        OSX/GM.Amos.KN         │
+│   BitDefender    │   Trojan.GenericKDZ.112661    │
+│      ClamAV      │ Unix.Malware.Amos-10056362-0  │
+│      Cynet       │     Malicious (score: 99)     │
+│      DrWeb       │       Mac.Stealer.1086        │
+│    ESET-NOD32    │ a variant of OSX/PSW.Agent.EA │
+│     Elastic      │  malicious (high confidence)  │
+│     Emsisoft     │ Trojan.GenericKDZ.112661 (B)  │
+│     F-Secure     │    Malware.OSX/GM.Amos.KN     │
+│     Fortinet     │      MAC/Agent.EA!tr.pws      │
+│      GData       │   Trojan.GenericKDZ.112661    │
+│      Ikarus      │      Trojan-PSW.OSX.Amos      │
+│    Kaspersky     │  HEUR:Trojan-PSW.OSX.Amos.as  │
+│     Kingsoft     │      Win32.Troj.Undef.a       │
+│ MicroWorld-eScan │   Trojan.GenericKDZ.112661    │
+│    Microsoft     │   Trojan:MacOS/Amos.EF!MTB    │
+│      Sophos      │        OSX/InfoStl-ER         │
+│     Symantec     │        OSX.Trojan.Gen         │
+│     Tencent      │ Osx.Trojan.LummaStealer.Fajl  │
+│      VIPRE       │   Trojan.GenericKDZ.112661    │
+│    ZoneAlarm     │        OSX/InfoStl-ER         │
+└──────────────────┴───────────────────────────────┘
+                                                                                                                                                        
+                                                              * CrowdSourced IDS Reports *                                                              
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Alert Number ┃    SRC IP    ┃ SRC Port ┃    DST IP     ┃ DST Port ┃ Alert Severity ┃          Rule Category          ┃          Rule Source          ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      1       │ 17.253.7.147 │   none   │     none      │   none   │     medium     │         attempted-recon         │ Snort registered user ruleset │
+│      2       │     none     │   none   │ 17.57.144.152 │   5223   │      low       │     protocol-command-decode     │ Snort registered user ruleset │
+│      3       │ 17.57.144.40 │   5223   │     none      │   none   │      low       │ Generic Protocol Command Decode │           Suricata            │
+└──────────────┴──────────────┴──────────┴───────────────┴──────────┴────────────────┴─────────────────────────────────┴───────────────────────────────┘
+
+[*] Alert Summary: /home/kali/Downloads/812048fdc274ffcafc6267d1b0dbc60026b4fb7eb2d1942f1c53e061bd6c48c4.macho
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Alert Level ┃ Number of Alerts ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│    HIGH     │        0         │
+│   MEDIUM    │        1         │
+│     LOW     │        2         │
+│    INFO     │        0         │
+└─────────────┴──────────────────┘
+ 
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/812048fdc274ffcafc6267d1b0dbc60026b4fb7eb2d1942f1c53e061bd6c48c4.macho
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[!] There is no possible domain strings found.
+

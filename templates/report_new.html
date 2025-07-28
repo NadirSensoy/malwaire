@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malware Analysis Report - {{ report.file_id }}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        .risk-critical {
+            background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);
+            color: white;
+        }
+        .risk-high {
+            background: linear-gradient(135deg, #fd7e14 0%, #e8590c 100%);
+            color: white;
+        }
+        .risk-medium {
+            background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+            color: #2f3640;
+        }
+        .risk-low {
+            background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+            color: white;
+        }
+        .risk-unclear {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+            color: white;
+        }
+        
+        .btn-custom-blue {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom-blue:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(116, 185, 255, 0.4);
+            color: white;
+        }
+        
+        .ioc-item {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            transition: all 0.2s ease;
+        }
+        
+        .ioc-item:hover {
+            background: #e3f2fd;
+            border-color: #74b9ff;
+        }
+        
+        .finding-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #74b9ff;
+            transition: all 0.3s ease;
+        }
+        
+        .finding-card:hover {
+            background: #e3f2fd;
+            transform: translateX(5px);
+        }
+        
+        .ai-analysis-box {
+            background: #f0f8ff;
+            border: 1px solid #cce7ff;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+        
+        .ai-analysis-box::before {
+            content: "🤖 AI Analysis";
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: #f0f8ff;
+            padding: 0 8px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #0066cc;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #74b9ff;
+        }
+        
+        .entropy-high {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .entropy-medium {
+            color: #fd7e14;
+            font-weight: bold;
+        }
+        
+        .entropy-low {
+            color: #198754;
+        }
+        
+        .function-category {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .function-category:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .risk-badge {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+        }
+        
+        .yara-match {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .vt-detection {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        
+        @media print {
+            .btn, .navbar {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); box-shadow: 0 4px 15px rgba(116, 185, 255, 0.3);">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-shield-virus me-2"></i>
+                Malware Analysis Platform
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/upload">New Analysis</a>
+                <a class="nav-link active" href="#" style="background: rgba(255,255,255,0.2); border-radius: 20px; padding: 0.5rem 1rem;">Report</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="card" style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white;">
+                    <div class="card-body p-4">
+                        <h1 class="fw-bold mb-3">
+                            <i class="fas fa-file-alt me-3"></i>
+                            Malware Analysis Report
+                        </h1>
+                        <p class="mb-2 fs-5">File ID: <span class="badge bg-light text-dark">{{ report.file_id }}</span></p>
+                        <p class="mb-0">
+                            <i class="fas fa-calendar me-2"></i>
+                            Analysis Date: {{ report.analysis_date[:19] | replace('T', ' ') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Assessment -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Risk Assessment
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        {% if report.ai_analysis and report.ai_analysis.report_summary %}
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    File Information
+                                </h6>
+                                <div class="list-group">
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-file me-2"></i>File Name</span>
+                                        <span class="badge bg-secondary">{{ report.ai_analysis.report_summary.file_name }}</span>
+                                    </div>
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-laptop me-2"></i>Target OS</span>
+                                        <span class="badge bg-info">{{ report.ai_analysis.report_summary.target_os }}</span>
+                                    </div>
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-cube me-2"></i>File Type</span>
+                                        <span class="badge bg-primary">{{ report.ai_analysis.report_summary.file_type }}</span>
+                                    </div>
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-fingerprint me-2"></i>MD5</span>
+                                        <span class="badge bg-dark text-truncate" style="max-width: 200px;">{{ report.ai_analysis.report_summary.md5 }}</span>
+                                    </div>
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-fingerprint me-2"></i>SHA256</span>
+                                        <span class="badge bg-dark text-truncate" style="max-width: 200px;">{{ report.ai_analysis.report_summary.sha256 }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Risk Assessment
+                                </h6>
+                                <div class="text-center mb-3">
+                                    {% set threat_level = report.ai_analysis.report_summary.threat_level %}
+                                    {% set risk_score = report.ai_analysis.report_summary.risk_score %}
+                                    
+                                    <div class="mb-3">
+                                        <h2 class="fw-bold mb-2 risk-{{ threat_level.lower() }}" style="padding: 1rem 2rem; border-radius: 50px; display: inline-block;">
+                                            <i class="fas fa-shield-alt me-2"></i>
+                                            {{ threat_level }}
+                                        </h2>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <h4 class="fw-bold mb-2">Risk Score</h4>
+                                        <div class="progress mb-2" style="height: 25px;">
+                                            <div class="progress-bar 
+                                                {% if risk_score >= 90 %}bg-danger
+                                                {% elif risk_score >= 70 %}bg-warning
+                                                {% elif risk_score >= 40 %}bg-info
+                                                {% else %}bg-success
+                                                {% endif %}" 
+                                                role="progressbar" 
+                                                style="width: {{ risk_score }}%;" 
+                                                data-progress="{{ risk_score }}">
+                                                {{ risk_score }}/100
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-info">
+                                    <h6 class="fw-bold mb-2">
+                                        <i class="fas fa-brain me-2"></i>
+                                        AI Assessment
+                                    </h6>
+                                    <p class="mb-0">{{ report.ai_analysis.report_summary.brief_assessment }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Report -->
+        {% if report.ai_analysis and report.ai_analysis.user_report %}
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-user-shield me-2"></i>
+                            User Report
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-question-circle me-2"></i>
+                                    What does this file do?
+                                </h6>
+                                <div class="alert alert-light">
+                                    <p class="mb-0">{{ report.ai_analysis.user_report.what_does_this_file_do }}</p>
+                                </div>
+                                
+                                <h6 class="text-primary fw-bold mb-3 mt-4">
+                                    <i class="fas fa-bug me-2"></i>
+                                    Malware Type
+                                </h6>
+                                <span class="badge bg-danger fs-6 p-2">{{ report.ai_analysis.user_report.malware_type }}</span>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-danger fw-bold mb-3">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Potential Risks
+                                </h6>
+                                <ul class="list-group">
+                                    {% for risk in report.ai_analysis.user_report.potential_risks %}
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="fas fa-exclamation-triangle text-danger me-2"></i>
+                                        {{ risk }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                
+                                <h6 class="text-success fw-bold mb-3 mt-4">
+                                    <i class="fas fa-shield-alt me-2"></i>
+                                    Recommendations
+                                </h6>
+                                <ul class="list-group">
+                                    {% for recommendation in report.ai_analysis.user_report.recommendations %}
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        {{ recommendation }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Technical Analysis -->
+        {% if report.ai_analysis and report.ai_analysis.technical_analysis %}
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-cogs me-2"></i>
+                            Technical Analysis
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        
+                        <!-- File Identity -->
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-id-card me-2"></i>
+                                File Identity
+                            </h6>
+                            <p class="mb-0">{{ report.ai_analysis.technical_analysis.file_identity.details }}</p>
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.file_identity.ai_analysis }}
+                            </div>
+                        </div>
+
+                        <!-- Section Analysis -->
+                        {% if report.ai_analysis.technical_analysis.section_analysis %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-layer-group me-2"></i>
+                                Section Analysis
+                            </h6>
+                            <p class="mb-3">{{ report.ai_analysis.technical_analysis.section_analysis.summary }}</p>
+                            
+                            {% if report.ai_analysis.technical_analysis.section_analysis.section_details %}
+                            <div class="row">
+                                {% for section in report.ai_analysis.technical_analysis.section_analysis.section_details %}
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold text-primary">{{ section.section_name }}</h6>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <small class="text-muted">Virtual Size:</small><br>
+                                                    <span class="badge bg-secondary">{{ section.virtual_size }}</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <small class="text-muted">Virtual Address:</small><br>
+                                                    <span class="badge bg-secondary">{{ section.virtual_address }}</span>
+                                                </div>
+                                                <div class="col-6 mt-2">
+                                                    <small class="text-muted">Raw Data Size:</small><br>
+                                                    <span class="badge bg-secondary">{{ section.raw_data_size }}</span>
+                                                </div>
+                                                <div class="col-6 mt-2">
+                                                    <small class="text-muted">Entropy:</small><br>
+                                                    {% set entropy = section.entropy | float %}
+                                                    <span class="badge 
+                                                        {% if entropy > 7 %}bg-danger
+                                                        {% elif entropy > 6 %}bg-warning
+                                                        {% else %}bg-success
+                                                        {% endif %}">
+                                                        {{ section.entropy }}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-2">
+                                                <small class="text-muted">Risk Analysis:</small><br>
+                                                <span class="text-sm">{{ section.risk_analysis }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.section_analysis.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Function Categories -->
+                        {% if report.ai_analysis.technical_analysis.function_categories %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-code me-2"></i>
+                                Function Categories
+                            </h6>
+                            
+                            <div class="row">
+                                {% for category in report.ai_analysis.technical_analysis.function_categories.categories %}
+                                <div class="col-md-6 mb-3">
+                                    <div class="function-category">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h6 class="fw-bold mb-0">{{ category.category }}</h6>
+                                            <div>
+                                                <span class="badge bg-primary me-1">{{ category.count }}</span>
+                                                <span class="badge risk-badge 
+                                                    {% if category.risk_level == 'High' %}bg-danger
+                                                    {% elif category.risk_level == 'Medium' %}bg-warning
+                                                    {% else %}bg-success
+                                                    {% endif %}">
+                                                    {{ category.risk_level }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                        {% if category.functions %}
+                                        <div class="mt-2">
+                                            {% for func in category.functions[:5] %}
+                                            <span class="badge bg-light text-dark me-1 mb-1">{{ func }}</span>
+                                            {% endfor %}
+                                            {% if category.functions|length > 5 %}
+                                            <span class="badge bg-secondary">+{{ category.functions|length - 5 }} more</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.function_categories.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- .NET Classes -->
+                        {% if report.ai_analysis.technical_analysis.dotnet_classes and report.ai_analysis.technical_analysis.dotnet_classes.classes %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fab fa-microsoft me-2"></i>
+                                .NET Classes
+                            </h6>
+                            
+                            <div class="row">
+                                {% for class in report.ai_analysis.technical_analysis.dotnet_classes.classes %}
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="fw-bold text-primary">{{ class.class_name }}</h6>
+                                            <div class="mb-2">
+                                                <span class="badge bg-info">{{ class.method_count }} methods</span>
+                                            </div>
+                                            {% if class.important_methods %}
+                                            <div class="mt-2">
+                                                <small class="text-muted">Important Methods:</small><br>
+                                                {% for method in class.important_methods[:3] %}
+                                                <span class="badge bg-light text-dark me-1 mb-1">{{ method }}</span>
+                                                {% endfor %}
+                                                {% if class.important_methods|length > 3 %}
+                                                <span class="badge bg-secondary">+{{ class.important_methods|length - 3 }} more</span>
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.dotnet_classes.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- DLL Files -->
+                        {% if report.ai_analysis.technical_analysis.dll_files and report.ai_analysis.technical_analysis.dll_files.dll_list %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-puzzle-piece me-2"></i>
+                                DLL Dependencies
+                            </h6>
+                            
+                            <div class="row">
+                                {% for dll in report.ai_analysis.technical_analysis.dll_files.dll_list %}
+                                <div class="col-md-3 mb-2">
+                                    <span class="badge bg-secondary">{{ dll }}</span>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.dll_files.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- YARA Rules -->
+                        {% if report.ai_analysis.technical_analysis.yara_rules and report.ai_analysis.technical_analysis.yara_rules.matches %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-search me-2"></i>
+                                YARA Rule Matches
+                            </h6>
+                            
+                            {% for rule in report.ai_analysis.technical_analysis.yara_rules.matches %}
+                            <div class="yara-match">
+                                <h6 class="fw-bold text-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    {{ rule.rule_name }}
+                                </h6>
+                                
+                                {% if rule.rule_matches %}
+                                <div class="mt-2">
+                                    <small class="text-muted">Matches:</small>
+                                    {% for match in rule.rule_matches %}
+                                    <div class="d-flex justify-content-between align-items-center mt-1">
+                                        <span class="badge bg-dark">{{ match.offset }}</span>
+                                        <span class="font-monospace">{{ match.value }}</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.yara_rules.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Programming Language -->
+                        {% if report.ai_analysis.technical_analysis.programming_language %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-code me-2"></i>
+                                Programming Language Detection
+                            </h6>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Primary Language: 
+                                        <span class="badge bg-primary">{{ report.ai_analysis.technical_analysis.programming_language.primary_language }}</span>
+                                    </h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Detected Languages:</h6>
+                                    {% for lang in report.ai_analysis.technical_analysis.programming_language.detected_languages %}
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span>{{ lang.language }}</span>
+                                        <div>
+                                            <span class="badge bg-success">{{ lang.probability }}%</span>
+                                            <span class="badge bg-secondary">{{ lang.pattern_count }} patterns</span>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.programming_language.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Interesting Strings -->
+                        {% if report.ai_analysis.technical_analysis.interesting_strings and report.ai_analysis.technical_analysis.interesting_strings.strings %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-quote-right me-2"></i>
+                                Interesting Strings
+                            </h6>
+                            
+                            <div class="row">
+                                {% for string in report.ai_analysis.technical_analysis.interesting_strings.strings %}
+                                <div class="col-md-6 mb-2">
+                                    <div class="ioc-item">{{ string }}</div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.interesting_strings.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Key Findings -->
+                        {% if report.ai_analysis.technical_analysis.key_findings %}
+                        <div class="section-header">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-key me-2"></i>
+                                Key Findings
+                            </h6>
+                            
+                            <ul class="list-group">
+                                {% for finding in report.ai_analysis.technical_analysis.key_findings.findings %}
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-arrow-right text-primary me-2"></i>
+                                    {{ finding }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            
+                            <div class="ai-analysis-box">
+                                {{ report.ai_analysis.technical_analysis.key_findings.ai_analysis }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- VirusTotal Analysis -->
+        {% if report.ai_analysis and report.ai_analysis.virustotal_analysis %}
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-virus me-2"></i>
+                            VirusTotal Analysis
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-chart-pie me-2"></i>
+                                    Detection Statistics
+                                </h6>
+                                <div class="text-center">
+                                    <h3 class="fw-bold text-danger mb-2">{{ report.ai_analysis.virustotal_analysis.detection_ratio }}</h3>
+                                    <p class="text-muted">{{ report.ai_analysis.virustotal_analysis.detection_count }} out of {{ report.ai_analysis.virustotal_analysis.total_scanners }} engines detected this file</p>
+                                    
+                                    <div class="progress mb-3" style="height: 20px;">
+                                        {% set detection_percentage = (report.ai_analysis.virustotal_analysis.detection_count / report.ai_analysis.virustotal_analysis.total_scanners * 100) if report.ai_analysis.virustotal_analysis.total_scanners > 0 else 0 %}
+                                        <div class="progress-bar 
+                                            {% if detection_percentage > 50 %}bg-danger
+                                            {% elif detection_percentage > 25 %}bg-warning
+                                            {% else %}bg-success
+                                            {% endif %}" 
+                                            style="width: {{ detection_percentage }}%;">
+                                            {{ detection_percentage|round(1) }}%
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {% if report.ai_analysis.virustotal_analysis.threat_labels %}
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-tags me-2"></i>
+                                    Threat Labels
+                                </h6>
+                                {% for label in report.ai_analysis.virustotal_analysis.threat_labels %}
+                                <span class="badge bg-danger me-1 mb-1">{{ label }}</span>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-shield-alt me-2"></i>
+                                    Important Detections
+                                </h6>
+                                {% for detection in report.ai_analysis.virustotal_analysis.important_detections %}
+                                <div class="vt-detection">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">{{ detection.engine }}</span>
+                                        <span class="badge bg-danger">{{ detection.detection }}</span>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h6 class="fw-bold mb-2">
+                                <i class="fas fa-brain me-2"></i>
+                                Overall Assessment
+                            </h6>
+                            <p class="mb-0">{{ report.ai_analysis.virustotal_analysis.overall_assessment }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- IOC List -->
+        {% if report.ai_analysis and report.ai_analysis.ioc_list %}
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-crosshairs me-2"></i>
+                            Indicators of Compromise (IOCs)
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row">
+                            
+                            <!-- File Hashes -->
+                            {% if report.ai_analysis.ioc_list.file_hashes %}
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-fingerprint me-2"></i>
+                                    File Hashes
+                                </h6>
+                                {% for hash in report.ai_analysis.ioc_list.file_hashes %}
+                                    {% if hash %}
+                                    <div class="ioc-item">{{ hash }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <!-- IP Addresses -->
+                            {% if report.ai_analysis.ioc_list.ip_addresses %}
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-globe me-2"></i>
+                                    IP Addresses
+                                </h6>
+                                {% for ip in report.ai_analysis.ioc_list.ip_addresses %}
+                                    {% if ip %}
+                                    <div class="ioc-item">{{ ip }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <!-- Domains -->
+                            {% if report.ai_analysis.ioc_list.domain_list %}
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-server me-2"></i>
+                                    Domains
+                                </h6>
+                                {% for domain in report.ai_analysis.ioc_list.domain_list %}
+                                    {% if domain %}
+                                    <div class="ioc-item">{{ domain }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <!-- URLs -->
+                            {% if report.ai_analysis.ioc_list.url_list %}
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-link me-2"></i>
+                                    URLs
+                                </h6>
+                                {% for url in report.ai_analysis.ioc_list.url_list %}
+                                    {% if url %}
+                                    <div class="ioc-item">{{ url }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <!-- PDB Information -->
+                            {% if report.ai_analysis.ioc_list.pdb_information %}
+                            <div class="col-md-6 mb-4">
+                                <h6 class="text-primary fw-bold mb-3">
+                                    <i class="fas fa-bug me-2"></i>
+                                    PDB Information
+                                </h6>
+                                {% for pdb in report.ai_analysis.ioc_list.pdb_information %}
+                                    {% if pdb %}
+                                    <div class="ioc-item">{{ pdb }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Action Buttons -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <a href="/upload" class="btn btn-custom-blue me-3">
+                    <i class="fas fa-upload me-2"></i>
+                    New Analysis
+                </a>
+                <button class="btn btn-outline-primary" onclick="window.print()">
+                    <i class="fas fa-print me-2"></i>
+                    Print Report
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Qu1cksc0pe Raw Output Section -->
+    <div class="container my-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-header" style="background: linear-gradient(135deg, #636e72 0%, #2d3436 100%); color: white;">
+                <h5 class="mb-0">
+                    <i class="fas fa-terminal me-2"></i>
+                    Qu1cksc0pe Raw Output
+                </h5>
+                <small class="text-light opacity-75">Complete analysis output from Qu1cksc0pe malware analysis tool</small>
+            </div>
+            <div class="card-body p-0">
+                {% if report.quickscope_output and report.quickscope_output.raw_analysis %}
+                <pre class="mb-0 p-3" style="background-color: #2d3436; color: #ddd; height: 400px; overflow-y: auto; border-radius: 0 0 0.375rem 0.375rem; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.3;"><code>{{ report.quickscope_output.raw_analysis }}</code></pre>
+                {% elif report.raw_output %}
+                <pre class="mb-0 p-3" style="background-color: #2d3436; color: #ddd; height: 400px; overflow-y: auto; border-radius: 0 0 0.375rem 0.375rem; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.3;"><code>{{ report.raw_output }}</code></pre>
+                {% else %}
+                <div class="p-4 text-center text-muted">
+                    <i class="fas fa-exclamation-triangle fa-2x mb-3"></i>
+                    <p>No raw output available for this analysis.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-5" style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white;">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="fw-bold mb-2">Malware Analysis Platform</h6>
+                    <p class="mb-0 small">Advanced malware analysis and threat intelligence platform</p>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="fw-bold mb-2">Analysis Process</h6>
+                    <p class="mb-0 small">Qu1cksc0pe + OpenAI GPT-4 + VirusTotal integration</p>
+                </div>
+            </div>
+            <hr class="my-3" style="border-color: rgba(255,255,255,0.3);">
+            <small>&copy; 2025 Malware Analysis Platform. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Risk score animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Progress bar animation
+            const progressBars = document.querySelectorAll('.progress-bar[data-progress]');
+            progressBars.forEach(bar => {
+                const targetWidth = bar.getAttribute('data-progress') + '%';
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                    bar.style.transition = 'width 1s ease-in-out';
+                }, 300);
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

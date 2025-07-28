@@ -1,0 +1,126 @@
+┌──(sc0pe_venv)(root㉿kali)-[/home/kali/Desktop/Qu1cksc0pe]
+└─# python qu1cksc0pe.py --file /home/kali/Downloads/5601f4c1aa29629fb60128c74c9054d54d60592434fc3e023eb464fa42648fd8.zip\ \(2\) --archive --domain --packer --resource --sigcheck --mitre --lang --vtFile --docs                                                        
+
+
+SIMON SAYS:
+
+         -o          o-
+          +hydNNNNdyh+          <--------------------------->
+        +mMMMMMMMMMMMMm+        <  Do not click every link. >
+       dMMm:NMMMMMMN:mMMb       <      Please listen me!!   >
+      hMMMMMMMMMMMMMMMMMMh      <--------------------------->
+  ..  yyyyyyyyyyyyyyyyyyyy  ..    /
+.mMMm MMMMMMMMMMMMMMMMMMMM mMMm. /
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-
+ +yy+ MMMMMMMMMMMMMMMMMMMM +yy+  <- Mr. Simon
+      mMMMMMMMMMMMMMMMMMMm
+       /++MMMMh++hMMMM++/
+          MMMMo  oMMMM
+          MMMMo  oMMMM
+          oNMm-  -mMNs 
+
+
+[*] Analyzing: /home/kali/Downloads/5601f4c1aa29629fb60128c74c9054d54d60592434fc3e023eb464fa42648fd8.zip (2)
+[*] Archive Type: Zip Archive
+
+[*] Analyzing archive file contents...
+         * Archive Contents *         
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+┃   File Name    ┃ File Size (bytes) ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+│ Вооtstappr.zip │      4032406      │
+│   README.txt   │        95         │
+└────────────────┴───────────────────┘
+
+[*] Looking for embedded URL's in: README.txt
+There is no URL contained in README.txt
+[*] Analyzing: /home/kali/Downloads/5601f4c1aa29629fb60128c74c9054d54d60592434fc3e023eb464fa42648fd8.zip (2)
+[*] Ole File: False
+[*] Encrypted: True
+
+[*] Analyzing file structure...
+    * Document    
+   Structure *    
+┏━━━━━━━━━━━━━━━━┓
+┃   File Name    ┃
+┡━━━━━━━━━━━━━━━━┩
+│ Вооtstappr.zip │
+│   README.txt   │
+└────────────────┘
+
+[*] Searching for interesting links...
+There is no interesting links found.
+
+[*] Performing YARA rule matching...
+>>> Rule name: Suspicious_Macro_Presence
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃  Offset  ┃ Matched String/Byte ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 0x3d898f │       b'.exe'       │
+└──────────┴─────────────────────┘
+ 
+
+[*] Looking for Macros...
+[!] An error occured while parsing that file for macro scan.
+
+[*] Performing magic number analysis...
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃     File Type      ┃    Pattern    ┃  Offset  ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ PKZIP Archive File │ b'PK\x03\x04' │   0x0    │
+│ PKZIP Archive File │ b'PK\x03\x04' │ 0x3d87f8 │
+│ PKZIP Archive File │ b'PK\x05\x06' │ 0x3d8950 │
+└────────────────────┴───────────────┴──────────┘
+
+[*] Looking for possible corrupted Windows executable patterns...
+[!] There is no corrupted Windows executable pattern found!
+[*] Target OS: Android
+
+[*] Parsing file contents...
+
+Traceback (most recent call last):
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/resourceChecker.py", line 695, in <module>
+    resource_scan.android_resource_scanner()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/kali/Desktop/Qu1cksc0pe/Modules/resourceChecker.py", line 104, in android_resource_scanner
+    ftypes = apk.get_files_types()
+  File "/home/kali/Desktop/Qu1cksc0pe/sc0pe_venv/lib/python3.13/site-packages/pyaxmlparser/core.py", line 705, in get_files_types
+    buffer = self.zip.read(i)
+  File "/usr/lib/python3.13/zipfile/__init__.py", line 1602, in read
+    with self.open(name, "r", pwd) as fp:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/zipfile/__init__.py", line 1706, in open
+    raise RuntimeError("File %r is encrypted, password "
+                       "required for extraction" % name)
+RuntimeError: File 'Вооtstappr.zip' is encrypted, password required for extraction
+[!] MITRE ATT&CK analysis is only for Windows binaries now!
+[!] Please scan executable files.
+
+
+[*] Querying the target hash to the VirusTotal API...
+[*] Parsing the scan report...
+
+
+[*] Detection: 1/76
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Detected By ┃           Results            ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  Kaspersky  │ UDS:Backdoor.Win32.Agent.gen │
+└─────────────┴──────────────────────────────┘
+
+There is no IDS reports for target file.
+
+>>> Performing strings based scan...
+
+Nothing found.
+
+
+>>> Performing YARA Rule based scan...
+There is no rules matched for /home/kali/Downloads/5601f4c1aa29629fb60128c74c9054d54d60592434fc3e023eb464fa42648fd8.zip (2)
+[*] Qu1cksc0pe is analyzing this file for possible domain and interesting strings. Please wait...
+
+[!] There is no possible domain strings found.

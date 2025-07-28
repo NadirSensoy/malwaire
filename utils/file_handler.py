@@ -28,9 +28,36 @@ class FileHandler:
         
         # Güvenli dosya türleri (malware analizi için)
         self.allowed_extensions = {
-            'exe', 'dll', 'bin', 'com', 'scr', 'pif', 'bat', 'cmd',
-            'msi', 'jar', 'apk', 'dex', 'elf', 'so', 'dmg', 'pkg',
-            'zip', 'rar', '7z', 'tar', 'gz'
+            # Windows Executables
+            'exe', 'dll', 'bin', 'msi',
+            
+            # Java/Android
+            'jar', 'apk', 'dex',
+            
+            # Linux/Unix
+            'elf',
+            
+            # macOS
+            'macho',
+            
+            # Scripts
+            'ps1', 'psm1', 'psd1', 
+            
+            # Archives
+            'zip', 'rar', 'ace',
+            
+            # Documents
+            'doc', 'docx', 'docm', 'dot', 'dotx', 'dotm',
+            'xls', 'xlsx', 'xlsm', 'xlsb', 'xlt', 'xltx', 'xltm',
+            'ppt', 'pptx', 'pptm', 'pot', 'potx', 'potm',
+            'pdf', 'rtf', 'odt', 'ods', 'odp',
+            'one', 'htm', 'html',
+            
+            # Email
+            'eml',
+            
+            # PCAP Files
+            'pcap'
         }
         
         # Tehlikeli MIME türleri
@@ -68,8 +95,23 @@ class FileHandler:
             
             # Dosya uzantısı kontrolü
             extension = file_path.suffix.lower().lstrip('.')
-            if extension not in self.allowed_extensions:
-                return {'valid': False, 'error': f'Desteklenmeyen dosya türü: .{extension}'}
+            
+            # Uzantısız dosyalar da kabul edilir (malware'ler genelde uzantısız olabilir)
+            if extension == '':
+                extension = 'no_extension'
+            else:
+                # Bilinen zararsız uzantıları reddet
+                dangerous_extensions = {
+                    'txt', 'md', 'readme', 'license', 'changelog',
+                    'gitignore', 'gitkeep', 'dockerignore'
+                }
+                
+                if extension in dangerous_extensions:
+                    return {'valid': False, 'error': f'Güvenlik nedeniyle reddedilen dosya türü: .{extension}'}
+                
+                # İzin verilen uzantılar veya bilinmeyen uzantılar kabul edilir
+                if extension not in self.allowed_extensions and len(extension) > 4:
+                    return {'valid': False, 'error': f'Desteklenmeyen dosya türü: .{extension}'}
             
             # MIME tip kontrolü
             try:
